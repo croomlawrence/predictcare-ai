@@ -1,0 +1,13 @@
+{
+  "name": "predictcare-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Static site: no build step required'",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "serve": "latest"
+  }
+}
