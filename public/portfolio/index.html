@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creative Portfolio — PredictCare.ai</title>
+  <meta name="description" content="Creative portfolio examples from PredictCare.ai and HealthFounderOS — healthcare commercialization assets, screenshots, campaigns, and AI-amplified creative systems." />
+  <link rel="canonical" href="https://predictcare.ai/portfolio/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream:#f6f0e8; --cream-dark:#ede5d8; --ink:#0d0d0b; --ink-soft:#5a5a52; --ink-faint:#9a9a8e;
+      --teal:#0f6e56; --teal-mid:#1d9e75; --rule:rgba(13,13,11,0.10); --rule-strong:rgba(13,13,11,0.20);
+      --serif:'Playfair Display', Georgia, serif; --sans:'DM Sans', system-ui, sans-serif; --max:1180px; --pad:clamp(1.25rem, 5vw, 3rem);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+    nav{position:sticky;top:0;z-index:100;background:rgba(246,240,232,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
+    .nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:60px;display:flex;align-items:center;justify-content:space-between;gap:2rem}
+    .nav-logo{font-family:var(--serif);font-size:1.05rem;font-weight:500}.nav-links{display:flex;align-items:center;gap:2rem;list-style:none}.nav-links a{font-size:.82rem;color:var(--ink-soft)}.nav-links a:hover{color:var(--ink)}
+    .nav-cta{color:var(--cream)!important;background:var(--ink);padding:.45rem 1.1rem;border-radius:2px;font-weight:500}.nav-cta:hover{background:var(--teal)!important}
+    @media(max-width:700px){.nav-links li:not(:last-child){display:none}}
+    .hero{padding:clamp(4rem,10vw,7rem) 0 clamp(2.5rem,6vw,4.5rem);border-bottom:1px solid var(--rule)}
+    .label{font-size:.68rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:1.2rem}
+    h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.12} h1{font-size:clamp(2.5rem,5.5vw,4.6rem);max-width:920px} h1 em,h2 em{color:var(--teal);font-style:italic}
+    .hero p{max-width:700px;color:var(--ink-soft);font-size:1.05rem;margin-top:1.4rem}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem}
+    .btn-primary,.btn-ghost{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem}.btn-primary{background:var(--ink);color:var(--cream);padding:.75rem 1.5rem;border-radius:2px}.btn-primary:hover{background:var(--teal)}.btn-ghost{color:var(--ink-soft);border-bottom:1px solid var(--rule-strong);padding-bottom:1px}
+    .portfolio-intro{padding:2rem 0;border-bottom:1px solid var(--rule)}.portfolio-intro-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:start}.portfolio-note{border-left:2px solid var(--teal);padding-left:1rem;color:var(--ink-soft);font-size:.9rem}.portfolio-note strong{color:var(--ink);font-weight:500}
+    .portfolio-section{padding:clamp(3rem,7vw,5rem) 0}.portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}.portfolio-card{background:var(--cream-dark);border:1px solid var(--rule);border-radius:3px;overflow:hidden;cursor:pointer;transition:transform .2s,border-color .2s}.portfolio-card:hover{transform:translateY(-3px);border-color:var(--teal)}
+    .portfolio-shot{aspect-ratio:16/10;background:linear-gradient(135deg,rgba(15,110,86,.14),rgba(13,13,11,.08));display:flex;align-items:center;justify-content:center;overflow:hidden}.portfolio-shot img{width:100%;height:100%;object-fit:cover}.portfolio-body{padding:1rem 1rem 1.15rem}.portfolio-body h3{font-size:1.05rem;margin-bottom:.35rem}.portfolio-body p{color:var(--ink-soft);font-size:.84rem}.portfolio-tag{font-size:.64rem;text-transform:uppercase;letter-spacing:.12em;color:var(--teal);font-weight:500;margin-bottom:.45rem}
+    .empty{border:1px dashed var(--rule-strong);padding:2rem;color:var(--ink-soft);background:rgba(255,255,255,.18)}.empty code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--ink)}
+    .lightbox{position:fixed;inset:0;background:rgba(13,13,11,.88);z-index:999;display:none;align-items:center;justify-content:center;padding:2rem}.lightbox.active{display:flex}.lightbox-inner{max-width:min(1100px,94vw);max-height:90vh}.lightbox img{max-height:78vh;width:auto;margin:0 auto;border:1px solid rgba(246,240,232,.15)}.lightbox-caption{color:var(--cream);margin-top:1rem;text-align:center}.lightbox-close{position:fixed;top:1rem;right:1rem;color:var(--cream);border:1px solid rgba(246,240,232,.25);background:transparent;border-radius:2px;padding:.55rem .8rem;cursor:pointer}
+    footer{border-top:1px solid var(--rule);padding:2rem 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}.footer-logo{font-family:var(--serif);font-size:.9rem}.footer-links{display:flex;gap:1.5rem;list-style:none}.footer-links a{font-size:.78rem;color:var(--ink-faint)}
+    @media(max-width:760px){.portfolio-intro-grid{grid-template-columns:1fr}.nav-links{gap:1rem}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">predictcare.ai</a>
+      <ul class="nav-links">
+        <li><a href="/#practices">Practices</a></li>
+        <li><a href="/#hfos">HealthFounderOS</a></li>
+        <li><a href="/portfolio/">Portfolio</a></li>
+        <li><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="nav-cta">Book a call ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="label">Creative portfolio · HealthFounderOS</span>
+        <h1>Commercial creative that helps healthcare founders <em>look launch-ready.</em></h1>
+        <p>A curated gallery of screenshots, landing pages, campaign assets, founder content, deck systems, and AI-amplified creative outputs built for healthcare commercialization.</p>
+        <div class="hero-actions">
+          <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="btn-primary">Discuss a project ↗</a>
+          <a href="/" class="btn-ghost">Back to PredictCare.ai →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-intro">
+      <div class="container portfolio-intro-grid">
+        <div>
+          <span class="label">Recommendation</span>
+          <h2>Use a curated grid, not a pure carousel.</h2>
+        </div>
+        <div class="portfolio-note">
+          <strong>Why:</strong> Carousels hide most of the work and are weak for skimming. A strong portfolio page should use a visual grid with optional lightbox enlargement. Later, we can add a short featured carousel at the top once the strongest 5–7 pieces are selected.
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio-section">
+      <div class="container">
+        <div id="portfolio-grid" class="portfolio-grid"></div>
+        <div id="portfolio-empty" class="empty" hidden>
+          <strong>No screenshots have been added yet.</strong><br>
+          Drop image files into <code>public/portfolio/assets/</code>, then run <code>npm run build</code>. Filenames become titles automatically, e.g. <code>01-acurist-landing-page.png</code>.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close">Close</button>
+    <div class="lightbox-inner">
+      <img id="lightbox-img" src="" alt="" />
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">predictcare.ai</span>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/#hfos">HealthFounderOS</a></li>
+          <li><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book a call ↗</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const grid = document.getElementById('portfolio-grid');
+    const empty = document.getElementById('portfolio-empty');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const close = document.getElementById('lightbox-close');
+
+    function openLightbox(item) {
+      lightboxImg.src = item.file;
+      lightboxImg.alt = item.title;
+      lightboxCaption.textContent = item.title;
+      lightbox.classList.add('active');
+      lightbox.setAttribute('aria-hidden', 'false');
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    }
+    close.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => { if (event.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeLightbox(); });
+
+    fetch('/portfolio/portfolio.json')
+      .then(response => response.ok ? response.json() : { items: [] })
+      .then(data => {
+        const items = data.items || [];
+        if (!items.length) {
+          empty.hidden = false;
+          return;
+        }
+        grid.innerHTML = items.map((item, index) => `
+          <article class="portfolio-card" data-index="${index}" tabindex="0">
+            <div class="portfolio-shot"><img src="${item.file}" alt="${item.title}" loading="lazy"></div>
+            <div class="portfolio-body">
+              <div class="portfolio-tag">${item.category || 'Creative Portfolio'}</div>
+              <h3>${item.title}</h3>
+              <p>${item.description || 'Healthcare commercialization creative asset.'}</p>
+            </div>
+          </article>
+        `).join('');
+        grid.querySelectorAll('.portfolio-card').forEach(card => {
+          const item = items[Number(card.dataset.index)];
+          card.addEventListener('click', () => openLightbox(item));
+          card.addEventListener('keydown', event => { if (event.key === 'Enter') openLightbox(item); });
+        });
+      })
+      .catch(() => { empty.hidden = false; });
+  </script>
+</body>
+</html>
