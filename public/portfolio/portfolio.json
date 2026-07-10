@@ -1,4 +1,47 @@
 {
-  "generatedAt": "2026-07-10T21:29:28.198Z",
-  "items": []
+  "generatedAt": "2026-07-10T21:45:00.104Z",
+  "items": [
+    {
+      "title": "PredictCare.ai — Fractional CCO/CMO Positioning",
+      "file": "/portfolio/assets/01-PredictCareAI-landing-page.png",
+      "category": "PredictCare.ai",
+      "description": "Principal-led healthcare commercialization positioning, conversion architecture, and HealthFounderOS operating-system narrative."
+    },
+    {
+      "title": "Acurist AI — Cognitive Screening Platform",
+      "file": "/portfolio/assets/02-AcuristAI-landing-page.png",
+      "category": "Diagnostics & Cognitive Health",
+      "description": "Healthcare AI landing page architecture for cognitive screening, clinical credibility, and founder-facing commercial clarity."
+    },
+    {
+      "title": "Hemostemix — Regenerative Medicine Commercial Story",
+      "file": "/portfolio/assets/03-Hemostemix-landing-page.png",
+      "category": "Biotech & Regenerative Medicine",
+      "description": "Investor and commercialization-oriented messaging for ACP-01, vascular disease, regenerative medicine, and clinical-stage biotech audiences."
+    },
+    {
+      "title": "Linzess — Patient Education Landing Page",
+      "file": "/portfolio/assets/04-Linzess-landing-page.png",
+      "category": "Pharma Brand Experience",
+      "description": "Consumer-facing healthcare creative with clear condition education, treatment navigation, and conversion-focused page structure."
+    },
+    {
+      "title": "Humira — Patient Support & Brand Experience",
+      "file": "/portfolio/assets/05-Humira-landing-page.png",
+      "category": "Pharma Brand Experience",
+      "description": "High-trust patient support creative emphasizing clarity, guided next steps, and approachable branded healthcare communication."
+    },
+    {
+      "title": "Rinvoq — Specialty Pharma Launch Creative",
+      "file": "/portfolio/assets/06-Rinvoq-landing-page.png",
+      "category": "Specialty Pharma",
+      "description": "Specialty-brand landing page creative built around audience segmentation, benefit hierarchy, and polished digital execution."
+    },
+    {
+      "title": "City of Hope — Institutional Healthcare Creative",
+      "file": "/portfolio/assets/07-City-of-Hope-landing-page.png",
+      "category": "Health System / Institution",
+      "description": "Mission-driven healthcare creative balancing institutional trust, emotional relevance, and clear audience pathways."
+    }
+  ]
 }
