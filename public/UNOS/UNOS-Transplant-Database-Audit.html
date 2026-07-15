@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.10" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>UNOS / OPTN Transplant Database Audit</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="audit-print.css" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">UNOS / OPTN Transplant Database Audit</h1>
+</header>
+<h1 id="unos-optn-transplant-database-audit">UNOS / OPTN Transplant
+Database Audit</h1>
+<p><strong>Prepared for:</strong> UNOS strategic growth discussion<br />
+<strong>Prepared by:</strong> Croom Lawrence / PredictCare.ai<br />
+<strong>Date:</strong> July 2026<br />
+<strong>Purpose:</strong> Translate the structure, history, data assets,
+modernization trajectory, and commercial growth potential of the
+national transplant data ecosystem into executive-ready opportunities
+for customer-facing products, messaging, and growth strategy.</p>
+<hr />
+<h2 id="executive-thesis">Executive thesis</h2>
+<p>UNOS / OPTN sits on one of the most consequential longitudinal
+healthcare datasets in the United States: a national, mandatory,
+census-level record of solid-organ transplant candidates, donors,
+offers, transplants, follow-up, immunology, organ disposition, center
+activity, OPO activity, and outcomes.</p>
+<p>The research-access layer is valuable, but the highest-growth
+opportunity is in the operational layer: real-time waitlist activity,
+DonorNet offer workflows, match-run behavior, acceptance and decline
+patterns, logistics, center benchmarking, OPO yield, data-quality
+issues, and predictive decision support.</p>
+<p>The strategic opportunity is not to “sell data.” It is to package
+permissioned, de-identified, aggregated, human-governed transplant
+intelligence into workflow-native products that help transplant
+hospitals, OPOs, labs, device companies, payers, logistics partners, and
+policymakers increase safe organ acceptance, reduce nonuse, improve
+outcomes, and lower administrative burden.</p>
+<hr />
+<h2 id="database-age-and-strategic-context">1. Database age and
+strategic context</h2>
+<p>The OPTN database traces its modern operating roots to the National
+Organ Transplant Act and HRSA’s OPTN contract history. UNOS was awarded
+the OPTN contract in 1986, and SRTR Standard Analysis Files broadly
+include OPTN-collected elements on U.S. solid-organ transplant
+candidates, donors, and recipients from <strong>1987 to
+present</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 30%" />
+<col style="width: 30%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: right;">Year</th>
+<th>Milestone</th>
+<th>Strategic implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1984</td>
+<td>National Organ Transplant Act</td>
+<td>Federal framework for national organ allocation and oversight</td>
+</tr>
+<tr>
+<td style="text-align: right;">1986</td>
+<td>HRSA awarded OPTN contract to UNOS</td>
+<td>National operating system for transplant matching and data
+collection</td>
+</tr>
+<tr>
+<td style="text-align: right;">1987-present</td>
+<td>SRTR/OPTN research files</td>
+<td>Nearly four decades of transplant candidate, donor, recipient, and
+outcome history</td>
+</tr>
+<tr>
+<td style="text-align: right;">2016</td>
+<td>UNOS API/developer program expanded through Apigee</td>
+<td>Shift from manual data entry toward real-time data exchange</td>
+</tr>
+<tr>
+<td style="text-align: right;">2024-2025</td>
+<td>HRSA OPTN modernization / multi-vendor transition</td>
+<td>Opening for next-generation IT, interoperability, transparency,
+analytics, and customer-facing growth products</td>
+</tr>
+<tr>
+<td style="text-align: right;">2025+</td>
+<td>Next-generation OPTN IT modernization</td>
+<td>Opportunity to build a flexible, longitudinal, AI-ready transplant
+data ecosystem</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="core-unos-optn-data-systems">2. Core UNOS / OPTN data
+systems</h2>
+<p>UNOS historically operated the OPTN technology platform,
+<strong>UNet</strong>, with several major modules.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>System / module</th>
+<th>What it captures</th>
+<th>Commercial opportunity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Waitlist</td>
+<td>Candidate registration, active/inactive status, organ-specific
+urgency, listing details, clinical status, demographics</td>
+<td>Candidate journey analytics, referral conversion, waitlist risk,
+access/equity analytics</td>
+</tr>
+<tr>
+<td>DonorNet</td>
+<td>Deceased donor data, OPO donor management, match runs, organ offers,
+attachments/images, offer review, acceptance/decline workflow</td>
+<td>Offer acceptance optimization, nonuse root-cause analytics, center
+decision support</td>
+</tr>
+<tr>
+<td>TIEDI</td>
+<td>Pre- and post-transplant forms: candidate, recipient, donor, living
+donor, follow-up, immunosuppression</td>
+<td>Data-quality automation, audit readiness, outcome intelligence</td>
+</tr>
+<tr>
+<td>TransNet</td>
+<td>Organ packaging, labeling, transport validation, recipient-organ
+identity confirmation</td>
+<td>Logistics optimization, ischemic-time reduction, transport
+performance analytics</td>
+</tr>
+<tr>
+<td>UNet APIs</td>
+<td>Data exchange with OPOs, transplant programs, labs, EHR/EMR systems,
+donor systems</td>
+<td>Workflow integration, partner ecosystem, marketplace/API
+products</td>
+</tr>
+<tr>
+<td>UNOS Tools / Data Services</td>
+<td>Dashboards, benchmarking, reports, quality and process improvement
+tools</td>
+<td>Premium analytics, customer success, strategic advisory,
+subscription products</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="what-is-in-the-research-access-public-data-layer">3. What is in
+the research-access / public data layer</h2>
+<p>The SRTR public Standard Analysis Files are organized by candidate,
+donor, transplant, follow-up, histocompatibility, immunosuppression,
+institution, and organ-specific tables. They are released quarterly and
+currently distributed in SAS format.</p>
+<h3 id="major-file-groups">Major file groups</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>File group</th>
+<th>Example tables</th>
+<th>What they contain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Candidate / waitlist</td>
+<td>CAND_KIPA, CAND_LIIN, CAND_THOR</td>
+<td>Candidate demographics, listing date, organ type, blood type,
+diagnosis, clinical status, comorbidities, height/weight/BMI, dialysis,
+urgency fields, donor acceptability criteria</td>
+</tr>
+<tr>
+<td>Status history</td>
+<td>STATHIST_KIPA, STATHIST_LIIN, STATHIST_THOR</td>
+<td>Active/inactive periods, priority status, status reasons,
+MELD/LAS/CAS-related variables, status justification history</td>
+</tr>
+<tr>
+<td>Deceased donor</td>
+<td>DONOR_DECEASED</td>
+<td>Donor ID, ABO, age, cause of death, DCD/DBD-related data, labs,
+serologies, HLA, risk factors, infectious disease, organ-specific donor
+details</td>
+</tr>
+<tr>
+<td>Living donor</td>
+<td>DONOR_LIVE, DON_LIV_FOL</td>
+<td>Living donor demographics, ABO/HLA, pre/post-op labs, complications,
+donor follow-up at 6 months, 1 year, and 2 years</td>
+</tr>
+<tr>
+<td>Donor organ disposition</td>
+<td>DONOR_DISPOSITION</td>
+<td>Organ recovered/transplanted/discarded, discard reason, recovery
+date, share type, storage/preservation solution, match ID</td>
+</tr>
+<tr>
+<td>Transplant event</td>
+<td>TX_KI, TX_LI, TX_HR, TX_LU, TX_PA, TX_KP</td>
+<td>Recipient/candidate + donor + transplant event summary, center/OPO,
+dates, organ type, ischemic time, diagnosis, prior transplant, risk
+factors</td>
+</tr>
+<tr>
+<td>Transplant follow-up</td>
+<td>TXF_KI, TXF_LI, TXF_HR, TXF_LU, etc.</td>
+<td>Survival, graft failure, rejection, infection, malignancy, dialysis
+after transplant, functional status, cause of death</td>
+</tr>
+<tr>
+<td>Histocompatibility</td>
+<td>REC_HISTO, REC_HISTO_XMAT, PRA_HIST</td>
+<td>Donor/recipient HLA, PRA/CPRA, antibody screening, crossmatch
+method/result, typing method</td>
+</tr>
+<tr>
+<td>Immunosuppression</td>
+<td>IMMUNO, FOL_IMMUNO</td>
+<td>Induction, maintenance, anti-rejection drugs, drug codes</td>
+</tr>
+<tr>
+<td>Malignancy / treatment</td>
+<td>MALIG, TREATMENT</td>
+<td>Post-transplant malignancy diagnosis and treatment</td>
+</tr>
+<tr>
+<td>Institutions</td>
+<td>INSTITUTION, HIST_OPO_TXC</td>
+<td>Transplant center / OPO identifiers, service relationships,
+historical mappings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-variable-scale-from-the-srtr-public-dictionary">Example
+variable scale from the SRTR public dictionary</h3>
+<table>
+<thead>
+<tr>
+<th>Data file</th>
+<th style="text-align: right;">Approx. variable count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DONOR_DECEASED</td>
+<td style="text-align: right;">260</td>
+</tr>
+<tr>
+<td>DONOR_LIVE</td>
+<td style="text-align: right;">233</td>
+</tr>
+<tr>
+<td>DONOR_DISPOSITION</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr>
+<td>CAND_KIPA — kidney/pancreas candidates</td>
+<td style="text-align: right;">194</td>
+</tr>
+<tr>
+<td>CAND_LIIN — liver/intestine candidates</td>
+<td style="text-align: right;">174</td>
+</tr>
+<tr>
+<td>CAND_THOR — heart/lung candidates</td>
+<td style="text-align: right;">213</td>
+</tr>
+<tr>
+<td>TX_KI — kidney transplant</td>
+<td style="text-align: right;">283</td>
+</tr>
+<tr>
+<td>TX_LI — liver transplant</td>
+<td style="text-align: right;">307</td>
+</tr>
+<tr>
+<td>TX_HR — heart transplant</td>
+<td style="text-align: right;">327</td>
+</tr>
+<tr>
+<td>TX_LU — lung transplant</td>
+<td style="text-align: right;">313</td>
+</tr>
+<tr>
+<td>TXF_KI — kidney follow-up</td>
+<td style="text-align: right;">106</td>
+</tr>
+<tr>
+<td>REC_HISTO</td>
+<td style="text-align: right;">111</td>
+</tr>
+<tr>
+<td>REC_HISTO_XMAT</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td>PRA_HIST</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="practical-data-field-inventory">4. Practical data-field
+inventory</h2>
+<h3 id="candidate-recipient-data">Candidate / recipient data</h3>
+<p>The database includes, or has historically included, fields such
+as:</p>
+<ul>
+<li>Identity and operational fields in restricted systems: name, DOB,
+SSN, center patient ID, transplant center, organ listed</li>
+<li>Demographics: sex/birth sex/gender depending on form era, age, race,
+ethnicity, citizenship, state and ZIP of permanent residence</li>
+<li>Listing and waitlist: listing date, activation date, active/inactive
+status, wait time, reason for removal, death date when applicable</li>
+<li>Clinical baseline: ABO, height, weight, BMI, primary diagnosis,
+secondary diagnosis, functional status, education/employment fields in
+some forms</li>
+<li>Comorbidities: diabetes, dialysis, peripheral vascular disease,
+cerebrovascular disease, COPD, hypertension, malignancy, previous
+transplant history</li>
+<li>Organ-specific clinical variables: MELD/PELD, Lung CAS/LAS-era
+fields, heart status, kidney allocation variables, CPRA/PRA, liver
+exceptions, thoracic status justifications</li>
+<li>Donor acceptability: HIV-positive organ willingness, HBV core
+antibody positive, HCV positive, DCD, A2/A2B, ABO-incompatible or other
+organ-specific criteria</li>
+</ul>
+<h3 id="donor-data">Donor data</h3>
+<p>The donor layer includes:</p>
+<ul>
+<li>Donor ID, donor type, OPO, donor hospital context</li>
+<li>ABO, age, sex, race/ethnicity, citizenship</li>
+<li>Cause of death, DCD status, stroke/CVA, cardiac arrest, donor-risk
+history</li>
+<li>Serologies and infectious disease fields: CMV, EBV, HIV, HBV, HCV,
+HTLV, Chagas NAT in some eras/contexts</li>
+<li>HLA: A, B, C, DR, DQ, DP, Bw4/Bw6</li>
+<li>Labs and clinical markers: creatinine, BUN, bilirubin, liver
+enzymes, albumin, organ-specific markers</li>
+<li>Risk factors: hypertension, diabetes, cancer history, tobacco,
+alcohol, cocaine, IV drug use</li>
+<li>Donor management and recovery: clamp date/time, recovery date/time,
+consent/authorization fields, organ-specific evaluation, biopsy,
+anatomy, storage solution</li>
+</ul>
+<h3 id="matching-compatibility-data">Matching / compatibility data</h3>
+<p>The matching layer includes:</p>
+<ul>
+<li>ABO compatibility</li>
+<li>Donor and recipient HLA typing</li>
+<li>CPRA/PRA and unacceptable antigen data</li>
+<li>Crossmatch source, type, technique, result, auto-crossmatch
+result</li>
+<li>Candidate acceptability filters and organ-specific thresholds</li>
+<li>Medical urgency and priority status</li>
+<li>Wait time</li>
+<li>Pediatric priority</li>
+<li>prior living donor / donation status priority</li>
+<li>geographic/distance allocation inputs</li>
+<li>organ-specific allocation scores</li>
+</ul>
+<h3 id="transplant-event-data">Transplant event data</h3>
+<p>The transplant-event layer includes:</p>
+<ul>
+<li>Transplant date and organ type</li>
+<li>Multi-organ transplant flags</li>
+<li>recipient center and OPO</li>
+<li>donor ID and donor type</li>
+<li>ischemic time</li>
+<li>recipient condition at transplant</li>
+<li>diagnosis and previous transplant history</li>
+<li>surgeon/NPI in restricted form data</li>
+<li>induction immunosuppression</li>
+<li>discharge and early post-transplant status</li>
+</ul>
+<h3 id="follow-up-outcomes-data">Follow-up / outcomes data</h3>
+<p>The outcomes layer includes:</p>
+<ul>
+<li>patient alive/dead status</li>
+<li>date last seen and date of death</li>
+<li>cause of death</li>
+<li>graft status, graft failure date, graft failure cause</li>
+<li>rejection episodes, biopsy-confirmed rejection</li>
+<li>dialysis after transplant</li>
+<li>disease recurrence</li>
+<li>malignancy and treatment</li>
+<li>infections and antivirals</li>
+<li>immunosuppression regimen</li>
+<li>functional status and selected social/education/employment
+fields</li>
+<li>living donor follow-up at 6 months, 1 year, and 2 years</li>
+</ul>
+<hr />
+<h2 id="what-is-limited-restricted-or-not-consistently-public">5. What
+is limited, restricted, or not consistently public</h2>
+<p>The public/research-access SAF layer is powerful, but not the full
+commercial asset. SRTR notes that SAFs generally do not include
+geographic data or text fields, and patient-level ZIP codes or
+supplementary files may require special request, approval, and cost.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Likely availability</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Patient name, SSN, center patient ID</td>
+<td>Restricted operational PHI/PII</td>
+<td>Not appropriate for commercial use except under strict
+permissions</td>
+</tr>
+<tr>
+<td>Patient-level ZIP/full geography</td>
+<td>Usually excluded or restricted</td>
+<td>Market access, equity, logistics, referral geography</td>
+</tr>
+<tr>
+<td>Free-text exception narratives</td>
+<td>Restricted</td>
+<td>NLP opportunity, but high governance burden</td>
+</tr>
+<tr>
+<td>Real-time match-run logs</td>
+<td>Operational / not broadly public</td>
+<td>Highest-value offer behavior analytics</td>
+</tr>
+<tr>
+<td>Offer acceptance/decline behavior</td>
+<td>Partially captured; richer in DonorNet</td>
+<td>Center decision support and nonuse reduction</td>
+</tr>
+<tr>
+<td>Donor imaging / attachments</td>
+<td>Operational only</td>
+<td>AI-assisted organ quality assessment</td>
+</tr>
+<tr>
+<td>Organ transport telemetry</td>
+<td>Fragmented</td>
+<td>Logistics and ischemia-risk modeling</td>
+</tr>
+<tr>
+<td>Perfusion-device data</td>
+<td>Often held by device companies</td>
+<td>DCD and machine-perfusion outcomes</td>
+</tr>
+<tr>
+<td>EHR longitudinal labs/vitals</td>
+<td>Not consistently in OPTN today</td>
+<td>Dynamic risk prediction</td>
+</tr>
+<tr>
+<td>ICU / intra-op detail</td>
+<td>Not consistently captured</td>
+<td>Post-transplant outcome prediction</td>
+</tr>
+<tr>
+<td>API/workflow logs</td>
+<td>UNOS/internal</td>
+<td>Operational bottlenecks and customer experience</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="new-data-likely-coming-into-the-ecosystem">6. New data likely
+coming into the ecosystem</h2>
+<h3 id="confirmed-direction">Confirmed direction</h3>
+<p>UNOS and the broader OPTN modernization process are moving toward
+more API-based, interoperable, dynamic data collection.</p>
+<p>UNOS API capabilities already support:</p>
+<ul>
+<li>Death notification registration</li>
+<li>Deceased donor registration and DCD forms</li>
+<li>Donor record upload and donor attachments</li>
+<li>Donor hospital lists</li>
+<li>Waitlist clinical data exchange from EHR/EMR</li>
+<li>Allocation calculators: CPRA, Lung CAS, MELD, PELD</li>
+<li>TIEDI forms: TRF, IMF, TRR, IMR, TCR, LDR, LDF</li>
+</ul>
+<p>Public Google Cloud materials describe UNOS’s API footprint as having
+hundreds of external endpoints, 300+ connected healthcare organizations,
+and high-volume real-time transactions across UNet.</p>
+<h3 id="direction-of-travel">Direction of travel</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Emerging data category</th>
+<th>Strategic value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>EHR-extracted labs, vitals, hemodynamics via FHIR</td>
+<td>Dynamic risk prediction, lower manual burden</td>
+</tr>
+<tr>
+<td>Longitudinal candidate deterioration data</td>
+<td>Better urgency and offer-acceptance decisions</td>
+</tr>
+<tr>
+<td>Granular mechanical circulatory support categories</td>
+<td>More accurate heart allocation and risk adjustment</td>
+</tr>
+<tr>
+<td>DCD procurement workflow timing</td>
+<td>DCD outcomes, organ viability, process improvement</td>
+</tr>
+<tr>
+<td>Normothermic regional perfusion / direct procurement and perfusion
+variables</td>
+<td>Compare DCD strategies and outcomes</td>
+</tr>
+<tr>
+<td>Organ perfusion-device data</td>
+<td>Device benchmarking and viability prediction</td>
+</tr>
+<tr>
+<td>Organ transport system and temperature data</td>
+<td>Logistics optimization and ischemia-risk modeling</td>
+</tr>
+<tr>
+<td>Donor organ imaging</td>
+<td>AI-assisted organ quality assessment</td>
+</tr>
+<tr>
+<td>Histopathology of explanted organs</td>
+<td>Diagnosis validation and outcomes research</td>
+</tr>
+<tr>
+<td>Genetic testing for disease etiology</td>
+<td>Risk stratification and disease-specific insights</td>
+</tr>
+<tr>
+<td>More specific nonuse / decline reasons</td>
+<td>Donor-pool expansion and center behavior analytics</td>
+</tr>
+<tr>
+<td>Offer behavior / next-offer prediction</td>
+<td>Point-of-offer decision support</td>
+</tr>
+<tr>
+<td>API workflow metadata</td>
+<td>Operational analytics and customer experience improvement</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="informed-view-of-the-non-public-operational-data-asset">7.
+Informed view of the non-public operational data asset</h2>
+<p>The highest-value data likely exists in the operational UNet layer.
+Based on UNet workflows, DonorNet, TIEDI, TransNet, and API
+architecture, UNOS likely has or can derive:</p>
+<h3 id="match-run-and-offer-level-intelligence">Match-run and
+offer-level intelligence</h3>
+<ul>
+<li>Every match run generated</li>
+<li>Candidate rank/order for each organ</li>
+<li>Which centers were offered the organ</li>
+<li>Offer timestamps and response timestamps</li>
+<li>Accepted / declined / bypassed / no-response outcomes</li>
+<li>Decline reason codes and possibly richer operational context</li>
+<li>Whether offer details, imaging, or attachments were reviewed</li>
+<li>Subsequent candidate outcome after accepting or declining</li>
+<li>Whether the candidate received another offer later</li>
+<li>Time to next offer</li>
+<li>Whether the organ was transplanted elsewhere or discarded</li>
+<li>Center-specific acceptance tendencies</li>
+</ul>
+<h3 id="center-behavior-intelligence">Center behavior intelligence</h3>
+<ul>
+<li>Organ acceptance rates by center, organ type, donor risk tier,
+geography, and candidate profile</li>
+<li>Response latency</li>
+<li>Decline-code distribution</li>
+<li>Outlier behaviors versus peer programs</li>
+<li>Waitlist size, transplant conversion, volume trends</li>
+<li>Data quality errors and TIEDI completion performance</li>
+<li>Staffing and workflow bottlenecks</li>
+<li>MPSC/SRTR-related risk signals</li>
+</ul>
+<h3 id="opo-performance-intelligence">OPO performance intelligence</h3>
+<ul>
+<li>Referral-to-authorization conversion</li>
+<li>Donor management timelines</li>
+<li>Organ yield</li>
+<li>Recovery process timing</li>
+<li>DCD progression and agonal-phase timing</li>
+<li>Organ nonuse and discard reasons</li>
+<li>Donor hospital patterns</li>
+<li>OPO-to-center placement dynamics</li>
+</ul>
+<h3 id="logistics-intelligence">Logistics intelligence</h3>
+<ul>
+<li>Packaging, labeling, handoff, transport, and arrival timestamps</li>
+<li>Cold ischemic time and delay drivers</li>
+<li>transport mode and route performance</li>
+<li>courier/vendor performance</li>
+<li>validation events and exceptions</li>
+</ul>
+<hr />
+<h2 id="current-product-evidence-and-white-space">8. Current product
+evidence and white space</h2>
+<p>UNOS is already moving from database stewardship toward productized
+intelligence.</p>
+<p>Known product/product-like examples include:</p>
+<ul>
+<li>CARE Tool — broader organ acceptance opportunities</li>
+<li>UNOS Predict — forward-looking metrics relative to future SRTR
+cohorts</li>
+<li>Benchmark Report — customizable patient population, listing, and
+transplant activity insights</li>
+<li>UNOS Staffing Survey — staffing benchmark for transplant
+administration</li>
+<li>Organ Utilization Tool / OPO tools</li>
+<li>DonorNet predictive analytics — time-to-next-offer and three-year
+mortality likelihood for adult kidney offers</li>
+<li>UNet APIs — workflow integration with OPOs, transplant programs,
+labs, and EHR systems</li>
+<li>UNOS One / Marketplace — emerging platform/partner ecosystem
+direction</li>
+</ul>
+<p>The white space is to package these capabilities into a more explicit
+customer-value architecture: business outcomes, workflow outcomes, risk
+reduction, center growth, OPO performance, logistics performance, and
+responsible AI/data modernization.</p>
+<hr />
+<h2 id="commercial-packaging-opportunities">9. Commercial packaging
+opportunities</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Product concept</th>
+<th>Buyer</th>
+<th>Value proposition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Offer Acceptance Optimizer</td>
+<td>Transplant centers</td>
+<td>Identify safe acceptance opportunities where the center is more
+conservative than peers</td>
+</tr>
+<tr>
+<td>Next-Best-Offer Advisor</td>
+<td>Transplant physicians</td>
+<td>Support accept-now vs wait decisions using candidate mortality and
+likely future offer patterns</td>
+</tr>
+<tr>
+<td>OPO Yield Intelligence</td>
+<td>OPOs</td>
+<td>Identify where donors/organs are lost across referral,
+authorization, recovery, placement</td>
+</tr>
+<tr>
+<td>Organ Nonuse Root-Cause Dashboard</td>
+<td>OPOs, centers, HRSA</td>
+<td>Break discard/nonuse into donor quality, center behavior, logistics,
+data quality, or process issues</td>
+</tr>
+<tr>
+<td>SRTR/MPSC Early Warning</td>
+<td>Transplant centers</td>
+<td>Predict performance risk before public reports or regulatory
+scrutiny</td>
+</tr>
+<tr>
+<td>Data Quality Copilot</td>
+<td>Centers and OPOs</td>
+<td>Detect missing, late, or contradictory OPTN/TIEDI data before
+audit</td>
+</tr>
+<tr>
+<td>Transplant Market Access Atlas</td>
+<td>Device, diagnostic, pharma, payer partners</td>
+<td>De-identified market map of volume, patient mix, disease burden,
+organ demand, center archetypes</td>
+</tr>
+<tr>
+<td>Perfusion Device Outcomes Registry</td>
+<td>Device companies, centers</td>
+<td>Link machine perfusion/device data to outcomes and adoption
+patterns</td>
+</tr>
+<tr>
+<td>DCD Expansion Intelligence</td>
+<td>OPOs, centers, device companies</td>
+<td>Optimize DCD procurement, NRP/DPP strategy, and machine perfusion
+usage</td>
+</tr>
+<tr>
+<td>Histocompatibility Intelligence</td>
+<td>HLA labs, kidney programs</td>
+<td>Improve sensitized-candidate strategy, CPRA trends, crossmatch
+outcomes</td>
+</tr>
+<tr>
+<td>Logistics Optimization Platform</td>
+<td>OPOs, logistics partners</td>
+<td>Reduce cold ischemia and predict transport delay risk</td>
+</tr>
+<tr>
+<td>Equity / Access Analytics</td>
+<td>HRSA, centers, foundations</td>
+<td>Identify disparities in listing, offers, wait time, acceptance,
+transplant rate, outcomes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="recommended-growth-wedge">10. Recommended growth wedge</h2>
+<h3 id="transplant-performance-command-center">Transplant Performance
+Command Center</h3>
+<p><strong>Positioning:</strong> Help transplant programs increase safe
+organ acceptance, improve SRTR/MPSC readiness, reduce administrative
+burden, and find hidden growth opportunities using OPTN/SRTR-derived
+intelligence and workflow automation.</p>
+<h3 id="core-modules">Core modules</h3>
+<ol type="1">
+<li><p><strong>Acceptance Opportunity Map</strong><br />
+Identifies donor profiles a center may be declining too conservatively
+relative to comparable peers.</p></li>
+<li><p><strong>Waitlist Conversion Analytics</strong><br />
+Tracks listed patients → offers → accepts → transplants → outcomes;
+highlights drop-off by organ, diagnosis, demographics, geography, and
+referral channel.</p></li>
+<li><p><strong>SRTR/MPSC Early Warning</strong><br />
+Shows expected risk trajectory before public reports, allowing leaders
+to act earlier.</p></li>
+<li><p><strong>Data Quality + TIEDI Automation</strong><br />
+Detects missing data, contradictions, late forms, and audit
+risks.</p></li>
+<li><p><strong>Referral / Growth Map</strong><br />
+Finds under-penetrated referral geographies, hospitals,
+nephrology/cardiology/pulmonology networks, and access gaps.</p></li>
+<li><p><strong>Executive Benchmark Report</strong><br />
+Quarterly board-ready narrative and dashboard for transplant
+leadership.</p></li>
+</ol>
+<h3 id="potential-commercial-model">Potential commercial model</h3>
+<ul>
+<li>Entry analytics subscription: $5k-$10k/month</li>
+<li>Enterprise command center: $10k-$30k/month</li>
+<li>Strategic advisory + custom analytics: $25k-$75k/project or
+retainer</li>
+<li>Partner marketplace / API monetization: usage-based or
+revenue-share</li>
+<li>Device / diagnostics registry analytics: custom enterprise
+agreements</li>
+</ul>
+<hr />
+<h2 id="messaging-implications-for-unos">11. Messaging implications for
+UNOS</h2>
+<h3 id="current-implicit-message">Current implicit message</h3>
+<p>UNOS is seen primarily as the national transplant infrastructure and
+data steward.</p>
+<h3 id="growth-message-opportunity">Growth message opportunity</h3>
+<p>UNOS can become the trusted intelligence layer that helps every
+transplant stakeholder make better, faster, more equitable, more
+evidence-based decisions.</p>
+<h3 id="suggested-narrative">Suggested narrative</h3>
+<blockquote>
+<p>UNOS is uniquely positioned to transform transplant data into
+trusted, workflow-native intelligence that helps centers accept more
+organs safely, helps OPOs increase yield, helps patients receive
+transplants sooner, and helps the entire ecosystem learn faster from
+every donor, offer, transplant, and outcome.</p>
+</blockquote>
+<h3 id="messaging-pillars">Messaging pillars</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>Plain-English meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trusted national data infrastructure</td>
+<td>UNOS has the census-level operating data others cannot
+replicate</td>
+</tr>
+<tr>
+<td>Human-governed decision support</td>
+<td>Data supports clinical judgment; it does not replace it</td>
+</tr>
+<tr>
+<td>More transplants, safer decisions</td>
+<td>Growth is mission-aligned: reduce nonuse, improve acceptance,
+protect outcomes</td>
+</tr>
+<tr>
+<td>Workflow-native products</td>
+<td>Insights appear where the decision is being made, not in a
+disconnected report</td>
+</tr>
+<tr>
+<td>Customer maturity</td>
+<td>Move from data collection to proactive intelligence, benchmarking,
+and action</td>
+</tr>
+<tr>
+<td>Modernization with governance</td>
+<td>AI/interoperability must be privacy-preserving, validated,
+auditable, and trusted</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="compliance-trust-and-governance-guardrails">12. Compliance,
+trust, and governance guardrails</h2>
+<p>The market opportunity must be framed carefully.</p>
+<h3 id="safe-framing">Safe framing</h3>
+<ul>
+<li>“Permissioned, de-identified, aggregated transplant
+intelligence”</li>
+<li>“Human-governed decision support”</li>
+<li>“Operational benchmarking and process improvement”</li>
+<li>“Workflow integration that reduces burden and improves data
+quality”</li>
+<li>“Mission-aligned growth that increases safe organ utilization”</li>
+</ul>
+<h3 id="avoid">Avoid</h3>
+<ul>
+<li>“Selling patient data”</li>
+<li>“Monetizing PHI”</li>
+<li>“AI replacing physicians”</li>
+<li>“Guaranteed improved survival” without prospective validation</li>
+<li>Re-identification, scraping, or use of restricted data outside
+data-use agreements</li>
+<li>Overstating what is public versus restricted</li>
+</ul>
+<h3 id="required-controls-for-future-products">Required controls for
+future products</h3>
+<ul>
+<li>HIPAA and federal data-use compliance</li>
+<li>Strong de-identification / aggregation thresholds</li>
+<li>Data-use agreements and role-based access</li>
+<li>IRB/legal review where research or patient-level analysis is
+involved</li>
+<li>Model validation and bias monitoring</li>
+<li>Clinical disclaimers and human-in-the-loop workflows</li>
+<li>Audit trails and explainability for decision support</li>
+</ul>
+<hr />
+<h2 id="recommended-next-steps">13. Recommended next steps</h2>
+<ol type="1">
+<li><p><strong>Create a product architecture map</strong><br />
+Map current UNOS Tools, UNet APIs, DonorNet predictive analytics, OPO
+tools, and UNOS Marketplace into a single customer-facing product
+portfolio.</p></li>
+<li><p><strong>Define three flagship buyer journeys</strong></p>
+<ul>
+<li>Transplant center administrator / quality leader</li>
+<li>OPO executive / operations leader</li>
+<li>Technology / device / logistics partner</li>
+</ul></li>
+<li><p><strong>Build a “value from data” message house</strong><br />
+Reframe data from compliance burden to mission-aligned intelligence:
+more transplants, lower burden, safer decisions, better customer
+value.</p></li>
+<li><p><strong>Package a Transplant Performance Command Center
+pilot</strong><br />
+Pick one organ area, one customer segment, and one measurable outcome:
+safe acceptance, nonuse reduction, or SRTR/MPSC readiness.</p></li>
+<li><p><strong>Create a governance-first AI roadmap</strong><br />
+Position AI around validated workflow support, not hype: offer triage,
+missing data detection, nonuse root cause, logistics prediction, and
+center benchmark explanation.</p></li>
+<li><p><strong>Develop customer-facing collateral</strong><br />
+Build a concise deck, one-page product map, case-study template, and
+executive demo narrative for UNOS leadership and prospective
+customers.</p></li>
+</ol>
+<hr />
+<h2 id="cover-letter-language">14. Cover-letter language</h2>
+<p>Recommended bullet for Croom’s cover letter:</p>
+<blockquote>
+<p>I have also begun a structured audit of the UNOS / OPTN data
+ecosystem — including candidate, donor, match, transplant, follow-up,
+OPO, center, API, and predictive analytics assets — to identify
+responsible, mission-aligned growth opportunities in benchmarking,
+decision support, data quality, organ utilization, and customer-facing
+intelligence products.</p>
+</blockquote>
+<p>Shorter version:</p>
+<blockquote>
+<p>I have already started developing a data-informed growth thesis for
+UNOS: how the OPTN/UNet ecosystem can be responsibly packaged into
+trusted benchmarking, decision-support, organ-utilization, and customer
+intelligence products that advance the mission while creating durable
+new value for transplant stakeholders.</p>
+</blockquote>
+<hr />
+<h2 id="appendix-source-map">Appendix: Source map</h2>
+<p>Primary source categories reviewed:</p>
+<ul>
+<li>SRTR Standard Analysis Files public data dictionary</li>
+<li>SRTR Standard Analysis Files overview</li>
+<li>UNOS UNet / Waitlist / DonorNet / TIEDI / TransNet public pages</li>
+<li>UNOS API public pages and developer-portal signals</li>
+<li>UNOS predictive analytics / DonorNet kidney offer analytics
+materials</li>
+<li>Google Cloud UNOS / Apigee case study</li>
+<li>OPTN/TIEDI data collection form instructions from RegInfo.gov</li>
+<li>2025 American Journal of Transplantation perspective: “Modernizing
+the national transplant database”</li>
+</ul>
+<p>Important diligence caveat: some OPTN/HRSA pages were blocked by
+automated access controls during research. The audit therefore
+distinguishes between confirmed public/research-access data and informed
+operational inferences based on UNet/TIEDI/DonorNet workflows, public
+documentation, SRTR dictionaries, and modernization literature.</p>
+</body>
+</html>
