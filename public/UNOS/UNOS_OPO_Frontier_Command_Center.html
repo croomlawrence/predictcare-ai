@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow, noarchive" />
+<title>UNOS Frontier OPO Command Center — Concept Mockup</title>
+<script>
+  (function(){
+    try {
+      if (sessionStorage.getItem('predictcare_unos_portal_access') !== 'granted') {
+        window.location.replace('/UNOS/?next=dashboard');
+      }
+    } catch (error) {
+      window.location.replace('/UNOS/?next=dashboard');
+    }
+  })();
+</script>
+<style>
+  :root{
+    --bg:#05080b;--panel:#081017;--panel2:#0b1721;--panel3:#0e202d;--ink:#e9fbff;--muted:#89a8b5;--dim:#51707c;
+    --cyan:#3ff6ff;--blue:#4d9dff;--green:#62ffb2;--amber:#ffd166;--red:#ff5b7c;--violet:#a98bff;--line:rgba(94,236,255,.22);
+    --shadow:0 0 34px rgba(63,246,255,.13), inset 0 0 0 1px rgba(115,234,255,.13);--radius:18px;--mono:"SF Mono", ui-monospace, Menlo, Consolas, monospace;
+    --sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box} html,body{margin:0;height:100%;background:radial-gradient(circle at 50% -20%,rgba(38,108,140,.35),transparent 36%),linear-gradient(120deg,#020304,#061016 56%,#020507);color:var(--ink);font-family:var(--sans);overflow:hidden}
+  body:before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(63,246,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(63,246,255,.025) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(circle at center,#000,transparent 74%);pointer-events:none}
+  body:after{content:"";position:fixed;inset:0;background:linear-gradient(transparent 50%,rgba(255,255,255,.018) 51%);background-size:100% 4px;mix-blend-mode:screen;pointer-events:none;opacity:.5}.app{height:100vh;padding:18px;display:grid;grid-template-columns:280px 1fr 380px;grid-template-rows:68px 1fr 150px;gap:14px;position:relative}.topbar,.panel,.dock{background:linear-gradient(180deg,rgba(12,28,39,.9),rgba(5,14,21,.88));border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius);backdrop-filter:blur(12px)}.topbar{grid-column:1/4;display:grid;grid-template-columns:310px minmax(320px,1fr) 480px;align-items:center;padding:0 18px;gap:18px}.brand{display:flex;gap:12px;align-items:center}.sigil{width:42px;height:42px;border:1px solid rgba(63,246,255,.55);border-radius:12px;display:grid;place-items:center;box-shadow:0 0 22px rgba(63,246,255,.25);position:relative}.sigil:before{content:"";width:22px;height:22px;border:2px solid var(--cyan);border-radius:50%;box-shadow:0 0 12px var(--cyan)}.eyebrow{font:11px/1 var(--mono);letter-spacing:.18em;color:var(--cyan);text-transform:uppercase}.title{font-weight:760;font-size:18px;letter-spacing:.01em}.sub{font:12px/1.35 var(--mono);color:var(--muted)}.mission{height:42px;border:1px solid rgba(63,246,255,.18);border-radius:14px;padding:8px 12px;background:rgba(1,8,12,.7);display:flex;align-items:center;gap:12px;overflow:hidden}.mission b{color:var(--green);font:12px var(--mono)}.ticker{white-space:nowrap;animation:ticker 18s linear infinite;color:#bceef8;font-size:13px}@keyframes ticker{from{transform:translateX(10%)}to{transform:translateX(-110%)}}.clock{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.metric{border:1px solid rgba(63,246,255,.16);border-radius:12px;padding:7px 9px;background:rgba(3,12,18,.72)}.metric .k{font:10px var(--mono);color:var(--muted);text-transform:uppercase}.metric .v{font:18px/1.05 var(--mono);color:var(--ink)}.left{grid-column:1;grid-row:2/4;display:grid;grid-template-rows:auto 1fr auto;gap:14px}.panel{padding:14px;overflow:hidden}.section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.section-title h2{font-size:12px;margin:0;font-family:var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#caeff6}.pill{font:10px var(--mono);color:var(--cyan);border:1px solid rgba(63,246,255,.25);padding:5px 8px;border-radius:999px;background:rgba(63,246,255,.06)}.usecase{padding:11px;border:1px solid rgba(104,214,255,.14);border-radius:14px;margin-bottom:9px;background:linear-gradient(90deg,rgba(63,246,255,.06),rgba(63,246,255,.015));cursor:pointer;transition:.2s}.usecase:hover,.usecase.active{border-color:rgba(63,246,255,.55);transform:translateX(3px);box-shadow:0 0 20px rgba(63,246,255,.1)}.usecase .name{font-size:13px;font-weight:700}.usecase .desc{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.35}.score-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:10px;margin:10px 0}.bar{height:6px;border-radius:999px;background:#132733;overflow:hidden}.bar span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--cyan),var(--green));box-shadow:0 0 14px rgba(98,255,178,.35)}.main{grid-column:2;grid-row:2/4;display:grid;grid-template-rows:minmax(330px,1fr) 160px;gap:14px}.holo{position:relative;overflow:hidden;min-height:0}.holo:before{content:"";position:absolute;inset:16px;border:1px solid rgba(63,246,255,.18);border-radius:22px;background:radial-gradient(circle at 50% 50%,rgba(63,246,255,.09),transparent 28%);pointer-events:none}.map{position:absolute;inset:48px 42px 34px 42px;border-radius:24px;background:radial-gradient(circle at 38% 45%,rgba(77,157,255,.18),transparent 23%),radial-gradient(circle at 62% 42%,rgba(98,255,178,.12),transparent 26%),linear-gradient(180deg,rgba(6,19,27,.3),rgba(3,9,14,.7));border:1px solid rgba(63,246,255,.12)}.organ{position:absolute;width:112px;height:112px;border-radius:50%;border:1px solid rgba(63,246,255,.38);display:grid;place-items:center;background:radial-gradient(circle,rgba(63,246,255,.24),rgba(63,246,255,.04) 58%,transparent 60%);box-shadow:0 0 30px rgba(63,246,255,.16);animation:pulse 3s ease-in-out infinite}.organ:after{content:attr(data-label);font:10px var(--mono);color:#dff;position:absolute;top:118px;white-space:nowrap}.organ .num{font:22px var(--mono);color:var(--green)}@keyframes pulse{50%{transform:scale(1.04);filter:brightness(1.15)}}.route{position:absolute;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);transform-origin:left center;box-shadow:0 0 10px var(--cyan);opacity:.75}.route:after{content:"";position:absolute;right:0;top:-4px;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 14px var(--cyan);animation:moveDot 2.8s linear infinite}@keyframes moveDot{from{right:100%}to{right:0}}.node{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--cyan);box-shadow:0 0 16px var(--cyan)}.node.big{width:18px;height:18px;background:var(--green)}.node.warn{background:var(--amber);box-shadow:0 0 16px var(--amber)}.tag{position:absolute;font:10px var(--mono);color:#bfeaf1;border:1px solid rgba(63,246,255,.22);padding:6px 8px;border-radius:10px;background:rgba(3,12,18,.75)}.robot-arm{position:absolute;right:60px;bottom:62px;width:150px;height:124px;border-bottom:2px solid rgba(169,139,255,.75);border-right:2px solid rgba(169,139,255,.75);transform:skew(-18deg);filter:drop-shadow(0 0 14px rgba(169,139,255,.45))}.drone{position:absolute;left:66%;top:26%;width:52px;height:20px;border:1px solid var(--cyan);border-radius:20px;box-shadow:0 0 16px rgba(63,246,255,.35);animation:drift 7s ease-in-out infinite}.drone:before,.drone:after{content:"";position:absolute;top:5px;width:22px;height:8px;border-top:1px solid var(--cyan);border-radius:50%}.drone:before{left:-24px}.drone:after{right:-24px}@keyframes drift{50%{transform:translate(34px,-18px)}}.center-readout{position:absolute;left:22px;top:20px;width:310px}.bigscore{font:68px/.9 var(--mono);letter-spacing:-.08em;color:var(--green);text-shadow:0 0 20px rgba(98,255,178,.35)}.bigscore small{font-size:18px;color:var(--muted);letter-spacing:0}.right{grid-column:3;grid-row:2/4;display:grid;grid-template-rows:1fr 1fr 200px;gap:14px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.card{border:1px solid rgba(63,246,255,.15);border-radius:14px;padding:12px;background:rgba(3,12,18,.62)}.card .label{font:10px var(--mono);color:var(--muted);text-transform:uppercase}.card .value{font:24px/1.15 var(--mono);margin-top:6px}.card .delta{font:11px var(--mono);margin-top:4px;color:var(--green)}.delta.bad{color:var(--red)}.timeline{display:grid;gap:8px}.event{display:grid;grid-template-columns:54px 1fr auto;gap:10px;align-items:start;padding:9px;border:1px solid rgba(63,246,255,.12);border-radius:12px;background:rgba(6,17,25,.58)}.event time{font:10px var(--mono);color:var(--cyan)}.event b{font-size:12px}.event p{margin:2px 0 0;color:var(--muted);font-size:11px;line-height:1.3}.status{font:10px var(--mono);color:var(--green)}.dock{grid-column:1;grid-row:auto;padding:12px;display:grid;grid-template-columns:1.1fr .9fr;gap:12px}.command{border:1px solid rgba(63,246,255,.18);border-radius:14px;background:#02080c;padding:12px}.command input{width:100%;border:0;outline:0;background:transparent;color:var(--ink);font:15px var(--mono)}.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.chip{border:1px solid rgba(63,246,255,.22);border-radius:999px;padding:7px 9px;color:#c9eff4;font:11px var(--mono);cursor:pointer}.chip:hover{background:rgba(63,246,255,.08)}.recommendation{border:1px solid rgba(98,255,178,.25);border-radius:14px;padding:12px;background:linear-gradient(135deg,rgba(98,255,178,.09),rgba(63,246,255,.03))}.recommendation h3{margin:0 0 7px;font-size:13px;color:var(--green)}.recommendation p{margin:0;color:#ccebf0;font-size:12px;line-height:1.4}.table{display:grid;gap:7px}.risk{display:grid;grid-template-columns:1fr 56px;gap:10px;align-items:center;font-size:12px;color:#d7f6fa}.api{font:10px var(--mono);padding:8px;border-radius:10px;background:#02080c;border:1px solid rgba(63,246,255,.16);margin:6px 0;color:#b7e6ee}.api span{color:var(--green)}.scenario-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.scenario-buttons button{background:rgba(63,246,255,.06);color:var(--ink);border:1px solid rgba(63,246,255,.24);border-radius:12px;padding:10px;font:11px var(--mono);cursor:pointer}.scenario-buttons button.active{border-color:var(--green);box-shadow:0 0 18px rgba(98,255,178,.16)}.watermark{position:absolute;right:410px;bottom:168px;color:rgba(255,255,255,.22);font:10px var(--mono);letter-spacing:.12em}.disclaimer{font:10px/1.35 var(--mono);color:#82a6b1}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.spark{height:38px;width:100%}.glow{color:var(--cyan);text-shadow:0 0 14px rgba(63,246,255,.4)}
+  @media(max-width:1200px){body{overflow:auto}.app{height:auto;grid-template-columns:1fr;grid-template-rows:auto}.topbar,.left,.main,.right,.dock{grid-column:1;grid-row:auto}.topbar{grid-template-columns:1fr}.clock{grid-template-columns:repeat(2,1fr)}.main{min-height:720px}.right{grid-template-rows:auto}.map{inset:80px 20px 20px}.dock{grid-template-columns:1fr}}
+  @media (prefers-reduced-motion: reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><div class="sigil"></div><div><div class="eyebrow">UNOS // OPO CUSTOMER FUTURE STATE</div><div class="title">Frontier Transplant Ecosystem Command Center</div><div class="sub">Mock concept: governed, de-identified, human-supervised analytics</div></div></div>
+    <div class="mission"><b>LIVE MISSION FEED</b><div class="ticker" id="ticker">Predictive organ utilization + nonuse root cause + DCD expansion + logistics/drones + data quality + equity access — all under permissioned governance.</div></div>
+    <div class="clock">
+      <div class="metric"><div class="k">OPO Mode</div><div class="v" id="opoName">Mid-Atlantic</div></div>
+      <div class="metric"><div class="k">Organs Active</div><div class="v" id="activeOrgans">17</div></div>
+      <div class="metric"><div class="k">Delay Risk</div><div class="v" id="delayRisk">12%</div></div>
+      <div class="metric"><div class="k">Mission Impact</div><div class="v" id="impactScore">+23</div></div>
+    </div>
+  </header>
+
+  <aside class="left">
+    <section class="panel">
+      <div class="section-title"><h2>Recommended OPO wedge</h2><span class="pill">Top 6</span></div>
+      <div id="usecases"></div>
+    </section>
+    <section class="panel">
+      <div class="section-title"><h2>Predictive scoring</h2><span class="pill">Human governed</span></div>
+      <div class="score-row"><div><b>Yield Recovery Index</b><div class="sub">Expected recovered/transplanted organs vs peer-adjusted opportunity</div></div><span id="yri">87</span></div><div class="bar"><span id="yriBar" style="width:87%"></span></div>
+      <div class="score-row"><div><b>Nonuse Avoidability</b><div class="sub">Actionable drivers separated from donor-quality drivers</div></div><span id="nonuse">41</span></div><div class="bar"><span id="nonuseBar" style="width:41%;background:linear-gradient(90deg,var(--amber),var(--green))"></span></div>
+      <div class="score-row"><div><b>Data Audit Readiness</b><div class="sub">TIEDI completeness, contradictions, late fields</div></div><span id="audit">93</span></div><div class="bar"><span id="auditBar" style="width:93%"></span></div>
+      <div class="score-row"><div><b>Equity Opportunity</b><div class="sub">Access gaps across referral → offer → transplant</div></div><span id="equity">64</span></div><div class="bar"><span id="equityBar" style="width:64%;background:linear-gradient(90deg,var(--violet),var(--cyan))"></span></div>
+    </section>
+    <section class="panel disclaimer">
+      <b>Compliance posture:</b> exploratory mockup only. Uses synthetic data. Position as permissioned, de-identified/aggregated, audit-trailed operational intelligence. Not automated clinical decision-making; clinician and OPO judgment remain controlling.
+    </section>
+  </aside>
+
+  <main class="main">
+    <section class="panel holo">
+      <div class="center-readout"><div class="eyebrow">Current mission probability</div><div class="bigscore"><span id="missionProb">91</span><small>%</small></div><div class="sub" id="missionText">Kidney route stabilized after drone handoff. Robotic OR API window aligned.</div></div>
+      <div class="map" id="map">
+        <div class="route" style="left:24%;top:31%;width:34%;transform:rotate(12deg)"></div>
+        <div class="route" style="left:46%;top:51%;width:31%;transform:rotate(-18deg)"></div>
+        <div class="route" style="left:31%;top:70%;width:41%;transform:rotate(-6deg)"></div>
+        <div class="node big" style="left:22%;top:30%"></div><div class="node" style="left:57%;top:38%"></div><div class="node warn" style="left:45%;top:66%"></div><div class="node" style="left:78%;top:42%"></div>
+        <div class="organ" style="left:35%;top:38%" data-label="LIVER // NRP Pathway"><span class="num" id="liverScore">94</span></div>
+        <div class="organ" style="left:59%;top:55%;animation-delay:.8s" data-label="KIDNEY // Drone Chain"><span class="num" id="kidneyScore">89</span></div>
+        <div class="organ" style="left:18%;top:58%;animation-delay:1.5s" data-label="HEART // Robot OR API"><span class="num" id="heartScore">76</span></div>
+        <div class="drone"></div><div class="robot-arm"></div>
+        <div class="tag" style="left:62%;top:20%">DRONE ETA: <span class="glow" id="droneEta">18m</span><br>Chain-of-custody verified</div>
+        <div class="tag" style="right:22px;bottom:18px">SURGICAL ROBOT API<br><span class="glow" id="robotStatus">OR slot held · sterile prep synced</span></div>
+        <div class="tag" style="left:22px;bottom:18px">DCD/NRP TWIN<br><span class="glow" id="dcdTwin">Agonal window risk low</span></div>
+      </div>
+      <div class="watermark">SYNTHETIC CONCEPT DEMO // NOT REAL PATIENT DATA</div>
+    </section>
+    <section class="dock">
+      <div class="command"><div class="eyebrow">Command layer</div><input id="cmd" value="/simulate reduce cold ischemia risk by 20% and re-route kidney via drone corridor" /><div class="chips"><span class="chip" data-cmd="/show top nonuse drivers by donor profile and center behavior">Nonuse drivers</span><span class="chip" data-cmd="/forecast DCD expansion impact over 90 days">DCD forecast</span><span class="chip" data-cmd="/audit missing TIEDI fields before submission">Data audit</span><span class="chip" data-cmd="/match robot OR API windows with organ ETA">Robot OR sync</span></div></div>
+      <div class="recommendation"><h3 id="recTitle">Recommendation: lead with OPO Performance Command Center</h3><p id="recText">Bundle OPO Yield Intelligence + Nonuse Root-Cause + Logistics Optimization as the premium front door. Add Data Quality Copilot as the trust/burden reducer, then layer DCD Expansion and Equity Analytics as transformation modules.</p></div>
+    </section>
+  </main>
+
+  <aside class="right">
+    <section class="panel">
+      <div class="section-title"><h2>Executive performance board</h2><span class="pill" id="scenarioLabel">Baseline</span></div>
+      <div class="cards"><div class="card"><div class="label">Potential organs saved / yr</div><div class="value" id="saved">42</div><div class="delta">+18% vs baseline</div></div><div class="card"><div class="label">Avoidable nonuse</div><div class="value" id="avoidable">31%</div><div class="delta bad">Focus: biopsy + logistics</div></div><div class="card"><div class="label">Audit burden reduced</div><div class="value" id="burden">38%</div><div class="delta">TIEDI copilot</div></div></div>
+      <svg class="spark" viewBox="0 0 340 44" preserveAspectRatio="none"><polyline id="spark" fill="none" stroke="#62ffb2" stroke-width="3" points="0,34 40,31 80,29 120,21 160,25 200,16 240,11 280,12 340,6"/><polyline fill="none" stroke="rgba(63,246,255,.25)" stroke-width="1" points="0,39 340,39"/></svg>
+      <div class="scenario-buttons"><button class="active" data-scenario="baseline">Baseline</button><button data-scenario="drone">Drone + API</button><button data-scenario="dcd">DCD/NRP push</button></div>
+    </section>
+    <section class="panel">
+      <div class="section-title"><h2>Live root-cause engine</h2><span class="pill">Explainable</span></div>
+      <div class="table" id="risks"></div>
+    </section>
+    <section class="panel">
+      <div class="section-title"><h2>API constellation</h2><span class="pill">Future state</span></div>
+      <div class="api">DonorNet Event Stream <span>CONNECTED</span></div><div class="api">TransNet Logistics Twin <span>SYNCED</span></div><div class="api">Drone Corridor API <span>SANDBOX</span></div><div class="api">Surgical Robot OR Scheduler <span>READ-ONLY</span></div><div class="api">TIEDI Data Quality Copilot <span>PRE-SUBMIT</span></div>
+    </section>
+  </aside>
+</div>
+<script>
+const usecases=[
+ {name:'OPO Yield Intelligence',desc:'Referral → authorization → recovery → placement leak map; strongest OPO wedge.',score:95},
+ {name:'Nonuse Root-Cause Dashboard',desc:'Separates donor quality, center behavior, logistics, data quality, process drivers.',score:93},
+ {name:'Organ Logistics Optimization',desc:'Predict delay risk; coordinate drones, couriers, perfusion, OR readiness.',score:90},
+ {name:'Data Quality Copilot',desc:'Pre-submit TIEDI audit, contradictions, missing fields, MPSC/SRTR readiness.',score:86},
+ {name:'DCD Expansion Intelligence',desc:'Digital twin for DCD/NRP pathways, perfusion evidence, process standardization.',score:84},
+ {name:'Equity / Access Analytics',desc:'Mission module surfacing access gaps and targeted intervention opportunities.',score:78}
+];
+const riskSets={baseline:[['Logistics handoff delay',72,'amber'],['Center-specific decline conservatism',64,'cyan'],['Biopsy turnaround variance',58,'amber'],['Incomplete donor-management fields',22,'green'],['Equity access gap: rural referral lag',46,'violet']],drone:[['Drone weather corridor risk',28,'green'],['Robot OR API schedule mismatch',18,'green'],['Cold ischemia overrun probability',9,'green'],['Chain-of-custody exception',4,'green'],['Center acceptance window expiring',36,'cyan']],dcd:[['Agonal phase duration risk',42,'amber'],['NRP team readiness',14,'green'],['Perfusion device availability',31,'cyan'],['Family authorization timing',53,'amber'],['Recipient backup pathway gap',38,'cyan']]};
+const scenarios={baseline:{label:'Baseline',saved:42,avoidable:'31%',burden:'38%',prob:91,delay:'12%',impact:'+23',drone:'18m',robot:'OR slot held · sterile prep synced',dcd:'Agonal window risk low',mission:'Kidney route stabilized after drone handoff. Robotic OR API window aligned.',scores:[94,89,76],yri:87,nonuse:41,audit:93,equity:64},drone:{label:'Drone + API',saved:57,avoidable:'24%',burden:'41%',prob:96,delay:'7%',impact:'+38',drone:'11m',robot:'Robot API confirms wheels-in → incision window',dcd:'No DCD exception',mission:'Autonomous route optimization cut projected cold ischemia by 22%. OR robot slot automatically protected.',scores:[96,97,83],yri:92,nonuse:35,audit:95,equity:67},dcd:{label:'DCD/NRP push',saved:68,avoidable:'27%',burden:'35%',prob:88,delay:'15%',impact:'+44',drone:'22m',robot:'Perfusion-first OR sequence recommended',dcd:'NRP digital twin recommends proceed',mission:'DCD expansion model identifies 9 incremental viable organs this quarter with controlled risk.',scores:[91,84,80],yri:89,nonuse:37,audit:90,equity:70}};
+function renderUsecases(){const el=document.getElementById('usecases');el.innerHTML=usecases.map((u,i)=>`<div class="usecase ${i==0?'active':''}" data-i="${i}"><div class="name">${i+1}. ${u.name} <span class="pill">${u.score}</span></div><div class="desc">${u.desc}</div></div>`).join('');el.querySelectorAll('.usecase').forEach(x=>x.onclick=()=>{el.querySelectorAll('.usecase').forEach(y=>y.classList.remove('active'));x.classList.add('active');const u=usecases[x.dataset.i];document.getElementById('recTitle').textContent='Selected module: '+u.name;document.getElementById('recText').textContent=u.desc+' Recommended packaging: executive dashboard view + 90-day diagnostic + advisory operating cadence.'})}
+function renderRisks(kind='baseline'){const el=document.getElementById('risks');el.innerHTML=riskSets[kind].map(([n,v,c])=>`<div class="risk"><div>${n}<div class="bar"><span style="width:${v}%;background:${c==='amber'?'linear-gradient(90deg,var(--amber),var(--red))':c==='violet'?'linear-gradient(90deg,var(--violet),var(--cyan))':'linear-gradient(90deg,var(--cyan),var(--green))'}"></span></div></div><b>${v}</b></div>`).join('')}
+function setScenario(kind){const s=scenarios[kind];document.querySelectorAll('.scenario-buttons button').forEach(b=>b.classList.toggle('active',b.dataset.scenario===kind));document.getElementById('scenarioLabel').textContent=s.label;['saved','avoidable','burden'].forEach(id=>document.getElementById(id).textContent=s[id]);document.getElementById('missionProb').textContent=s.prob;document.getElementById('delayRisk').textContent=s.delay;document.getElementById('impactScore').textContent=s.impact;document.getElementById('droneEta').textContent=s.drone;document.getElementById('robotStatus').textContent=s.robot;document.getElementById('dcdTwin').textContent=s.dcd;document.getElementById('missionText').textContent=s.mission;document.getElementById('liverScore').textContent=s.scores[0];document.getElementById('kidneyScore').textContent=s.scores[1];document.getElementById('heartScore').textContent=s.scores[2];['yri','nonuse','audit','equity'].forEach(id=>{document.getElementById(id).textContent=s[id];document.getElementById(id+'Bar').style.width=s[id]+'%'});renderRisks(kind)}
+function boot(){renderUsecases();renderRisks();document.querySelectorAll('.scenario-buttons button').forEach(b=>b.onclick=()=>setScenario(b.dataset.scenario));document.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{document.getElementById('cmd').value=c.dataset.cmd;document.getElementById('ticker').textContent='Command queued: '+c.dataset.cmd+' // synthetic simulation only // requires governed API sandbox.'});setInterval(()=>{const active=17+Math.floor(Math.random()*4)-1;document.getElementById('activeOrgans').textContent=active;},2800)}
+boot();
+</script>
+</body>
+</html>

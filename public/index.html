@@ -889,6 +889,135 @@
       }
     }
 
+    /* ── FEATURED ARTIFACT TILE ── */
+    .artifact-feature {
+      padding: clamp(2.5rem, 6vw, 4rem) 0;
+      background:
+        radial-gradient(circle at 82% 12%, rgba(15,110,86,0.14), transparent 28%),
+        linear-gradient(180deg, rgba(13,13,11,0.02), rgba(13,13,11,0));
+    }
+
+    .artifact-card {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+      gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: stretch;
+      padding: clamp(1.5rem, 4vw, 2rem);
+      border: 1px solid var(--rule-strong);
+      background: rgba(246,240,232,0.7);
+      box-shadow: 0 24px 70px rgba(13,13,11,0.08);
+    }
+
+    .artifact-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(15,110,86,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(15,110,86,0.055) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: radial-gradient(circle at 78% 42%, #000, transparent 62%);
+      pointer-events: none;
+    }
+
+    .artifact-copy,
+    .artifact-preview { position: relative; z-index: 1; }
+
+    .artifact-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .artifact-copy h2 { max-width: 640px; }
+    .artifact-copy p { max-width: 620px; }
+
+    .artifact-links {
+      display: flex;
+      gap: 0.9rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 0.25rem;
+    }
+
+    .artifact-preview {
+      min-height: 300px;
+      border: 1px solid rgba(13,13,11,0.18);
+      background: #05080b;
+      color: #e9fbff;
+      padding: 1rem;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 0.9rem;
+      box-shadow: inset 0 0 0 1px rgba(63,246,255,0.16), 0 0 50px rgba(15,110,86,0.18);
+    }
+
+    .artifact-preview-top,
+    .artifact-preview-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(233,251,255,0.62);
+    }
+
+    .artifact-preview-grid {
+      position: relative;
+      border: 1px solid rgba(63,246,255,0.20);
+      background:
+        radial-gradient(circle at 50% 45%, rgba(63,246,255,0.18), transparent 26%),
+        linear-gradient(rgba(63,246,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(63,246,255,0.05) 1px, transparent 1px);
+      background-size: auto, 28px 28px, 28px 28px;
+      min-height: 210px;
+      overflow: hidden;
+    }
+
+    .artifact-preview-score {
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      font-family: var(--sans);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      color: #62ffb2;
+      text-shadow: 0 0 20px rgba(98,255,178,0.45);
+    }
+
+    .artifact-preview-node {
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      border-radius: 999px;
+      border: 1px solid rgba(63,246,255,0.7);
+      box-shadow: 0 0 26px rgba(63,246,255,0.22);
+      background: radial-gradient(circle, rgba(63,246,255,0.28), rgba(63,246,255,0.04) 68%);
+    }
+
+    .artifact-preview-node.one { right: 18%; top: 20%; }
+    .artifact-preview-node.two { right: 34%; bottom: 16%; width: 76px; height: 76px; }
+    .artifact-preview-node.three { right: 8%; bottom: 28%; width: 42px; height: 42px; border-color: rgba(255,209,102,0.85); }
+
+    .artifact-preview-route {
+      position: absolute;
+      height: 1px;
+      width: 48%;
+      right: 8%;
+      top: 48%;
+      background: linear-gradient(90deg, transparent, #3ff6ff, transparent);
+      transform: rotate(-12deg);
+      box-shadow: 0 0 12px rgba(63,246,255,0.6);
+    }
+
+    @media (max-width: 860px) {
+      .artifact-card { grid-template-columns: 1fr; }
+      .artifact-preview { min-height: 260px; }
+    }
+
     /* ── UTILITIES ── */
     .mt-sm  { margin-top: 0.75rem; }
     .mt-md  { margin-top: 1.5rem; }
@@ -907,6 +1036,7 @@
         <li><a href="#practices">Practices</a></li>
         <li><a href="#hfos">HealthFounderOS</a></li>
         <li><a href="/portfolio/">Case Studies</a></li>
+        <li><a href="/UNOS/?next=dashboard">UNOS Demo</a></li>
         <li><a href="#who">About</a></li>
         <li><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="nav-cta">Book a call ↗</a></li>
       </ul>
@@ -985,6 +1115,38 @@
       </div>
     </div>
   </div>
+
+  <hr class="rule" />
+
+  <!-- FEATURED ARTIFACT -->
+  <section class="artifact-feature" id="featured-artifact">
+    <div class="container">
+      <div class="artifact-card">
+        <div class="artifact-copy">
+          <span class="label">Featured frontier analytics prototype</span>
+          <h2>UNOS OPO Command Center — a future-state transplant ecosystem dashboard.</h2>
+          <p>
+            A synthetic, interactive concept showing how permissioned UNOS intelligence could help an OPO see yield, nonuse root causes, logistics risk, data quality, DCD expansion, equity opportunities, drone corridors, and surgical robot API alignment in one operating surface.
+          </p>
+          <div class="artifact-links">
+            <a href="/UNOS/?next=dashboard" class="btn-primary">Open private demo portal ↗</a>
+            <a href="/UNOS/" class="btn-ghost">Review protected materials →</a>
+          </div>
+        </div>
+        <a href="/UNOS/?next=dashboard" class="artifact-preview" aria-label="Open the protected UNOS OPO Command Center demo portal">
+          <div class="artifact-preview-top"><span>OPO Future State</span><span>Human governed</span></div>
+          <div class="artifact-preview-grid">
+            <div class="artifact-preview-score">91%</div>
+            <div class="artifact-preview-route"></div>
+            <div class="artifact-preview-node one"></div>
+            <div class="artifact-preview-node two"></div>
+            <div class="artifact-preview-node three"></div>
+          </div>
+          <div class="artifact-preview-bottom"><span>Yield · Nonuse · Logistics</span><span>Drones + Robot APIs</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <hr class="rule" />
 
@@ -1281,6 +1443,7 @@
           <li><a href="#practices">Practices</a></li>
           <li><a href="#hfos">HealthFounderOS</a></li>
           <li><a href="/portfolio/">Case Studies</a></li>
+          <li><a href="/UNOS/?next=dashboard">UNOS Demo</a></li>
           <li><a href="#who">About</a></li>
           <li><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book a call ↗</a></li>
         </ul>
@@ -1312,6 +1475,10 @@
       });
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
     reveals.forEach(el => observer.observe(el));
+    // Fail-safe: never leave content invisible if IntersectionObserver does not fire in a browser, screenshot, or crawler context.
+    window.addEventListener('load', () => {
+      window.setTimeout(() => reveals.forEach(el => el.classList.add('visible')), 1200);
+    });
   </script>
 
 </body>
