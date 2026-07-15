@@ -392,36 +392,17 @@
       aspect-ratio: 16 / 9;
     }
 
-    .hfos-video-frame video,
-    .hfos-video-placeholder {
+    .hfos-video-frame iframe,
+    .hfos-video-frame video {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
     }
 
-    .hfos-video-placeholder {
-      position: absolute;
-      inset: 0;
-      background: url('/media/healthfounderos-poster.svg') center / cover no-repeat;
+    .hfos-video-frame iframe {
+      border: 0;
     }
-
-    .hfos-video-placeholder::after {
-      content: 'Video placeholder — add the final MP4';
-      position: absolute;
-      left: 1rem;
-      bottom: 1rem;
-      padding: 0.55rem 0.8rem;
-      border: 1px solid rgba(246,240,232,0.18);
-      border-radius: 999px;
-      color: rgba(246,240,232,0.82);
-      background: rgba(13,13,11,0.48);
-      font-size: 0.72rem;
-      letter-spacing: 0.02em;
-    }
-
-    .hfos-video-frame.has-video .hfos-video-placeholder { display: none; }
-    .hfos-video-frame:not(.has-video) video { display: none; }
 
     .hfos-video-copy {
       display: flex;
@@ -1142,17 +1123,19 @@
 
         <div class="hfos-video-card reveal">
           <div class="hfos-video-frame" id="hfos-video-frame">
-            <div class="hfos-video-placeholder" aria-label="HealthFounderOS video placeholder"></div>
-            <video id="hfos-video" controls playsinline preload="metadata" poster="/media/healthfounderos-poster.svg">
-              <source src="/media/healthfounderos-feature.mp4" type="video/mp4" />
-              Your browser does not support embedded video.
-            </video>
+            <iframe
+              id="hfos-video"
+              src="https://www.youtube-nocookie.com/embed/p7GP5_WNAP4?rel=0&modestbranding=1"
+              title="HealthFounderOS featured video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
           </div>
           <div class="hfos-video-copy">
             <span class="label" style="color: rgba(246,240,232,0.4);">Featured video</span>
             <h3>See how HealthFounderOS turns strategy into shipped work.</h3>
-            <p>A featured video belongs here: prominent enough to explain the operating system, but still downstream from the hero CTA so high-intent visitors can book immediately.</p>
-            <div class="hfos-video-note">Suggested video: the strongest 60–180 second HealthFounderOS walkthrough, masterclass excerpt, or founder-facing demo.</div>
+            <p>Watch the featured HealthFounderOS video directly on the page, then use the operating-system framework below to see how strategy becomes repeatable commercial execution.</p>
+            <div class="hfos-video-note">Embedded from YouTube for easy streaming on desktop and mobile.</div>
           </div>
         </div>
 
@@ -1419,17 +1402,6 @@
   </footer>
 
   <script>
-    // Only show the embedded video player when the final MP4 exists.
-    const hfosVideoFrame = document.getElementById('hfos-video-frame');
-    const hfosVideo = document.getElementById('hfos-video');
-    if (hfosVideoFrame && hfosVideo) {
-      fetch('/media/healthfounderos-feature.mp4', { method: 'HEAD' })
-        .then(response => {
-          if (response.ok) hfosVideoFrame.classList.add('has-video');
-        })
-        .catch(() => {});
-    }
-
     // Scroll reveal
     const reveals = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
