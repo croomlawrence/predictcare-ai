@@ -1,32 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/unos",
-      "destination": "/UNOS",
-      "permanent": true
-    },
-    {
-      "source": "/unos/:path*",
-      "destination": "/UNOS/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
-    {
-      "source": "/UNOS/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive"
-        },
-        {
-          "key": "Cache-Control",
-          "value": "no-store"
-        }
-      ]
-    },
     {
       "source": "/(.*)",
       "headers": [
