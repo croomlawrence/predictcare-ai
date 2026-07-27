@@ -1,1 +1,114 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>HealthFounderOS Scorecard — PredictCare.AI</title><meta name="description" content="Free healthcare AI readiness scorecard for HealthFounderOS."><meta property="og:title" content="HealthFounderOS Scorecard — PredictCare.AI"><meta property="og:description" content="Free healthcare AI readiness scorecard for HealthFounderOS."><meta property="og:type" content="website"><meta property="og:url" content="https://predictcare.ai/scorecard/"><meta property="og:image" content="https://predictcare.ai/og-image.png"><link rel="canonical" href="https://predictcare.ai/scorecard/"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/hfos.css"></head><body><nav class="nav"><div class="navin"><a class="brand" href="/">PredictCare.AI</a><div class="links"><a href="/healthfounderos">HealthFounderOS</a><a href="/solutions">Solutions</a><a href="/tools">Tools</a><a href="/learning">Learning</a><a href="/community">Community</a><a href="/pricing">Pricing</a><a class="btn" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book a call ↗</a></div></div></nav><header class="hero"><div class="wrap"><span class="kicker">Free tool</span><h1>HealthFounderOS Scorecard.</h1><p class="lede">Get a quick read on where your healthcare organization is ready for AI — and where resistance or governance gaps may slow you down. No PHI needed.</p></div></header><section><div class="wrap"><div class="grid2"><div><h2>Score your readiness.</h2><p>Use 1 = weak / unclear and 5 = strong / ready. Your score appears instantly in-browser; nothing is submitted.</p><div id="score"></div><div class="result" id="result">Total: 0 / 40</div><div class="actions"><a class="btn" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Review my score with Croom ↗</a></div></div><div class="module"><h3>Dimensions</h3><ul class="list"><li>Strategy clarity</li><li>Workflow readiness</li><li>Data/tool fragmentation</li><li>Team resistance</li><li>Governance/compliance</li><li>Growth pipeline</li><li>Patient/customer access</li><li>Reporting cadence</li></ul></div></div></div></section><script>const items=['Strategy clarity','Workflow readiness','Data/tool fragmentation','Team resistance','Governance/compliance','Growth pipeline','Patient/customer access','Reporting cadence']; const box=document.getElementById('score'); items.forEach((x,i)=>box.insertAdjacentHTML('beforeend',`<div class="scorebox"><label>${x}: <span id="v${i}">3</span></label><input type="range" min="1" max="5" value="3" oninput="v${i}.textContent=this.value;calc()"></div>`)); function calc(){let t=[...document.querySelectorAll('input[type=range]')].reduce((a,b)=>a+Number(b.value),0); let msg=t<20?'Early: start with scorecard review and one low-risk workflow.':t<30?'Emerging: ready for an AI Workflow Assessment.':'Ready: consider a Sprint or Fractional AI Officer engagement.'; result.textContent=`Total: ${t} / 40 — ${msg}`} calc();</script><footer class="footer"><div class="footin"><strong>PredictCare.AI</strong><span>HealthFounderOS for healthcare companies.</span><span>Educational and commercial operations support only; not medical advice, diagnosis, treatment, or clinical decision support.</span></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HealthFounderOS Scorecard — PredictCare.AI</title>
+  <meta name="description" content="Free healthcare AI readiness scorecard for HealthFounderOS. Score your AI readiness and send the result to PredictCare.AI for recommended next steps.">
+  <meta property="og:title" content="HealthFounderOS Scorecard — PredictCare.AI">
+  <meta property="og:description" content="Score where your healthcare organization is ready for AI — and where resistance, workflow fragmentation, or governance gaps will slow you down.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://predictcare.ai/scorecard/">
+  <meta property="og:image" content="https://predictcare.ai/og-image.png">
+  <link rel="canonical" href="https://predictcare.ai/scorecard/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/hfos.css">
+  <style>
+    .lead-form{display:grid;gap:14px;margin-top:18px}.lead-form label{font-weight:800}.lead-form input,.lead-form select,.lead-form textarea{width:100%;font:inherit;border:1px solid var(--line);border-radius:12px;background:#fffdf8;padding:13px}.lead-form textarea{min-height:96px}.route{border-left:5px solid var(--teal);padding:18px;background:rgba(15,143,114,.08);margin-top:18px}.small{font-size:13px;color:var(--muted)}.button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.scorebox input{accent-color:var(--teal)}
+  </style>
+</head>
+<body>
+  <nav class="nav"><div class="navin"><a class="brand" href="/">PredictCare.AI</a><div class="links"><a href="/healthfounderos">HealthFounderOS</a><a href="/solutions">Solutions</a><a href="/tools">Tools</a><a href="/learning">Learning</a><a href="/community">Community</a><a href="/pricing">Pricing</a><a class="btn" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book a call ↗</a></div></div></nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="kicker">Free lead diagnostic</span>
+      <h1>HealthFounderOS Scorecard.</h1>
+      <p class="lede">Score where your healthcare organization is ready for AI — and where resistance, workflow fragmentation, or governance gaps will slow you down. No PHI. No patient-specific information.</p>
+      <div class="actions"><a class="btnY" href="#scorecard">Score readiness →</a><a class="btn2" href="#send">Send your result</a></div>
+    </div>
+  </header>
+
+  <section id="scorecard">
+    <div class="wrap">
+      <div class="grid2">
+        <div>
+          <span class="kicker">Step 1</span>
+          <h2>Score your readiness.</h2>
+          <p>Use 1 = weak / unclear and 5 = strong / ready. Your score updates instantly.</p>
+          <div id="score"></div>
+          <div class="result" id="result">Total: 0 / 40</div>
+          <div class="route" id="route">Complete the scorecard to see the recommended next step.</div>
+        </div>
+        <div class="module" id="send">
+          <span class="kicker">Step 2</span>
+          <h2>Send the score to Croom.</h2>
+          <p>Enter basic business context, then open a pre-filled email with your score and recommended next step. This static page does not collect PHI or silently store submissions.</p>
+          <form class="lead-form" onsubmit="return false;">
+            <label>Name<input id="name" autocomplete="name" placeholder="Your name"></label>
+            <label>Email<input id="email" type="email" autocomplete="email" placeholder="you@company.com"></label>
+            <label>Organization<input id="org" autocomplete="organization" placeholder="Company / practice / nonprofit"></label>
+            <label>Segment<select id="segment"><option>Healthcare startup</option><option>Physician specialty practice</option><option>DTC health business</option><option>B2B healthcare company</option><option>Payer / hospital / ACO</option><option>BioPharma / medtech</option><option>Health nonprofit</option><option>Other healthcare organization</option></select></label>
+            <label>Biggest AI question right now<textarea id="question" placeholder="Example: Where should we use AI first without creating compliance or staff adoption risk?"></textarea></label>
+          </form>
+          <div class="button-row">
+            <a class="btnY" id="mailto" href="mailto:croom@predictcare.ai?subject=HealthFounderOS%20Scorecard%20Review">Send score to Croom ↗</a>
+            <button class="btn2" id="copy" type="button">Copy score summary</button>
+            <a class="btn" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book review call ↗</a>
+          </div>
+          <p class="small" id="copied"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="darksec">
+    <div class="wrap">
+      <span class="kicker">What happens next</span>
+      <h2>Your score routes you to the lightest useful next step.</h2>
+      <div class="grid3">
+        <div class="card"><span class="badge">Early</span><h3>Free tools / workshop</h3><p>If readiness is low, start with a low-risk workflow, the checklist, or the $100 Healthcare AI Shift workshop.</p></div>
+        <div class="card"><span class="badge">Emerging</span><h3>AI Workflow Assessment</h3><p>If the organization has a clear pain point but needs prioritization and guardrails, start with the $999 diagnostic.</p></div>
+        <div class="card"><span class="badge">Ready</span><h3>Sprint or Fractional AI Officer</h3><p>If readiness is high, move into a HealthFounderOS Sprint or Fractional AI Officer engagement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="footin"><strong>PredictCare.AI</strong><span>HealthFounderOS for healthcare companies.</span><span>Educational and commercial operations support only; not medical advice, diagnosis, treatment, or clinical decision support.</span></div></footer>
+
+<script>
+const items=['Strategy clarity','Workflow readiness','Data/tool fragmentation','Team resistance','Governance/compliance','Growth pipeline','Patient/customer access','Reporting cadence'];
+const box=document.getElementById('score');
+items.forEach((x,i)=>box.insertAdjacentHTML('beforeend',`<div class="scorebox"><label>${x}: <span id="v${i}">3</span></label><input aria-label="${x}" type="range" min="1" max="5" value="3" oninput="document.getElementById('v${i}').textContent=this.value;calc()"></div>`));
+function scoreValues(){return [...document.querySelectorAll('#score input[type=range]')].map((el,i)=>({name:items[i],value:Number(el.value)}));}
+function recommendation(total){
+  if(total<20) return {tier:'Early', next:'Start with the Healthcare AI Workflow Checklist or $100 Healthcare AI Shift workshop.', path:'/healthcare-ai-checklist/'};
+  if(total<30) return {tier:'Emerging', next:'Book the $999 AI Workflow Assessment to choose the first governed workflow and 90-day roadmap.', path:'/ai-workflow-assessment/'};
+  return {tier:'Ready', next:'Consider a HealthFounderOS Sprint or Fractional AI Officer engagement.', path:'/healthfounderos-sprint/'};
+}
+function summary(){
+  const values=scoreValues(); const total=values.reduce((a,b)=>a+b.value,0); const rec=recommendation(total);
+  const details=values.map(x=>`${x.name}: ${x.value}/5`).join('\n');
+  const leadName=document.getElementById('name').value||'';
+  const leadEmail=document.getElementById('email').value||'';
+  const leadOrg=document.getElementById('org').value||'';
+  const leadSegment=document.getElementById('segment').value||'';
+  const leadQuestion=document.getElementById('question').value||'';
+  return `HealthFounderOS Scorecard Submission\n\nName: ${leadName}\nEmail: ${leadEmail}\nOrganization: ${leadOrg}\nSegment: ${leadSegment}\n\nScore: ${total}/40\nReadiness tier: ${rec.tier}\nRecommended next step: ${rec.next}\n\nDimension scores:\n${details}\n\nBiggest AI question:\n${leadQuestion}\n\nGuardrail: no PHI or patient-specific information included.`;
+}
+function calc(){
+  const total=scoreValues().reduce((a,b)=>a+b.value,0); const rec=recommendation(total);
+  result.textContent=`Total: ${total} / 40 — ${rec.tier}`;
+  route.innerHTML=`<strong>Recommended next step:</strong> ${rec.next} <br><a href="${rec.path}">View recommended path →</a>`;
+  const leadOrg=document.getElementById('org').value||'';
+  const subject=encodeURIComponent(`HealthFounderOS Scorecard Review — ${leadOrg || 'Healthcare organization'} — ${total}/40`);
+  mailto.href=`mailto:croom@predictcare.ai?subject=${subject}&body=${encodeURIComponent(summary())}`;
+}
+['name','email','org','segment','question'].forEach(id=>document.getElementById(id).addEventListener('input',calc));
+document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(summary()); copied.textContent='Score summary copied. Paste it into email, LinkedIn, or Slack.'}catch(e){copied.textContent='Copy failed — use the Send score button instead.'}});
+calc();
+</script>
+</body>
+</html>
