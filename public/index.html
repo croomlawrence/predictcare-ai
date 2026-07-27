@@ -3,1454 +3,247 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PredictCare.ai — Fractional Chief Commercial & Marketing Officer for healthcare CEOs</title>
-  <meta name="description" content="For healthcare CEOs who've outgrown the agency, can't afford a full-time hire, and don't want another strategy deck. PredictCare.ai pairs forward-looking CCO/CMO judgment with AI-amplified execution — because LLMs look backward, but your commercial leader has to lead forward." />
+  <title>PredictCare.ai — Fractional AI Officer for Healthcare Companies</title>
+  <meta name="description" content="PredictCare.ai helps healthcare companies move from scattered AI tools to governed AI workflows for growth, operations, patient/customer access, and decision-making. Fractional AI Officer for healthcare startups, specialty practices, DTC, B2B, payers, hospitals, ACOs, BioPharma, medtech, and health nonprofits." />
   <meta name="author" content="PredictCare.ai" />
-  <meta property="og:title" content="Fractional Chief Commercial & Marketing Officer for healthcare CEOs" />
-  <meta property="og:description" content="For healthcare CEOs who've outgrown the agency, can't afford a full-time hire, and don't want another strategy deck. Forward-looking commercial leadership, AI-amplified execution." />
+  <meta property="og:title" content="Fractional AI Officer for Healthcare Companies" />
+  <meta property="og:description" content="Move from scattered AI tools to governed AI workflows. Start with one workflow. Govern it. Prove value. Scale what works." />
   <meta property="og:image" content="https://predictcare.ai/og-image.png" />
   <meta property="og:url" content="https://predictcare.ai/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Fractional Chief Commercial & Marketing Officer for healthcare CEOs" />
-  <meta name="twitter:description" content="LLMs look backward. PredictCare.ai gives healthcare CEOs a forward-looking fractional CCO/CMO who can lead the commercial path ahead." />
+  <meta name="twitter:title" content="Fractional AI Officer for Healthcare Companies" />
+  <meta name="twitter:description" content="Governed AI workflows for healthcare growth, operations, patient/customer access, and decision-making." />
   <meta name="twitter:image" content="https://predictcare.ai/og-image.png" />
   <meta name="theme-color" content="#f6f0e8" />
   <link rel="canonical" href="https://predictcare.ai/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --cream:       #f6f0e8;
-      --cream-dark:  #ede5d8;
-      --ink:         #0d0d0b;
-      --ink-mid:     #2a2a25;
-      --ink-soft:    #5a5a52;
-      --ink-faint:   #9a9a8e;
-      --teal:        #0f6e56;
-      --teal-mid:    #1d9e75;
-      --teal-light:  #e1f5ee;
-      --rule:        rgba(13,13,11,0.10);
-      --rule-strong: rgba(13,13,11,0.20);
-      --serif:       'Playfair Display', Georgia, serif;
-      --sans:        'DM Sans', system-ui, sans-serif;
-      --max:         1120px;
-      --pad:         clamp(1.25rem, 5vw, 3rem);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--cream);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    /* ── GRAIN OVERLAY ── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.4;
-    }
-
-    /* ── TYPOGRAPHY ── */
-    h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; line-height: 1.15; }
-    h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); }
-    h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
-    h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
-    p  { color: var(--ink-soft); line-height: 1.75; }
-
-    em { font-style: italic; color: var(--ink); }
-    strong { font-weight: 500; color: var(--ink); }
-
-    a { color: inherit; text-decoration: none; }
-
-    .label {
-      font-family: var(--sans);
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-
-    /* ── LAYOUT ── */
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-    .rule      { border: none; border-top: 1px solid var(--rule); }
-
-    /* ── NAV ── */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(246,240,232,0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--rule);
-    }
-
-    .nav-inner {
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 0 var(--pad);
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--ink);
-      letter-spacing: -0.01em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      font-size: 0.82rem;
-      font-weight: 400;
-      color: var(--ink-soft);
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: var(--ink); }
-
-    .nav-cta {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--cream) !important;
-      background: var(--ink);
-      padding: 0.45rem 1.1rem;
-      border-radius: 2px;
-      transition: background 0.2s, opacity 0.2s;
-      white-space: nowrap;
-    }
-    .nav-cta:hover { background: var(--teal) !important; }
-
-    @media (max-width: 640px) {
-      .nav-links li:not(:last-child) { display: none; }
-    }
-
-    /* ── HERO ── */
-    .hero {
-      padding: clamp(4rem, 10vw, 8rem) 0 clamp(3rem, 8vw, 6rem);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      margin-bottom: 2rem;
-      animation: fadeUp 0.6s ease both;
-    }
-
-    .hero-eyebrow-line {
-      width: 32px;
-      height: 1px;
-      background: var(--teal);
-    }
-
-    .hero-headline {
-      max-width: 820px;
-      margin-bottom: 1.5rem;
-      animation: fadeUp 0.7s 0.1s ease both;
-    }
-
-    .hero-headline em {
-      font-style: italic;
-      color: var(--teal);
-    }
-
-    .hero-sub {
-      max-width: 560px;
-      font-size: 1.05rem;
-      color: var(--ink-soft);
-      margin-bottom: 2.5rem;
-      animation: fadeUp 0.7s 0.2s ease both;
-      line-height: 1.7;
-    }
-
-    .hero-credentials {
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      padding: 1.5rem 0;
-      margin-bottom: 2.5rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-      animation: fadeUp 0.7s 0.3s ease both;
-    }
-
-    .hero-credential {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.85rem;
-      font-size: 0.9rem;
-      color: var(--ink-soft);
-      line-height: 1.55;
-    }
-
-    .hero-credential::before {
-      content: '';
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--teal);
-      flex-shrink: 0;
-      margin-top: 0.55rem;
-    }
-
-    .hero-credential strong { color: var(--ink); font-weight: 500; }
-
-    .hero-actions {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      animation: fadeUp 0.7s 0.4s ease both;
-    }
-
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--ink);
-      color: var(--cream);
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 500;
-      padding: 0.75rem 1.5rem;
-      border-radius: 2px;
-      transition: background 0.2s;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-primary:hover { background: var(--teal); }
-
-    .btn-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--sans);
-      font-size: 0.85rem;
-      font-weight: 400;
-      color: var(--ink-soft);
-      border-bottom: 1px solid var(--rule-strong);
-      padding-bottom: 1px;
-      transition: color 0.2s, border-color 0.2s;
-    }
-    .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
-
-    /* Stats strip */
-    .hero-stats {
-      margin-top: 3.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--rule);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1.5rem 2rem;
-      animation: fadeUp 0.7s 0.5s ease both;
-    }
-
-    .stat-num {
-      font-family: var(--serif);
-      font-size: 2.2rem;
-      font-weight: 400;
-      color: var(--ink);
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--ink-faint);
-      line-height: 1.4;
-    }
-
-    /* ── SECTION SHARED ── */
-    section {
-      padding: clamp(3.5rem, 8vw, 6rem) 0;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-      margin-bottom: clamp(2.5rem, 5vw, 4rem);
-    }
-
-    .section-num {
-      font-family: var(--serif);
-      font-size: 0.75rem;
-      font-weight: 400;
-      color: var(--ink-faint);
-      padding-top: 0.35rem;
-      white-space: nowrap;
-    }
-
-    .section-title { max-width: 600px; }
-    .section-title em { color: var(--teal); font-style: italic; }
-
-    /* ── HFOS BAND ── */
-    .hfos-band {
-      background: var(--ink);
-      color: var(--cream);
-      padding: clamp(3rem, 7vw, 5rem) 0;
-    }
-
-    .hfos-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem 4rem;
-      align-items: start;
-    }
-
-    .hfos-left h2 { color: var(--cream); }
-    .hfos-left h2 em { color: var(--teal-mid); font-style: italic; }
-    .hfos-left p  { color: rgba(246,240,232,0.65); margin-top: 1rem; }
-
-    .hfos-loops {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: rgba(246,240,232,0.08);
-      border: 1px solid rgba(246,240,232,0.08);
-      border-radius: 2px;
-    }
-
-    .hfos-loop {
-      background: rgba(246,240,232,0.03);
-      padding: 1.25rem 1.5rem;
-      transition: background 0.2s;
-    }
-    .hfos-loop:hover { background: rgba(246,240,232,0.07); }
-
-    .loop-arrow {
-      font-size: 0.65rem;
-      color: var(--teal-mid);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-    }
-
-    .loop-name {
-      font-family: var(--serif);
-      font-size: 1rem;
-      color: var(--cream);
-      margin-bottom: 0.35rem;
-    }
-
-    .loop-desc {
-      font-size: 0.78rem;
-      color: rgba(246,240,232,0.5);
-      line-height: 1.55;
-    }
-
-
-
-    .hfos-video-card {
-      grid-column: 1 / -1;
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
-      gap: 1.5rem;
-      align-items: stretch;
-      background: rgba(246,240,232,0.045);
-      border: 1px solid rgba(246,240,232,0.12);
-      border-radius: 3px;
-      padding: clamp(1rem, 3vw, 1.35rem);
-      margin-top: 0.25rem;
-    }
-
-    .hfos-video-frame {
-      position: relative;
-      overflow: hidden;
-      border-radius: 3px;
-      background: #050504;
-      border: 1px solid rgba(246,240,232,0.10);
-      aspect-ratio: 16 / 9;
-    }
-
-    .hfos-video-frame iframe,
-    .hfos-video-frame video {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-    }
-
-    .hfos-video-frame iframe {
-      border: 0;
-    }
-
-    .hfos-video-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 0.9rem;
-      padding: 0.5rem;
-    }
-
-    .hfos-video-copy h3 {
-      color: var(--cream);
-      font-size: clamp(1.25rem, 2vw, 1.65rem);
-    }
-
-    .hfos-video-copy p {
-      color: rgba(246,240,232,0.58);
-      font-size: 0.88rem;
-      line-height: 1.65;
-      margin-top: 0;
-    }
-
-    .hfos-video-note {
-      font-size: 0.72rem;
-      color: rgba(246,240,232,0.36);
-      border-top: 1px solid rgba(246,240,232,0.08);
-      padding-top: 0.9rem;
-    }
-
-    .hfos-media {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(246,240,232,0.08);
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .hfos-media-item {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      font-size: 0.8rem;
-      color: rgba(246,240,232,0.5);
-    }
-
-    .media-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal-mid);
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 760px) {
-      .hfos-inner { grid-template-columns: 1fr; }
-      .hfos-video-card { grid-template-columns: 1fr; }
-      .hfos-loops { grid-template-columns: 1fr; }
-    }
-
-    /* ── PRACTICES ── */
-    .practices-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-    }
-
-    .practice-card {
-      background: var(--cream);
-      padding: 2rem 1.75rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      transition: background 0.2s;
-      position: relative;
-    }
-    .practice-card:hover { background: var(--cream-dark); }
-
-    .practice-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--teal);
-    }
-
-    .practice-tag::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--teal);
-    }
-
-    .practice-card h3 { font-size: 1.1rem; }
-    .practice-card p  { font-size: 0.85rem; flex: 1; }
-
-    .practice-link {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--teal);
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      margin-top: 0.5rem;
-      transition: gap 0.2s;
-    }
-    .practice-card:hover .practice-link { gap: 0.6rem; }
-
-    /* ── PROOF ── */
-    .proof-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-bottom: 3rem;
-    }
-
-    .proof-card {
-      border: 1px solid var(--rule-strong);
-      border-radius: 2px;
-      padding: 1.75rem;
-      position: relative;
-    }
-
-    .proof-quote {
-      font-family: var(--serif);
-      font-size: 1rem;
-      font-style: italic;
-      color: var(--ink);
-      line-height: 1.6;
-      margin-bottom: 1.25rem;
-    }
-
-    .proof-quote::before {
-      content: '\201C';
-      font-size: 2.5rem;
-      line-height: 0;
-      vertical-align: -0.7rem;
-      color: var(--teal);
-      margin-right: 0.2rem;
-      font-family: var(--serif);
-    }
-
-    .proof-attr {
-      display: flex;
-      flex-direction: column;
-      gap: 0.2rem;
-    }
-
-    .proof-name { font-size: 0.85rem; font-weight: 500; color: var(--ink); }
-    .proof-role { font-size: 0.78rem; color: var(--ink-faint); }
-
-    .proof-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-    }
-
-    .proof-stat {
-      background: var(--cream);
-      padding: 1.5rem 1.25rem;
-    }
-
-    .proof-stat-num {
-      font-family: var(--serif);
-      font-size: 1.8rem;
-      color: var(--ink);
-      line-height: 1;
-      margin-bottom: 0.35rem;
-    }
-
-    .proof-stat-label { font-size: 0.78rem; color: var(--ink-faint); line-height: 1.4; }
-
-    @media (max-width: 640px) {
-      .proof-grid { grid-template-columns: 1fr; }
-      .proof-stats { grid-template-columns: 1fr 1fr; }
-    }
-
-    /* ── HOW WE WORK ── */
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-    }
-
-    .process-step {
-      background: var(--cream);
-      padding: 2rem 1.75rem;
-    }
-
-    .step-num {
-      font-family: var(--serif);
-      font-size: 2rem;
-      color: var(--rule-strong);
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-
-    .process-step h3 { margin-bottom: 0.65rem; }
-    .process-step p  { font-size: 0.875rem; }
-
-    @media (max-width: 700px) {
-      .process-steps { grid-template-columns: 1fr; }
-    }
-
-    /* ── ABOUT ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
-    .about-sidebar {
-      position: sticky;
-      top: 80px;
-    }
-
-    .about-label-block {
-      border-left: 2px solid var(--teal);
-      padding-left: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .about-label-block .label { margin-bottom: 0.35rem; }
-    .about-label-block h3 { font-size: 1rem; }
-
-    .about-metrics {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-      margin-top: 2rem;
-    }
-
-    .about-metric {
-      background: var(--cream);
-      padding: 1.25rem;
-    }
-
-    .about-metric-num {
-      font-family: var(--serif);
-      font-size: 1.6rem;
-      color: var(--ink);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .about-metric-label { font-size: 0.75rem; color: var(--ink-faint); }
-
-    .about-body p {
-      font-size: 0.95rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .about-body p:last-child { margin-bottom: 0; }
-
-    .about-pull {
-      border-left: 2px solid var(--teal);
-      padding: 1rem 1.25rem;
-      margin: 1.75rem 0;
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--ink);
-      line-height: 1.55;
-    }
-
-    @media (max-width: 760px) {
-      .about-grid { grid-template-columns: 1fr; }
-      .about-sidebar { position: static; }
-    }
-
-    /* ── CTA SECTION ── */
-    .cta-section {
-      background: var(--ink);
-      color: var(--cream);
-      padding: clamp(3.5rem, 8vw, 6rem) 0;
-    }
-
-    .cta-inner {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      gap: 2rem 3rem;
-      align-items: start;
-    }
-
-    .cta-main h2 { color: var(--cream); }
-    .cta-main h2 em { color: var(--teal-mid); font-style: italic; }
-    .cta-main p { color: rgba(246,240,232,0.6); margin-top: 0.75rem; font-size: 0.9rem; }
-
-    .cta-card {
-      border: 1px solid rgba(246,240,232,0.1);
-      border-radius: 2px;
-      padding: 1.5rem;
-    }
-
-    .cta-card-tag {
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--teal-mid);
-      margin-bottom: 0.75rem;
-    }
-
-    .cta-card h3 {
-      font-size: 1rem;
-      color: var(--cream);
-      margin-bottom: 0.6rem;
-    }
-
-    .cta-card p {
-      font-size: 0.8rem;
-      color: rgba(246,240,232,0.5);
-      margin-bottom: 1.25rem;
-    }
-
-    .cta-card-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-family: var(--sans);
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--cream);
-      border: 1px solid rgba(246,240,232,0.2);
-      border-radius: 2px;
-      padding: 0.55rem 1rem;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .cta-card-btn:hover { border-color: var(--teal-mid); background: rgba(29,158,117,0.1); }
-
-    .cta-card.featured {
-      border-color: var(--teal-mid);
-      background: rgba(29,158,117,0.06);
-    }
-
-    .cta-card.featured .cta-card-btn {
-      background: var(--teal);
-      border-color: var(--teal);
-    }
-    .cta-card.featured .cta-card-btn:hover { background: var(--teal-mid); }
-
-    @media (max-width: 800px) {
-      .cta-inner { grid-template-columns: 1fr; }
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--rule);
-      padding: 2rem 0;
-    }
-
-    .footer-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .footer-logo {
-      font-family: var(--serif);
-      font-size: 0.9rem;
-      color: var(--ink);
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 1.5rem;
-      list-style: none;
-    }
-
-    .footer-links a {
-      font-size: 0.78rem;
-      color: var(--ink-faint);
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--ink); }
-
-    .footer-copy {
-      font-size: 0.75rem;
-      color: var(--ink-faint);
-      width: 100%;
-    }
-
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* ── LOGO STRIP ── */
-    .logo-strip { padding: 2.5rem 0; }
-
-    .logo-strip-label {
-      text-align: center;
-      font-family: var(--sans);
-      font-size: 0.68rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-bottom: 1.75rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .logo-strip-label::before,
-    .logo-strip-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--rule);
-    }
-
-    .logo-strip-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem 2rem;
-      flex-wrap: wrap;
-    }
-
-    .logo-name {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--ink-faint);
-      letter-spacing: 0.02em;
-      opacity: 0.7;
-      transition: opacity 0.2s, color 0.2s;
-      white-space: nowrap;
-      flex: 1;
-      text-align: center;
-    }
-    .logo-name:hover { opacity: 1; color: var(--ink); }
-
-    @media (max-width: 640px) {
-      .logo-strip-inner {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        gap: 1.25rem;
-        justify-items: center;
-      }
-    }
-
-    /* ── FEATURED ARTIFACT TILE ── */
-    .artifact-feature {
-      padding: clamp(2.5rem, 6vw, 4rem) 0;
-      background:
-        radial-gradient(circle at 82% 12%, rgba(15,110,86,0.14), transparent 28%),
-        linear-gradient(180deg, rgba(13,13,11,0.02), rgba(13,13,11,0));
-    }
-
-    .artifact-card {
-      position: relative;
-      overflow: hidden;
-      display: grid;
-      grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
-      gap: clamp(1.5rem, 4vw, 3rem);
-      align-items: stretch;
-      padding: clamp(1.5rem, 4vw, 2rem);
-      border: 1px solid var(--rule-strong);
-      background: rgba(246,240,232,0.7);
-      box-shadow: 0 24px 70px rgba(13,13,11,0.08);
-    }
-
-    .artifact-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(rgba(15,110,86,0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(15,110,86,0.055) 1px, transparent 1px);
-      background-size: 34px 34px;
-      mask-image: radial-gradient(circle at 78% 42%, #000, transparent 62%);
-      pointer-events: none;
-    }
-
-    .artifact-copy,
-    .artifact-preview { position: relative; z-index: 1; }
-
-    .artifact-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-    }
-
-    .artifact-copy h2 { max-width: 640px; }
-    .artifact-copy p { max-width: 620px; }
-
-    .artifact-links {
-      display: flex;
-      gap: 0.9rem;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-top: 0.25rem;
-    }
-
-    .artifact-preview {
-      min-height: 300px;
-      border: 1px solid rgba(13,13,11,0.18);
-      background: #05080b;
-      color: #e9fbff;
-      padding: 1rem;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      gap: 0.9rem;
-      box-shadow: inset 0 0 0 1px rgba(63,246,255,0.16), 0 0 50px rgba(15,110,86,0.18);
-    }
-
-    .artifact-preview-top,
-    .artifact-preview-bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.68rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(233,251,255,0.62);
-    }
-
-    .artifact-preview-grid {
-      position: relative;
-      border: 1px solid rgba(63,246,255,0.20);
-      background:
-        radial-gradient(circle at 50% 45%, rgba(63,246,255,0.18), transparent 26%),
-        linear-gradient(rgba(63,246,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(63,246,255,0.05) 1px, transparent 1px);
-      background-size: auto, 28px 28px, 28px 28px;
-      min-height: 210px;
-      overflow: hidden;
-    }
-
-    .artifact-preview-score {
-      position: absolute;
-      left: 1rem;
-      top: 1rem;
-      font-family: var(--sans);
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      line-height: 1;
-      color: #62ffb2;
-      text-shadow: 0 0 20px rgba(98,255,178,0.45);
-    }
-
-    .artifact-preview-node {
-      position: absolute;
-      width: 58px;
-      height: 58px;
-      border-radius: 999px;
-      border: 1px solid rgba(63,246,255,0.7);
-      box-shadow: 0 0 26px rgba(63,246,255,0.22);
-      background: radial-gradient(circle, rgba(63,246,255,0.28), rgba(63,246,255,0.04) 68%);
-    }
-
-    .artifact-preview-node.one { right: 18%; top: 20%; }
-    .artifact-preview-node.two { right: 34%; bottom: 16%; width: 76px; height: 76px; }
-    .artifact-preview-node.three { right: 8%; bottom: 28%; width: 42px; height: 42px; border-color: rgba(255,209,102,0.85); }
-
-    .artifact-preview-route {
-      position: absolute;
-      height: 1px;
-      width: 48%;
-      right: 8%;
-      top: 48%;
-      background: linear-gradient(90deg, transparent, #3ff6ff, transparent);
-      transform: rotate(-12deg);
-      box-shadow: 0 0 12px rgba(63,246,255,0.6);
-    }
-
-    @media (max-width: 860px) {
-      .artifact-card { grid-template-columns: 1fr; }
-      .artifact-preview { min-height: 260px; }
-    }
-
-    /* ── UTILITIES ── */
-    .mt-sm  { margin-top: 0.75rem; }
-    .mt-md  { margin-top: 1.5rem; }
-    .mt-lg  { margin-top: 2.5rem; }
-    .text-teal { color: var(--teal); }
+      --cream:#f6f0e8; --cream-dark:#ede5d8; --ink:#0d0d0b; --ink-mid:#2a2a25;
+      --ink-soft:#5a5a52; --ink-faint:#8a8a7e; --teal:#0f6e56; --teal-mid:#1d9e75;
+      --teal-light:#e1f5ee; --rule:rgba(13,13,11,.10); --rule-strong:rgba(13,13,11,.20);
+      --serif:'Playfair Display', Georgia, serif; --sans:'DM Sans', system-ui, -apple-system, Segoe UI, sans-serif;
+      --max:1120px; --pad:clamp(1.25rem,5vw,3rem);
+    }
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    body:before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.35}
+    h1,h2,h3,h4{font-family:var(--serif);font-weight:400;line-height:1.12} h1{font-size:clamp(2.55rem,6vw,4.65rem);letter-spacing:-.035em} h2{font-size:clamp(1.9rem,3.8vw,3rem);letter-spacing:-.02em} h3{font-size:clamp(1.1rem,2vw,1.45rem)} p{color:var(--ink-soft);line-height:1.78} a{color:inherit;text-decoration:none} strong{font-weight:700;color:var(--ink)} em{font-style:italic;color:var(--teal)}
+    .container{max-width:var(--max);margin:0 auto;padding:0 var(--pad)} .label{font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)} .rule{border:0;border-top:1px solid var(--rule)}
+    nav{position:sticky;top:0;z-index:100;background:rgba(246,240,232,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)} .nav-inner{max-width:var(--max);margin:0 auto;padding:0 var(--pad);height:60px;display:flex;align-items:center;justify-content:space-between;gap:2rem}.nav-logo{font-family:var(--serif);font-size:1.05rem;font-weight:500}.nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none}.nav-links a{font-size:.82rem;color:var(--ink-soft)}.nav-links a:hover{color:var(--ink)}.nav-cta{color:var(--cream)!important;background:var(--ink);padding:.45rem 1rem;border-radius:2px;font-weight:700}.nav-cta:hover{background:var(--teal)!important}@media(max-width:760px){.nav-links li:not(:last-child){display:none}}
+    .hero{padding:clamp(4rem,9vw,7rem) 0 clamp(3rem,7vw,5rem);overflow:hidden}.eyebrow{display:flex;align-items:center;gap:.75rem;margin-bottom:1.6rem}.eyebrow:before{content:'';width:34px;height:1px;background:var(--teal)}.hero h1{max-width:980px}.hero-sub{max-width:740px;font-size:1.12rem;margin-top:1.35rem}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin-top:2rem}.btn-primary,.btn-secondary{display:inline-flex;align-items:center;gap:.45rem;border-radius:2px;font-size:.9rem;font-weight:700;padding:.82rem 1.35rem;transition:.2s}.btn-primary{background:var(--ink);color:var(--cream)}.btn-primary:hover{background:var(--teal)}.btn-secondary{border:1px solid var(--rule-strong);color:var(--ink-mid)}.btn-secondary:hover{border-color:var(--ink);background:var(--cream-dark)}
+    .cred-strip{margin-top:3rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:1px;background:var(--rule)}.cred{background:var(--cream);padding:1.25rem}.cred-num{font-family:var(--serif);font-size:2rem;line-height:1;color:var(--ink);margin-bottom:.35rem}.cred p{font-size:.82rem;line-height:1.55;color:var(--ink-faint)}@media(max-width:760px){.cred-strip{grid-template-columns:1fr}}
+    section{padding:clamp(3.6rem,8vw,6rem) 0}.section-header{display:grid;grid-template-columns:90px minmax(0,760px);gap:1.5rem;margin-bottom:2.5rem}.section-num{font-family:var(--serif);color:var(--ink-faint);font-size:.85rem;padding-top:.45rem}.section-header p{margin-top:.85rem}@media(max-width:700px){.section-header{grid-template-columns:1fr;gap:.6rem}}
+    .dark{background:var(--ink);color:var(--cream)}.dark h2,.dark h3,.dark strong{color:var(--cream)}.dark p{color:rgba(246,240,232,.66)}.dark .label{color:rgba(246,240,232,.42)}.dark .section-num{color:rgba(246,240,232,.32)}
+    .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(246,240,232,.10);border:1px solid rgba(246,240,232,.10)}.problem-card{padding:1.6rem;background:rgba(246,240,232,.035)}.problem-card h3{margin-bottom:.65rem}.problem-card ul{list-style:none;display:grid;gap:.55rem;margin-top:1rem}.problem-card li{color:rgba(246,240,232,.62);font-size:.88rem}.problem-card li:before{content:'•';color:var(--teal-mid);margin-right:.55rem}@media(max-width:760px){.problem-grid{grid-template-columns:1fr}}
+    .method-band{border:1px solid var(--rule-strong);display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:var(--rule);margin-top:2rem}.method-step{background:var(--cream);padding:1.5rem}.step-kicker{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:.6rem}.method-step p{font-size:.86rem}@media(max-width:860px){.method-band{grid-template-columns:1fr 1fr}}@media(max-width:560px){.method-band{grid-template-columns:1fr}}
+    .audience-grid,.workflow-grid,.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}.card{background:var(--cream);padding:1.55rem;min-height:100%}.card h3{margin-bottom:.65rem;color:var(--ink)}.card p{font-size:.86rem;color:var(--ink-soft)}.card .tag{display:inline-flex;color:var(--teal);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.75rem}.card-link{display:inline-flex;margin-top:1rem;color:var(--teal);font-size:.82rem;font-weight:700}.dark .card{background:var(--cream)}.dark .card h3,.dark .card strong{color:var(--ink)}.dark .card p{color:var(--ink-soft)}.dark .card .tag,.dark .card .card-link{color:var(--teal)}@media(max-width:900px){.audience-grid,.workflow-grid,.offer-grid{grid-template-columns:1fr 1fr}}@media(max-width:620px){.audience-grid,.workflow-grid,.offer-grid{grid-template-columns:1fr}}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3.5rem;align-items:start}.about-box{border-left:2px solid var(--teal);padding-left:1rem}.about-body p{margin-bottom:1.05rem}.pull{font-family:var(--serif);font-size:1.25rem;line-height:1.45;color:var(--ink);border-left:2px solid var(--teal);padding:1rem 1.2rem;margin:1.5rem 0;background:rgba(15,110,86,.045)}@media(max-width:760px){.about-grid{grid-template-columns:1fr}}
+    .cta{background:var(--ink);color:var(--cream);padding:clamp(3.6rem,8vw,6rem) 0}.cta-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center}.cta h2{color:var(--cream)}.cta p{color:rgba(246,240,232,.64);margin-top:1rem}.cta .btn-primary{background:var(--teal);color:var(--cream)}.cta .btn-primary:hover{background:var(--teal-mid)}.cta-panel{border:1px solid rgba(246,240,232,.14);padding:1.5rem;background:rgba(246,240,232,.04)}.cta-panel strong{color:var(--cream)}.cta-panel ul{list-style:none;display:grid;gap:.55rem;margin:1rem 0}.cta-panel li{font-size:.86rem;color:rgba(246,240,232,.62)}.cta-panel li:before{content:'✓';color:var(--teal-mid);margin-right:.55rem}@media(max-width:760px){.cta-grid{grid-template-columns:1fr}}
+    footer{border-top:1px solid var(--rule);padding:2rem 0}.footer-inner{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}.footer-logo{font-family:var(--serif)}.footer-links{display:flex;gap:1.3rem;list-style:none}.footer-links a,.footer-copy{font-size:.78rem;color:var(--ink-faint)}.footer-copy{width:100%;margin-top:.6rem}
   </style>
 </head>
-
 <body>
-
-  <!-- NAV -->
   <nav>
     <div class="nav-inner">
       <a href="#top" class="nav-logo">predictcare.ai</a>
       <ul class="nav-links">
-        <li><a href="#practices">Offers</a></li>
-        <li><a href="#hfos">HealthFounderOS</a></li>
-        <li><a href="/portfolio/">Case Studies</a></li>
-        <li><a href="#who">About</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#who">Who it helps</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="nav-cta">Book a call ↗</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <div class="hero" id="top">
-    <div class="container">
-
-      <div class="hero-eyebrow">
-        <div class="hero-eyebrow-line"></div>
-        <span class="label">Fractional Chief Commercial & Marketing Officer · Healthcare</span>
-      </div>
-
-      <h1 class="hero-headline">
-        Fractional Chief Commercial &amp; Marketing Officer<br>for healthcare CEOs <em>ready to launch.</em>
-      </h1>
-
-      <p class="hero-sub">
-        Senior commercial and marketing leadership for healthcare CEOs who've outgrown the agency, can't afford a full-time hire, and don't want another strategy deck. LLMs look backward; your new CCO has to lead forward — with operator judgment, productized practices, and AI-amplified delivery.
-      </p>
-
-      <div class="hero-credentials">
-        <div class="hero-credential">
-          <strong>Twenty-five years across AbbVie, Amgen, BMS, Merck, Novo Nordisk, Pfizer, and Sanofi</strong> — $500M+ in commercial impact across 15+ launches and hundreds of DTC/DTP campaigns.
+  <main id="top">
+    <header class="hero">
+      <div class="container">
+        <div class="eyebrow"><span class="label">Fractional AI Officer · Healthcare</span></div>
+        <h1>Move from scattered AI tools to <em>governed healthcare workflows.</em></h1>
+        <p class="hero-sub">PredictCare.AI helps healthcare companies identify where AI can create real business value, then build one high-value workflow first — with human judgment, compliance awareness, and measurable execution built in.</p>
+        <div class="hero-actions">
+          <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="btn-primary">Book an AI Workflow Assessment ↗</a>
+          <a href="#how" class="btn-secondary">See how it works</a>
         </div>
-        <div class="hero-credential">
-          <strong>Fluent in the medical, legal, and regulatory terrain</strong> — FDA, EMA, FTC, and the state-by-state layers that catch healthcare CEOs off guard.
-        </div>
-        <div class="hero-credential">
-          <strong>Fluent in the agent, human, and tech stack as a unified system</strong> — not three separate vendor categories. Hands-on with the build, orchestration, and compliance trade-offs most consultants outsource.
+        <div class="cred-strip" aria-label="PredictCare credentials">
+          <div class="cred"><div class="cred-num">25+</div><p>Years helping healthcare organizations turn new technology into profitable growth.</p></div>
+          <div class="cred"><div class="cred-num">1</div><p>Workflow first. Govern it, prove value, then scale what works.</p></div>
+          <div class="cred"><div class="cred-num">0</div><p>No unmanaged clinical decisions, PHI shortcuts, or AI theater.</p></div>
         </div>
       </div>
+    </header>
 
-      <div class="hero-actions">
-        <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="btn-primary">
-          Book a Discovery Call ↗
-        </a>
-        <a href="#practices" class="btn-ghost">See the offers →</a>
+    <section class="dark" id="clarity">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <div>
+            <span class="label">The problem</span>
+            <h2 style="margin-top:.7rem">AI is everywhere in healthcare. <em>Clarity isn’t.</em></h2>
+            <p>Most teams are already experimenting with ChatGPT, Claude, CRMs, automations, meeting summaries, and content tools. That is not an AI strategy.</p>
+          </div>
+        </div>
+        <div class="problem-grid">
+          <div class="problem-card">
+            <h3>Scattered tools create speed without alignment.</h3>
+            <p>Healthcare teams need AI systems that connect to real workflows: growth, intake, referrals, CRM, compliance review, research, reporting, and executive decisions.</p>
+            <ul>
+              <li>Unclear ownership</li>
+              <li>Duplicate work and fragmented memory</li>
+              <li>Inconsistent follow-up and handoffs</li>
+            </ul>
+          </div>
+          <div class="problem-card">
+            <h3>Healthcare adoption creates resistance.</h3>
+            <p>Compliance concerns, staff skepticism, workflow disruption, leadership uncertainty, and unclear guardrails can slow AI adoption even when the opportunity is obvious.</p>
+            <ul>
+              <li>What should AI do?</li>
+              <li>What should humans approve?</li>
+              <li>What should we avoid automating?</li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="hero-stats">
-        <div>
-          <div class="stat-num">25+</div>
-          <div class="stat-label">Years in healthcare commercialization</div>
+    <section id="how">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <div>
+            <span class="label">The operating model</span>
+            <h2 style="margin-top:.7rem">Start with one workflow. Govern it. Prove value. Scale what works.</h2>
+            <p>I use the OpenExO transformation framework as a practical adoption model: don’t try to transform the whole company at once. Build a governed workflow at the edge of the business, prove it, and expand with discipline.</p>
+          </div>
         </div>
-        <div>
-          <div class="stat-num">$500M+</div>
-          <div class="stat-label">Commercial impact across launches</div>
-        </div>
-        <div>
-          <div class="stat-num">15+</div>
-          <div class="stat-label">Product launches led</div>
-        </div>
-        <div>
-          <div class="stat-num">1:1</div>
-          <div class="stat-label">Principal on every call, every time</div>
+        <div class="method-band">
+          <div class="method-step"><div class="step-kicker">01 · Discover</div><h3>Find the first workflow</h3><p>Map where AI can create near-term growth, efficiency, or decision-quality leverage — and where risk requires restraint.</p></div>
+          <div class="method-step"><div class="step-kicker">02 · Govern</div><h3>Set the rules</h3><p>Define what AI can draft, route, summarize, recommend, or automate — and what requires human approval.</p></div>
+          <div class="method-step"><div class="step-kicker">03 · Build</div><h3>Deploy a usable system</h3><p>Connect the workflow to existing tools where possible: CRM, email, docs, meetings, dashboards, content, and reporting.</p></div>
+          <div class="method-step"><div class="step-kicker">04 · Improve</div><h3>Scale what works</h3><p>Measure adoption, performance, and resistance. Expand only when the workflow proves value and the team trusts it.</p></div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-
-  <!-- LOGO STRIP -->
-  <div class="logo-strip">
-    <div class="container">
-      <div class="logo-strip-label">Prior engagements</div>
-      <div class="logo-strip-inner">
-        <span class="logo-name">Acurist</span>
-        <span class="logo-name">Hemostemix</span>
-        <span class="logo-name">AMPEL</span>
-        <span class="logo-name">ReJoy</span>
-        <span class="logo-name">Embic</span>
-        <span class="logo-name">AltheaDx</span>
+    <section class="dark" id="who">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <div>
+            <span class="label">Who it helps</span>
+            <h2 style="margin-top:.7rem">Built for healthcare companies that need practical AI leverage.</h2>
+            <p>PredictCare.AI is designed for healthcare leaders who see the opportunity but need a clear operating path through strategy, systems, workflow change, team resistance, and measurable execution.</p>
+          </div>
+        </div>
+        <div class="audience-grid">
+          <div class="card"><span class="tag">Startups</span><h3>Healthcare startups</h3><p>Founder Single Brain, investor/customer narrative, launch content, market intelligence, sales motion, and operating cadence.</p></div>
+          <div class="card"><span class="tag">Practices</span><h3>Physician specialty practices</h3><p>Patient access, provider referrals, appointment prep, reputation loops, staff workflow support, and condition education.</p></div>
+          <div class="card"><span class="tag">DTC</span><h3>DTC health businesses</h3><p>Quiz-to-consult funnels, compliant education, segmentation, follow-up, conversion, retention, and performance reporting.</p></div>
+          <div class="card"><span class="tag">B2B</span><h3>B2B healthcare companies</h3><p>Prospect research, CRM cleanup, sales follow-up, proposal support, account intelligence, and executive dashboards.</p></div>
+          <div class="card"><span class="tag">Enterprise</span><h3>Payers, hospitals & ACOs</h3><p>Workflow discovery, stakeholder alignment, meeting intelligence, governance maps, and adoption roadmaps for regulated teams.</p></div>
+          <div class="card"><span class="tag">Life sciences</span><h3>BioPharma, medtech & nonprofits</h3><p>Commercial planning, market research, content systems, medical/legal/regulatory review workflows, and mission-aligned growth.</p></div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
 
-  <hr class="rule" />
+    <section id="workflows">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <div>
+            <span class="label">Where to start</span>
+            <h2 style="margin-top:.7rem">High-value healthcare workflows AI can support now.</h2>
+            <p>The first workflow should be concrete enough to build, important enough to matter, and bounded enough to govern.</p>
+          </div>
+        </div>
+        <div class="workflow-grid">
+          <div class="card"><h3>Customer journey & experience architecture</h3><p>Map the patient/customer path and remove the friction that blocks conversion, trust, and follow-up.</p></div>
+          <div class="card"><h3>Advertising, lead generation & intake</h3><p>Improve how inquiries are captured, qualified, routed, and prepared for human follow-up.</p></div>
+          <div class="card"><h3>Provider referral conversion</h3><p>Make referral workflows cleaner, faster, and easier for staff and partner offices to use.</p></div>
+          <div class="card"><h3>Sales follow-up & CRM</h3><p>Build better handoffs, next steps, pipeline visibility, account intelligence, and conversion discipline.</p></div>
+          <div class="card"><h3>MLR and compliance review</h3><p>Support medical, legal, and regulatory review with source-aware drafts, checklists, and approval gates.</p></div>
+          <div class="card"><h3>Market intelligence & reporting</h3><p>Turn meetings, research, competitor signals, and performance data into executive-ready decisions.</p></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- HEALTHFOUNDEROS BAND -->
-  <section class="hfos-band" id="hfos">
-    <div class="container">
-      <div class="hfos-inner">
+    <section class="dark" id="offers">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <div>
+            <span class="label">Engagements</span>
+            <h2 style="margin-top:.7rem">Start where you are.</h2>
+            <p>Each engagement is designed to create clarity first, then build working systems with governance and human accountability.</p>
+          </div>
+        </div>
+        <div class="offer-grid">
+          <div class="card"><span class="tag">Start here</span><h3>AI Workflow Assessment</h3><p>Find where AI can create near-term value, what to avoid, and which workflow to build first. Includes opportunity map, risk boundaries, and 90-day roadmap.</p><a class="card-link" href="/ai-workflow-assessment">View assessment →</a></div>
+          <div class="card"><span class="tag">Build</span><h3>First Workflow Buildout</h3><p>Design and deploy one governed AI workflow for intake, referral conversion, sales follow-up, content, CRM, research, or reporting.</p><a class="card-link" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Discuss buildout →</a></div>
+          <div class="card"><span class="tag">Operate</span><h3>Fractional AI Officer</h3><p>Ongoing AI leadership for healthcare companies: strategy, workflow backlog, governance, implementation, training, and monthly executive reporting.</p><a class="card-link" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book a call →</a></div>
+        </div>
+      </div>
+    </section>
 
-        <div class="hfos-left reveal">
-          <span class="label" style="color: rgba(246,240,232,0.4);">The operating system</span>
-          <h2 style="margin-top: 0.75rem;">HealthFounderOS gives one operator <em>the leverage of a team.</em></h2>
-          <p>The AI operating system behind PredictCare.ai. Four revenue loops — Authority, Acquisition, Conversion, Retention — running as a unified system. Built specifically for healthcare commercialization workflows: research, intake, content, compliance review, CRM operations. One senior operator delivering across multiple practices without losing depth or accountability.</p>
-          <div class="hfos-media">
-            <div class="hfos-media-item">
-              <span class="media-dot"></span>
-              <span>Weekly newsletter — healthcare commercialization</span>
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <aside>
+            <div class="about-box">
+              <span class="label">Principal-led</span>
+              <h3 style="margin-top:.5rem">Croom Lawrence<br>Founder, PredictCare.AI</h3>
             </div>
-            <div class="hfos-media-item">
-              <span class="media-dot"></span>
-              <span>Webinar series — live and evergreen</span>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="hfos-video-card reveal">
-          <div class="hfos-video-frame" id="hfos-video-frame">
-            <iframe
-              id="hfos-video"
-              src="https://www.youtube-nocookie.com/embed/p7GP5_WNAP4?rel=0&modestbranding=1"
-              title="HealthFounderOS featured video"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="hfos-video-copy">
-            <span class="label" style="color: rgba(246,240,232,0.4);">Featured video</span>
-            <h3>See how HealthFounderOS turns strategy into shipped work.</h3>
-            <p>Watch the featured HealthFounderOS video directly on the page, then use the operating-system framework below to see how strategy becomes repeatable commercial execution.</p>
-            <div class="hfos-video-note">Embedded from YouTube for easy streaming on desktop and mobile.</div>
-          </div>
-        </div>
-
-        <div class="hfos-loops reveal">
-          <div class="hfos-loop">
-            <div class="loop-arrow">01 → Loop</div>
-            <div class="loop-name">Authority</div>
-            <div class="loop-desc">Clinical credibility, trust assets, thought leadership, and regulatory positioning — before the first sales call.</div>
-          </div>
-          <div class="hfos-loop">
-            <div class="loop-arrow">02 → Loop</div>
-            <div class="loop-name">Acquisition</div>
-            <div class="loop-desc">B2B outreach, payer architecture, prescriber adoption mechanics, and channel design — targeted and sequenced.</div>
-          </div>
-          <div class="hfos-loop">
-            <div class="loop-arrow">03 → Loop</div>
-            <div class="loop-name">Conversion</div>
-            <div class="loop-desc">ROI calculators, pilot SOWs, enterprise proposal architecture — structured to close, not just impress.</div>
-          </div>
-          <div class="hfos-loop">
-            <div class="loop-arrow">04 → Loop</div>
-            <div class="loop-name">Retention</div>
-            <div class="loop-desc">QBR frameworks, renewal architecture, expansion roadmaps — the year-two conversation starts in month one.</div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- OFFERS -->
-  <section id="practices">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">01</span>
-        <div class="section-title">
-          <h2>Start with the offer that matches <em>where you are.</em></h2>
-          <p class="mt-sm">Pick the first problem to solve: save time with AI, prepare for launch, commercialize a diagnostic, or build a specialty growth system. Same principal-led model across every offer.</p>
-        </div>
-      </div>
-
-      <div class="practices-grid reveal">
-
-        <div class="practice-card">
-          <span class="practice-tag">New · $999</span>
-          <h3>Organizational Singularity Readiness Audit</h3>
-          <p>Find where critical work still depends on founder-only effort. Get a 7-domain readiness score, L0-L5 workflow maturity map, and 90-day roadmap to build measurable AI operating rails.</p>
-          <a href="/organizational-singularity-audit" class="practice-link">View audit →</a>
-        </div>
-
-        <div class="practice-card">
-          <span class="practice-tag">New · $999</span>
-          <h3>AI Workflow Assessment</h3>
-          <p>Forty-five minutes to find where your healthcare team is losing time. Get 3-7 AI tools or workflows, a 4-day starter plan, and a simple guarantee: if we cannot find 5 hours a week worth saving, you do not pay.</p>
-          <a href="/ai-workflow-assessment" class="practice-link">View offer →</a>
-        </div>
-
-        <div class="practice-card">
-          <span class="practice-tag">New · $999</span>
-          <h3>Lead Management Audit</h3>
-          <p>Find where good leads leak after the form fill, webinar, event, or sales conversation. Get a crawl/walk/run maturity score, top 5 fixes, and a 30-day improvement plan.</p>
-          <a href="/lead-management-audit" class="practice-link">View offer →</a>
-        </div>
-
-        <div class="practice-card">
-          <span class="practice-tag">Available</span>
-          <h3>Regenerative CMO</h3>
-          <p>Fractional CMO for physician-led regenerative medicine clinics — longevity, stem cell, and specialty practices adding regenerative therapies. Cash-pay growth system, regulatory framework integration, three engagement tiers.</p>
-          <a href="https://predictcare.ai/regenerative-cmo" class="practice-link">View practice →</a>
-        </div>
-
-        <div class="practice-card">
-          <span class="practice-tag">Available</span>
-          <h3>Biotech Launch Activation</h3>
-          <p>Commercial readiness for biotech founders 12–36 months from launch. KOL strategy, payer architecture, launch sequencing, GTM build. Senior commercial leadership before the full-time CCO hire.</p>
-          <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="practice-link">Book a Discovery call →</a>
-        </div>
-
-        <div class="practice-card">
-          <span class="practice-tag">Available</span>
-          <h3>Diagnostics Commercialization</h3>
-          <p>For diagnostics and precision-medicine leaders facing the gap between FDA clearance and commercial traction. Reimbursement strategy, channel design, prescriber adoption mechanics.</p>
-          <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="practice-link">Book a Discovery call →</a>
-        </div>
-
-        <div class="practice-card">
-          <span class="practice-tag">Available</span>
-          <h3>Longevity Advisory</h3>
-          <p>For founders building in longevity, preventive medicine, and healthspan — across consumer, clinical, and platform configurations. Commercial strategy that respects the regulatory complexity.</p>
-          <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="practice-link">Book a Discovery call →</a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <hr class="rule" />
-
-  <!-- PROOF -->
-  <section id="proof">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">02</span>
-        <div class="section-title">
-          <h2>What principal-led engagements <em>actually produce.</em></h2>
-          <p class="mt-sm">Senior commercial judgment from someone who has shipped. Not advised. Shipped.</p>
-        </div>
-      </div>
-
-      <div class="proof-grid reveal">
-        <div class="proof-card">
-          <div class="proof-quote">Croom brought a level of commercial rigor I hadn't seen from a fractional engagement before. He understood the regulatory terrain and the payer landscape simultaneously — that combination is rare.</div>
-          <div class="proof-attr">
-            <span class="proof-name">Healthcare CEO</span>
-            <span class="proof-role">Biotech · Pre-launch stage</span>
-          </div>
-        </div>
-        <div class="proof-card">
-          <div class="proof-quote">What sets PredictCare apart is the operating system underneath everything. It's not consulting — it's infrastructure. The deliverables kept coming and the quality never dropped.</div>
-          <div class="proof-attr">
-            <span class="proof-name">Founder</span>
-            <span class="proof-role">Digital health · Series A</span>
+          </aside>
+          <div class="about-body">
+            <h2>I don’t just advise. I help build the operating path.</h2>
+            <p style="margin-top:1rem">I’ve spent 25+ years helping healthcare organizations turn new technology into profitable growth. The technology changes; the adoption gap does not. Leaders see what is possible, but need a practical path through strategy, systems, workflow change, team resistance, and measurable execution.</p>
+            <p>I’ve helped close that gap across startups, specialty practices, DTC and B2B healthcare companies, payers, hospital systems, ACOs, BioPharma, medtech, and health nonprofits. That is the gap I fill now with PredictCare.AI.</p>
+            <div class="pull">Predictive intelligence for proactive healthcare — with human judgment in control.</div>
+            <p>AI can support coordination, synthesis, routing, drafting, and follow-up. Human judgment stays in control for clinical, regulatory, commercial, and trust-sensitive decisions.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="proof-stats reveal">
-        <div class="proof-stat">
-          <div class="proof-stat-num">4.9/5</div>
-          <div class="proof-stat-label">Average engagement rating across principal-led engagements</div>
-        </div>
-        <div class="proof-stat">
-          <div class="proof-stat-num">15+</div>
-          <div class="proof-stat-label">Healthcare product launches with senior commercial leadership</div>
-        </div>
-        <div class="proof-stat">
-          <div class="proof-stat-num">100%</div>
-          <div class="proof-stat-label">Principal on every call — no handoff to junior staff</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="rule" />
-
-  <!-- HOW WE WORK -->
-  <section id="how">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">03</span>
-        <div class="section-title">
-          <h2>Discovery. Design. <em>Deploy.</em></h2>
-          <p class="mt-sm">Every engagement begins the same way, regardless of which practice it lands in. Three phases. One operator on every conversation.</p>
-        </div>
-      </div>
-
-      <div class="process-steps reveal">
-        <div class="process-step">
-          <div class="step-num">01</div>
-          <h3>Discovery</h3>
-          <p>A 30-minute call. We discuss your business, audit your current commercial posture, and confirm whether your situation, sector, and pathway are a fit. Free. Direct. With the principal.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">02</div>
-          <h3>Design</h3>
-          <p>If there's a fit, we map the engagement and the practice — scope, deliverables, cadence, pricing. If there isn't, including for regulatory reasons, we say so plainly and recommend where to go instead.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-num">03</div>
-          <h3>Deploy</h3>
-          <p>Engagements run on a weekly operating cadence with monthly business reviews. Every engagement includes a compliance audit cycle from day one. Productized scope; bespoke depth where it matters.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <hr class="rule" />
-
-  <!-- ABOUT -->
-  <section id="who">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">04</span>
-        <div class="section-title">
-          <h2>About <em>the principal.</em></h2>
-        </div>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-sidebar reveal">
-          <div class="about-label-block">
-            <span class="label">Croom Lawrence</span>
-            <h3>Founder · Fractional CCO/CMO<br>Operator of HealthFounderOS</h3>
+    <section class="cta">
+      <div class="container">
+        <div class="cta-grid">
+          <div>
+            <span class="label">Next step</span>
+            <h2 style="margin-top:.7rem">Trying to answer “Where should we actually use AI?”</h2>
+            <p>Start with an AI Workflow Assessment. We will identify the highest-value workflow to build first, the guardrails it needs, and the 90-day path to prove value.</p>
+            <div class="hero-actions"><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="btn-primary">Book an AI Workflow Assessment ↗</a></div>
           </div>
-          <div class="about-metrics">
-            <div class="about-metric">
-              <div class="about-metric-num">30+</div>
-              <div class="about-metric-label">Years in healthcare</div>
-            </div>
-            <div class="about-metric">
-              <div class="about-metric-num">$500M+</div>
-              <div class="about-metric-label">Commercial impact</div>
-            </div>
-            <div class="about-metric">
-              <div class="about-metric-num">15+</div>
-              <div class="about-metric-label">Product launches</div>
-            </div>
-            <div class="about-metric">
-              <div class="about-metric-num">1:1</div>
-              <div class="about-metric-label">Direct on every call</div>
-            </div>
+          <div class="cta-panel">
+            <strong>Designed for healthcare realities:</strong>
+            <ul>
+              <li>No PHI required for initial assessment</li>
+              <li>No medical advice or AI diagnosis</li>
+              <li>Human approval for clinical, regulatory, and commercial decisions</li>
+              <li>Clear workflow rules before automation</li>
+              <li>Practical roadmap before tool spend</li>
+            </ul>
           </div>
         </div>
-
-        <div class="about-body reveal">
-          <p>I built PredictCare.ai because the healthcare consultancy market is missing a specific operator profile: someone with real commercialization scars, a productized way of working, and the AI infrastructure to deliver across multiple practices without losing depth.</p>
-
-          <div class="about-pull">Most fractional CCO/CMOs in healthcare come from one of two backgrounds: career consulting — good frameworks, thin on lived launches — or marketing services — good tactics, thin on commercial strategy. Neither fits a CEO who needs senior commercial judgment from someone who has actually shipped.</div>
-
-          <p>Active Center-of-Excellence work in regenerative medicine. CLTI / ACP-01 fluency. Prior leadership across 15+ healthcare product launches and hundreds of DTC/DTP campaigns at AbbVie, Amgen, BMS, Merck, Novo Nordisk, Pfizer, Sanofi, and more.</p>
-
-          <p>Three decades of commercializing healthcare products — inside biotech, specialty pharma, and active clinical work — meets HealthFounderOS, the AI operating system that lets one operator do the work of a team. Productized practices, senior judgment, AI-amplified delivery. That's what I'm building here.</p>
-
-          <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="btn-primary mt-lg" style="display:inline-flex;">
-            Schedule a Discovery Call ↗
-          </a>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- CTA -->
-  <section class="cta-section" id="book">
-    <div class="container">
-      <div class="cta-inner">
-
-        <div class="cta-main reveal">
-          <h2>Three ways to engage. <em>Start where you are.</em></h2>
-          <p>Every engagement begins with a Discovery call. The other two are how to stay close while you decide.</p>
-        </div>
-
-        <div class="cta-card featured reveal">
-          <div class="cta-card-tag">Primary · Highest intent</div>
-          <h3>Book a Discovery Call</h3>
-          <p>Thirty minutes with the principal directly. Audit your commercial posture, identify the right practice fit, and get an honest read on whether this is the right next step.</p>
-          <a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener" class="cta-card-btn">Schedule the call ↗</a>
-        </div>
-
-        <div style="display:flex;flex-direction:column;gap:1rem;" class="reveal">
-          <div class="cta-card">
-            <div class="cta-card-tag">New offer</div>
-            <h3>Organizational Singularity Readiness Audit</h3>
-            <p>A $999 audit to identify founder workload pressure, score agent readiness, and map your first 90 days of AI operating rails.</p>
-            <a href="/organizational-singularity-audit" class="cta-card-btn">View the audit →</a>
-          </div>
-          <div class="cta-card">
-            <div class="cta-card-tag">New offer</div>
-            <h3>AI Workflow Assessment</h3>
-            <p>A $999 assessment to find where your team can save 5 hours a week with AI. No PHI needed.</p>
-            <a href="/ai-workflow-assessment" class="cta-card-btn">View the offer →</a>
-          </div>
-          <div class="cta-card">
-            <div class="cta-card-tag">New offer</div>
-            <h3>Lead Management Audit</h3>
-            <p>A $999 audit to find where leads stall, leak, or get handed off without enough context.</p>
-            <a href="/lead-management-audit" class="cta-card-btn">View the audit →</a>
-          </div>
-          <div class="cta-card">
-            <div class="cta-card-tag">Just lurking</div>
-            <h3>HealthFounderOS Newsletter</h3>
-            <p>A weekly read on healthcare commercialization — frameworks, operating systems, regulatory thinking.</p>
-            <a href="https://crooms-newsletter-012741.beehiiv.com/" target="_blank" rel="noopener" class="cta-card-btn">Subscribe ↗</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <span class="footer-logo">predictcare.ai</span>
-        <ul class="footer-links">
-          <li><a href="#practices">Offers</a></li>
-          <li><a href="#hfos">HealthFounderOS</a></li>
-          <li><a href="/portfolio/">Case Studies</a></li>
-          <li><a href="#who">About</a></li>
-          <li><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book a call ↗</a></li>
-        </ul>
-        <span class="footer-copy">© 2026 · PredictCare.ai · AI-amplified commercial leadership for healthcare</span>
-      </div>
+    <div class="container footer-inner">
+      <div class="footer-logo">predictcare.ai</div>
+      <ul class="footer-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#who">Who it helps</a></li>
+        <li><a href="#offers">Offers</a></li>
+        <li><a href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Book a call ↗</a></li>
+      </ul>
+      <div class="footer-copy">© 2026 PredictCare.ai. Healthcare AI strategy and workflow implementation. Educational and commercial operations support only; not medical advice, diagnosis, treatment, or clinical decision support.</div>
     </div>
   </footer>
-
-  <script>
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-    reveals.forEach(el => observer.observe(el));
-    // Fail-safe: never leave content invisible if IntersectionObserver does not fire in a browser, screenshot, or crawler context.
-    window.addEventListener('load', () => {
-      window.setTimeout(() => reveals.forEach(el => el.classList.add('visible')), 1200);
-    });
-  </script>
-
 </body>
 </html>
