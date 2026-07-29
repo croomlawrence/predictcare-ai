@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7F4EC"/><stop offset="1" stop-color="#EEF3FF"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#080A0F" flood-opacity="0.14"/></filter>
+    <style>
+      .title{font:900 58px Inter,Arial,sans-serif;fill:#080A0F}
+      .h2{font:800 34px Inter,Arial,sans-serif;fill:#080A0F}
+      .body{font:600 22px Inter,Arial,sans-serif;fill:#6B6258}
+      .small{font:700 18px Inter,Arial,sans-serif;fill:#6B6258}
+      .pill{font:800 17px Inter,Arial,sans-serif;letter-spacing:.12em;fill:#0F8F72}
+    </style>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <circle cx="1120" cy="100" r="190" fill="#345CFF" opacity=".08"/>
+  <circle cx="120" cy="660" r="260" fill="#0F8F72" opacity=".08"/>
+  
+  <text x="70" y="84" class="pill">THE PLAYBOOK</text>
+  <text x="70" y="148" class="title">HealthFounderOS REWRITE</text>
+  <text x="70" y="198" class="body">Reveal · Encode · Wire · Run · Inspect · Train · Expand</text>
+  <g transform="translate(70 290)">
+    <g transform="translate(0 0)"><circle cx="52" cy="52" r="52" fill="#345CFF" filter="url(#shadow)"/><text x="32" y="67" font-family="Inter,Arial" font-size="40" font-weight="900" fill="#fff">R</text><text x="0" y="140" class="small">Reveal</text></g><g transform="translate(166 0)"><circle cx="52" cy="52" r="52" fill="#0F8F72" filter="url(#shadow)"/><text x="32" y="67" font-family="Inter,Arial" font-size="40" font-weight="900" fill="#fff">E</text><text x="0" y="140" class="small">Encode</text></g><g transform="translate(332 0)"><circle cx="52" cy="52" r="52" fill="#FFD22E" filter="url(#shadow)"/><text x="32" y="67" font-family="Inter,Arial" font-size="40" font-weight="900" fill="#080A0F">W</text><text x="0" y="140" class="small">Wire</text></g><g transform="translate(498 0)"><circle cx="52" cy="52" r="52" fill="#345CFF" filter="url(#shadow)"/><text x="32" y="67" font-family="Inter,Arial" font-size="40" font-weight="900" fill="#fff">R</text><text x="0" y="140" class="small">Run</text></g><g transform="translate(664 0)"><circle cx="52" cy="52" r="52" fill="#0F8F72" filter="url(#shadow)"/><text x="32" y="67" font-family="Inter,Arial" font-size="40" font-weight="900" fill="#fff">I</text><text x="0" y="140" class="small">Inspect</text></g><g transform="translate(830 0)"><circle cx="52" cy="52" r="52" fill="#FFD22E" filter="url(#shadow)"/><text x="32" y="67" font-family="Inter,Arial" font-size="40" font-weight="900" fill="#080A0F">T</text><text x="0" y="140" class="small">Train</text></g><g transform="translate(996 0)"><circle cx="52" cy="52" r="52" fill="#345CFF" filter="url(#shadow)"/><text x="32" y="67" font-family="Inter,Arial" font-size="40" font-weight="900" fill="#fff">E</text><text x="0" y="140" class="small">Expand</text></g>
+  </g>
+  <text x="74" y="615" class="h2">Start with one workflow. Govern it. Prove value. Scale what works.</text>
+
+</svg>
