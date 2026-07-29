@@ -3,7 +3,7 @@
   "trailingSlash": false,
   "headers": [
     {
-      "source": "/pro-evolve-demo/(.*)",
+      "source": "/pro-evolve-demo",
       "headers": [
         {
           "key": "X-Robots-Tag",
@@ -16,7 +16,20 @@
       ]
     },
     {
-      "source": "/organizational-singularity-audit/(.*)",
+      "source": "/pro-evolve-demo/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    },
+    {
+      "source": "/organizational-singularity-audit/:path*",
       "headers": [
         {
           "key": "X-Robots-Tag",
