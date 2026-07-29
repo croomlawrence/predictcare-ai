@@ -53,3 +53,21 @@
 .video-card-featured{grid-column:1/-1;display:grid;grid-template-columns:1.08fr .92fr;gap:18px;align-items:center}
 .video-card-featured .video-frame{grid-row:span 3}.video-card-featured .badge{align-self:end;justify-self:start}.video-card-featured h3{align-self:center;margin:0}.video-card-featured p{align-self:start;margin:0;color:#3f443e}
 @media(max-width:860px){.founder-video-card,.video-card-featured{grid-template-columns:1fr}.founder-video-section{padding:10px 20px 48px}.video-card-featured .video-frame{grid-row:auto}}
+/* Segment solution links: keep headlines dominant; no yellow CTA buttons */
+.segment-grid>.card>strong{
+  display:inline!important;
+  margin-top:10px!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:none!important;
+  box-shadow:none!important;
+  color:#080a0f!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+}
+.segment-grid>.card:hover>strong{
+  box-shadow:none!important;
+  text-decoration:underline!important;
+  text-underline-offset:4px;
+}
