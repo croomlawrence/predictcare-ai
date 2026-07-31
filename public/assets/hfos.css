@@ -108,3 +108,92 @@
 .case-study-visual{border-radius:30px;background:radial-gradient(circle at 20% 0%,rgba(52,92,255,.22),transparent 34%),radial-gradient(circle at 82% 14%,rgba(255,210,46,.30),transparent 28%),linear-gradient(145deg,#fffdf8,#eef3ff);border:1px solid rgba(8,10,15,.08);padding:28px;min-height:320px;display:grid;align-content:center;gap:14px}
 .twin-node{background:#fff;border:1px solid rgba(8,10,15,.08);border-radius:18px;padding:14px 16px;font-weight:900;color:#111827;box-shadow:0 12px 28px rgba(8,10,15,.06)}
 .twin-node.main{background:#080a0f;color:#fff;font-size:24px;letter-spacing:-.04em}.twin-node.accent{background:#ffd22e;color:#080a0f}.case-study-card h2{font-size:clamp(36px,5vw,68px);line-height:.96;letter-spacing:-.065em;margin:0 0 14px;background:linear-gradient(100deg,#080a0f,#345cff 52%,#0f8f72);-webkit-background-clip:text;background-clip:text;color:transparent}.case-study-card p{font-size:clamp(17px,1.7vw,21px);color:#3f443e;max-width:720px}.case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.case-panel{background:#fffdf8;border:1px solid rgba(8,10,15,.08);border-radius:24px;padding:24px;box-shadow:0 16px 42px rgba(8,10,15,.055)}.case-panel h3{font-size:25px;line-height:1.05;letter-spacing:-.04em;margin:8px 0 10px}.case-panel p,.case-panel li{color:#3f443e}.case-panel ul{padding-left:20px}.case-wide{grid-column:1/-1}.principle-list{display:grid;gap:12px}.principle-row{display:grid;grid-template-columns:170px 1fr;gap:18px;align-items:start;padding:16px;border-radius:18px;background:#fff;border:1px solid rgba(8,10,15,.08)}.principle-row strong{color:#111827}.discreet-note{font-size:14px;color:#626862}.framework-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}.framework-mini div{background:#fff;border:1px solid rgba(8,10,15,.08);border-radius:18px;padding:16px}.framework-mini strong{display:block;color:#111827;margin-bottom:4px}@media(max-width:900px){.case-study-card,.case-grid,.framework-mini{grid-template-columns:1fr}.principle-row{grid-template-columns:1fr}.navin{min-height:64px}.brand-lockup strong{font-size:24px!important}.brand-lockup span{font-size:13px!important}}
+
+/* Mobile-first polish pass — July 2026
+   Goal: remove horizontal overflow, normalize typography, and make cards/modules feel intentionally mobile-native. */
+html,body{max-width:100%;overflow-x:hidden}
+img,svg,iframe,video{max-width:100%}
+
+@media(max-width:760px){
+  :root{--mobile-gutter:20px;--mobile-section:60px;--mobile-card:24px}
+  body{font-size:16px;line-height:1.55}
+  .wrap{width:100%;max-width:100%;padding-left:0;padding-right:0}
+  section{padding:var(--mobile-section) var(--mobile-gutter)!important}
+  .hero{padding:54px var(--mobile-gutter) 40px!important}
+
+  /* Compact mobile header: keep brand + one CTA; avoid clipped desktop nav. */
+  .navin{min-height:62px!important;padding:10px 16px!important;gap:12px!important}
+  .brand-lockup{flex:1 1 auto!important;min-width:0!important}
+  .brand-lockup strong{font-size:22px!important;line-height:.9!important;letter-spacing:-.06em!important;white-space:nowrap!important}
+  .brand-lockup span{font-size:12px!important;line-height:1.05!important;white-space:nowrap!important}
+  .nav .links{flex:0 0 auto!important;gap:0!important;margin-left:0!important;min-width:0!important}
+  .nav .links a:not(.btn){display:none!important}
+  .nav .links .btn{padding:10px 12px!important;font-size:13px!important;line-height:1!important;white-space:nowrap!important;max-width:142px!important;overflow:hidden!important;text-overflow:ellipsis!important;box-shadow:0 8px 20px rgba(255,210,46,.20)!important}
+
+  /* Mobile type scale: fewer sizes/weights, less poster-like, more readable. */
+  .system-kicker,.kicker,.price,.badge,.workshop-pill,.fan,.segment-proof-strip span{font-size:11px!important;font-weight:800!important;letter-spacing:.105em!important;line-height:1.35!important}
+  .system-kicker{display:flex!important;width:fit-content!important;max-width:100%!important;padding:8px 11px!important;border-radius:999px!important;white-space:normal!important}
+  .hero h1{font-size:42px!important;line-height:.98!important;letter-spacing:-.055em!important;max-width:100%!important;overflow-wrap:anywhere!important;text-shadow:none!important}
+  .hero-short,.hero .subline{font-size:18px!important;line-height:1.34!important;letter-spacing:-.015em!important;font-weight:600!important;max-width:100%!important;margin-top:18px!important}
+  h2,.section-head h2,.founder-video-copy h2,.ebook-promo-card h2,.case-study-card h2,.cta h2,.segment-cta-card h2,.legal-copy h2,.offer-summary-card h2{font-size:32px!important;line-height:1.04!important;letter-spacing:-.045em!important;text-shadow:none!important}
+  h3,.card h3,.method-card h3,.case-panel h3,.function-tile h3,.video-card h3{font-size:23px!important;line-height:1.12!important;letter-spacing:-.03em!important}
+  p,.card p,.method-card p,.case-study-card p,.ebook-promo-card p,.founder-video-copy p,.legal-copy p,.legal-copy li{font-size:16px!important;line-height:1.55!important}
+  .lede{font-size:18px!important;line-height:1.45!important}
+
+  /* Force every desktop grid/card system into one intentional mobile column. */
+  .cards,.grid2,.grid3,.path-cards,.product-path-cards,.architecture-cards,.method5,.lighter-grid,.lighter-cards,.segment-grid,.case-study-card,.proof-grid,.founder-card,.founder-video-card,.ebook-promo-card,.video-grid,.video-card-featured,.case-grid,.framework-mini,.function-grid,.timeline-grid,.deliverable-list,.offer-hero-grid,.segment-split,.segment-flow{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:18px!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+  .cards{background:transparent!important;border:0!important;margin-top:28px!important}
+  .card,.path-card,.product-card,.arch-card,.method-card,.workshop-card,.function-card,.case-study-card,.founder-video-card,.ebook-promo-card,.case-panel,.proof-metric,.segment-aside,.segment-cta-card,.offer-summary-card,.timeline-card,.function-tile{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    min-height:0!important;
+    padding:var(--mobile-card)!important;
+    border-radius:22px!important;
+  }
+  .segment-grid>.card:last-child:nth-child(3n+1){grid-column:auto!important}
+
+  /* Product cards: less dense, title-first, scan-friendly. */
+  .path-copy{margin:24px 0 14px!important;max-width:100%!important}
+  .path-copy p{font-size:17px!important;line-height:1.45!important}
+  .product-card h3{font-size:34px!important;line-height:1!important;letter-spacing:-.05em!important;margin:12px 0 10px!important}
+  .product-card .price{max-width:100%!important;white-space:normal!important;font-size:11px!important;font-weight:800!important;padding:7px 9px!important;letter-spacing:.055em!important}
+  .product-subhead{font-size:16px!important;line-height:1.45!important;max-width:100%!important}
+  .product-checks{margin-top:18px!important;padding-top:14px!important}
+  .product-checks li,.tool-list li{font-size:14.5px!important;line-height:1.42!important;padding-top:9px!important;padding-bottom:9px!important}
+  .product-checks li:nth-child(n+6){display:none!important}
+  .product-card>strong{padding:13px 16px!important;margin-top:18px!important;font-size:15px!important}
+
+  /* Buttons and chips should stack cleanly with touch-friendly targets. */
+  .actions{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;margin-top:22px!important}
+  .btn,.btn2,.btnY,.workshop-button{width:100%!important;justify-content:center!important;min-height:48px!important;padding:12px 16px!important;font-size:15px!important;font-weight:750!important;text-align:center!important}
+  .problem-bubbles{display:grid!important;grid-template-columns:1fr 1fr!important;gap:9px!important;max-width:100%!important;margin-top:22px!important}
+  .problem-bubbles span{width:100%!important;white-space:normal!important;font-size:12.5px!important;font-weight:750!important;padding:9px 10px!important;line-height:1.25!important}
+
+  /* Media/art modules should not dominate the first mobile scroll. */
+  .founder-video-section{padding-top:22px!important;padding-bottom:48px!important}
+  .founder-video-card,.ebook-promo-card,.case-study-card{gap:18px!important}
+  .ebook-promo-art{order:0!important;padding:10px!important;border-radius:20px!important}
+  .case-study-visual{min-height:0!important;padding:18px!important;border-radius:20px!important}
+  .twin-node.main{font-size:19px!important}
+
+  /* Footer/legal polish. */
+  .footer,.footin{padding-left:var(--mobile-gutter)!important;padding-right:var(--mobile-gutter)!important}
+  .footer-links{gap:10px!important}
+}
+
+@media(max-width:360px){
+  .hero h1{font-size:34px!important;letter-spacing:-.045em!important;overflow-wrap:normal!important;word-break:normal!important}
+  h2,.section-head h2,.founder-video-copy h2,.ebook-promo-card h2,.case-study-card h2,.cta h2{font-size:29px!important}
+  .product-card h3{font-size:31px!important}
+  .brand-lockup strong{font-size:18px!important;letter-spacing:-.045em!important}
+  .brand-lockup span{font-size:11px!important}
+  .nav .links .btn{width:auto!important;max-width:124px!important;font-size:12px!important;padding-left:10px!important;padding-right:10px!important}
+  .problem-bubbles{grid-template-columns:1fr!important}
+}
