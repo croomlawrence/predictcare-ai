@@ -197,3 +197,18 @@ img,svg,iframe,video{max-width:100%}
   .nav .links .btn{width:auto!important;max-width:124px!important;font-size:12px!important;padding-left:10px!important;padding-right:10px!important}
   .problem-bubbles{grid-template-columns:1fr!important}
 }
+
+
+/* Growth conversion additions */
+.first-workflow-map{padding:76px 0;background:radial-gradient(circle at 18% 8%,rgba(255,210,46,.18),transparent 28%),linear-gradient(180deg,#fffdf8,#eef3ff)}
+.workflow-map-card{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:stretch;background:rgba(255,253,248,.88);border:1px solid rgba(52,92,255,.16);border-radius:34px;padding:32px;box-shadow:0 24px 80px rgba(8,10,15,.09)}
+.workflow-map-card h2,.buyer-fit-section h2{font-size:clamp(36px,5vw,64px);line-height:.98;letter-spacing:-.06em;margin:8px 0 14px}
+.workflow-steps{display:grid;gap:12px}
+.workflow-steps div{background:#fff;border:1px solid rgba(8,10,15,.10);border-radius:22px;padding:18px;box-shadow:0 12px 34px rgba(8,10,15,.055)}
+.workflow-steps strong{display:block;font-size:18px;color:#080a0f;margin-bottom:6px}
+.workflow-steps span{display:block;color:#59625f;line-height:1.48}
+.buyer-fit-section{padding:72px 0;background:#fffdf8}
+.buyer-fit-grid .card{position:relative;overflow:hidden}
+.buyer-fit-grid .card:before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:linear-gradient(90deg,#ffd22e,#345cff,#0f8f72)}
+.fit-label{display:inline-flex;margin-bottom:14px;padding:7px 11px;border-radius:999px;background:#eef3ff;color:#2442ff;font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:900px){.workflow-map-card{grid-template-columns:1fr;padding:24px}.first-workflow-map,.buyer-fit-section{padding:48px 0}}
