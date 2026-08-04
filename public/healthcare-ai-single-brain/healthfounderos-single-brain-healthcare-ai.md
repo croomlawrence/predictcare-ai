@@ -1021,9 +1021,9 @@ The best first workflow is commercially meaningful, operationally visible, and b
 
 HealthFounderOS is built so healthcare CEOs can choose the level of support that matches their urgency, team capacity, and governance needs.
 
-### 1. AI Function Diagnostic
+### 1. First Commercial Workflow Map
 
-Start here when one department or workflow is visibly slowing down growth or creating uncertainty.
+Start here when one commercial workflow is visibly slowing down growth or creating uncertainty.
 
 A focused diagnostic maps the current workflow, identifies the highest-leverage AI opportunities, flags governance risks, and gives the CEO a practical recommendation on what to fix first.
 
