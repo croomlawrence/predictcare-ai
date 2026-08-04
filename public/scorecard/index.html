@@ -75,8 +75,8 @@
       <h2>Your score routes you to the lightest useful next step.</h2>
       <div class="grid3">
         <div class="card"><span class="badge">Early</span><h3>Tools / workshop</h3><p>If readiness is low, start with a low-risk workflow, the checklist, or the Healthcare AI Shift workshop.</p></div>
-        <div class="card"><span class="badge">Emerging</span><h3>Discovery & Blueprint</h3><p>If the organization has a clear pain point but needs prioritization and guardrails, start with the Discovery & Blueprint.</p></div>
-        <div class="card"><span class="badge">Ready</span><h3>Custom AI Build or Strategic AI Growth Retainer</h3><p>If readiness is high, move into a HealthFounderOS Custom AI Build or Strategic AI Growth Retainer engagement.</p></div>
+        <div class="card"><span class="badge">Emerging</span><h3>Discovery & Blueprint</h3><p>If the organization has a clear pain point but needs prioritization and guardrails, start with the Single Brain Blueprint plus FDM/FDS Blueprint.</p></div>
+        <div class="card"><span class="badge">Ready</span><h3>Custom AI Build or Strategic AI Growth Retainer</h3><p>If readiness is high, move into a Single Brain build or the Strategic AI Growth Retainer operating loop.</p></div>
       </div>
     </div>
   </section>
@@ -90,8 +90,8 @@ items.forEach((x,i)=>box.insertAdjacentHTML('beforeend',`<div class="scorebox"><
 function scoreValues(){return [...document.querySelectorAll('#score input[type=range]')].map((el,i)=>({name:items[i],value:Number(el.value)}));}
 function recommendation(total){
   if(total<20) return {tier:'Early', next:'Start with the Healthcare AI Workflow Checklist or Healthcare AI Shift workshop.', path:'/healthcare-ai-checklist/'};
-  if(total<30) return {tier:'Emerging', next:'Book the Discovery & Blueprint to choose the first governed workflow and practical next-step roadmap.', path:'/discovery-blueprint/'};
-  return {tier:'Ready', next:'Consider a HealthFounderOS Custom AI Build or Strategic AI Growth Retainer engagement.', path:'/strategic-ai-growth-retainer/'};
+  if(total<30) return {tier:'Emerging', next:'Book Discovery & Blueprint to define the Single Brain Blueprint, FDM/FDS Blueprint, and practical next-step AI roadmap.', path:'/discovery-blueprint/'};
+  return {tier:'Ready', next:'Consider a Custom AI Build for the Single Brain, or the Strategic AI Growth Retainer for the Single Brain plus FDM/FDS/FDE operating loop.', path:'/strategic-ai-growth-retainer/'};
 }
 function summary(){
   const values=scoreValues(); const total=values.reduce((a,b)=>a+b.value,0); const rec=recommendation(total);

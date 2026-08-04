@@ -65,6 +65,28 @@ This field guide gives CEOs and executive teams a practical way to make that shi
 
 ---
 
+# Forward Deployed Growth Roles
+
+The rise of Forward Deployed Engineers creates an equal need for **Forward Deployed Marketers** and **Forward Deployed Sales agents**.
+
+A Single Brain is not just a knowledge base. It is the shared operating memory that lets commercial operators and technical builders work from the same strategy, customer context, assets, decisions, prompts, rules, and review process.
+
+## Forward Deployed Marketer
+
+The Forward Deployed Marketer understands the business model, customer, market, message, offer, funnel, content engine, and sales motion. This operator turns the Single Brain into marketing strategy, campaigns, content, lifecycle motions, and go-to-market execution.
+
+## Forward Deployed Sales agent
+
+The Forward Deployed Sales agent turns the Single Brain into pipeline action: account preparation, outreach, follow-up, objections, service workflows, CRM discipline, and revenue cadence. This role keeps sales execution connected to the same operating memory as marketing, leadership, and service.
+
+## Forward Deployed Engineer
+
+The Forward Deployed Engineer grounds strategy in technical reality, builds the systems, and brings implementation ideas back into the commercial loop.
+
+The future healthcare growth team is not marketing over here, sales over there, engineering somewhere else, and AI tools scattered everywhere. It is a governed Single Brain, a HealthFounderOS harness, and a forward-deployed growth loop that turns strategy into deployed workflows.
+
+---
+
 # The Three Things to Remember
 
 The HealthFounderOS model can be reduced to three ideas.

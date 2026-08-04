@@ -236,3 +236,6 @@ img,svg,iframe,video{max-width:100%}
 .lighter-cards .function-card .tool-list{display:block;margin:16px 0 0;padding-left:18px;list-style:disc;}
 .lighter-cards .function-card .tool-list li{display:list-item;width:auto;margin:0 0 8px;padding:0;line-height:1.45;}
 .lighter-cards .function-card .price{display:inline-flex;width:auto;}
+
+
+.offer-outcome{border:1px solid rgba(52,92,255,.18);background:linear-gradient(135deg,rgba(255,255,255,.78),rgba(238,243,255,.82));border-radius:18px;padding:12px 14px!important;margin:12px 0!important;font-size:15px!important;line-height:1.35!important;color:#17203a!important;font-weight:800!important}.offer-outcome strong{color:#2442ff}.operating-loop-strip{margin-top:22px;border:1px solid rgba(15,143,114,.22);background:linear-gradient(135deg,rgba(255,253,248,.88),rgba(232,250,245,.86));border-radius:24px;padding:20px 22px;box-shadow:0 12px 34px rgba(8,10,15,.06)}.operating-loop-strip p{margin:6px 0 0;font-size:17px;line-height:1.5;color:#303640;font-weight:650}.offer-summary-card .kicker{display:inline-flex}.grid3 .card p,.grid2 .card p{line-height:1.5}
