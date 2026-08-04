@@ -75,7 +75,7 @@
       <h2>Your score routes you to the lightest useful next step.</h2>
       <div class="grid3">
         <div class="card"><span class="badge">Early</span><h3>Free tools / workshop</h3><p>If readiness is low, start with a low-risk workflow, the checklist, or the $100 Healthcare AI Shift workshop.</p></div>
-        <div class="card"><span class="badge">Emerging</span><h3>AI Workflow Assessment</h3><p>If the organization has a clear pain point but needs prioritization and guardrails, start with the $999 diagnostic.</p></div>
+        <div class="card"><span class="badge">Emerging</span><h3>AI Function Diagnostic</h3><p>If the organization has a clear pain point but needs prioritization and guardrails, start with the $1,500 function diagnostic.</p></div>
         <div class="card"><span class="badge">Ready</span><h3>Sprint or Fractional AI Officer</h3><p>If readiness is high, move into a HealthFounderOS Sprint or Fractional AI Officer engagement.</p></div>
       </div>
     </div>
@@ -90,7 +90,7 @@ items.forEach((x,i)=>box.insertAdjacentHTML('beforeend',`<div class="scorebox"><
 function scoreValues(){return [...document.querySelectorAll('#score input[type=range]')].map((el,i)=>({name:items[i],value:Number(el.value)}));}
 function recommendation(total){
   if(total<20) return {tier:'Early', next:'Start with the Healthcare AI Workflow Checklist or $100 Healthcare AI Shift workshop.', path:'/healthcare-ai-checklist/'};
-  if(total<30) return {tier:'Emerging', next:'Book the $999 AI Workflow Assessment to choose the first governed workflow and 90-day roadmap.', path:'/ai-workflow-assessment/'};
+  if(total<30) return {tier:'Emerging', next:'Book the $1,500 AI Function Diagnostic to choose the first governed workflow and 90-day roadmap.', path:'/function-diagnostic/'};
   return {tier:'Ready', next:'Consider a HealthFounderOS Sprint or Fractional AI Officer engagement.', path:'/healthfounderos-sprint/'};
 }
 function summary(){
