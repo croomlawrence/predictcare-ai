@@ -224,3 +224,10 @@ img,svg,iframe,video{max-width:100%}
 .hero-primary-actions .btnY,.hero-primary-actions .btn2{font-size:17px;padding:14px 20px}
 .hero-microcopy{margin:12px 0 0!important;color:#4b4f49!important;font-size:15px!important;line-height:1.45!important;font-weight:700}
 @media(max-width:760px){.hero-action-stack{margin-top:22px}.hero-primary-actions .btnY,.hero-primary-actions .btn2{font-size:15px!important}.hero-microcopy{font-size:14px!important}}
+
+
+/* CRO offer ladder refinement */
+.offer-ladder-section{padding-top:18px;background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(248,250,255,.96));}
+.trust-strip{margin:22px auto 0;padding:16px 20px;border:1px solid rgba(52,92,255,.18);border-radius:18px;background:rgba(255,255,255,.82);color:#4f5968;font-size:15px;line-height:1.55;text-align:center;box-shadow:0 10px 30px rgba(8,10,15,.04)}
+.trust-strip strong{color:#080a0f}
+@media(max-width:760px){.offer-ladder-section{padding-top:4px}.trust-strip{text-align:left;font-size:14px}}

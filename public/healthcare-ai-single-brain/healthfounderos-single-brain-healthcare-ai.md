@@ -1027,13 +1027,13 @@ Start here when one commercial workflow is visibly slowing down growth or creati
 
 A focused diagnostic maps the current workflow, identifies the highest-leverage AI opportunities, flags governance risks, and gives the CEO a practical recommendation on what to fix first.
 
-### 2. Pro Evolve
+### 2. 90-Day Harness Build
 
 Start here when your team can self-implement but needs proven frameworks, prompts, worksheets, workshops, and light expert guidance.
 
 This path helps an executive team build AI capability without losing control of strategy, claims, data boundaries, or human accountability.
 
-### 3. All In Twin
+### 3. Embedded AI Twin
 
 Start here when the business needs a done-for-you Single Brain transformation with an embedded strategic operator.
 
