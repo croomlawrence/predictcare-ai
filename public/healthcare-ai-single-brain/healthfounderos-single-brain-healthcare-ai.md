@@ -121,13 +121,13 @@ HealthFounderOS begins at the edge:
 - Decision log.
 - Operating cadence.
 
-The first workflow becomes the prototype for the organization’s AI operating system.
+The first strategic blueprint becomes the prototype for the organization’s AI operating system.
 
 Do not begin by asking, “What AI tools should we buy?”
 
 Begin by asking:
 
-> Where do growth, operations, and governance most urgently need leverage — and what is the first workflow we can safely govern, prove, and scale?
+> Where do growth, operations, and governance most urgently need leverage — and what is the first strategic blueprint we can safely govern, prove, and scale?
 
 ---
 
@@ -578,7 +578,7 @@ The CEO must stop using AI to generate endless new directions and start using AI
 ### The CEO’s New Responsibilities
 
 1. Define the company’s AI ambition.
-2. Name the first workflow that matters.
+2. Name the first strategic blueprint that matters.
 3. Clarify decision rights.
 4. Approve the source-of-truth layer.
 5. Protect phase discipline.
@@ -940,7 +940,7 @@ It is about removing avoidable coordination drag so healthcare teams can execute
 
 # HealthFounderOS Implementation Model
 
-## The 90-Day Pilot
+## The First Pilot
 
 A practical CEO-led AI program should begin with one workflow.
 
@@ -950,7 +950,7 @@ A practical CEO-led AI program should begin with one workflow.
 - Identify growth leaks.
 - Identify governance risks.
 - Audit scattered AI usage.
-- Select first workflow.
+- Select first strategic blueprint.
 - Define source of truth.
 - Define data boundaries.
 - Define success metrics.
@@ -1001,7 +1001,7 @@ The right move is not to buy every new tool or launch a company-wide transformat
 
 Every executive team should leave this guide with one question:
 
-> Which workflow, if governed by a Single Brain, would create the most leverage for growth, customer experience, operational speed, or executive alignment in the next 90 days?
+> Which workflow, if governed by a Single Brain, would create the most leverage for growth, customer experience, operational speed, or executive alignment in the next custom build?
 
 Good starting points often include:
 
@@ -1015,27 +1015,27 @@ Good starting points often include:
 - Content review and repurposing.
 - CRM cleanup, segmentation, and prioritization.
 
-The best first workflow is commercially meaningful, operationally visible, and bounded enough to govern.
+The best first strategic blueprint is commercially meaningful, operationally visible, and bounded enough to govern.
 
 ## Three Practical Ways to Begin
 
 HealthFounderOS is built so healthcare CEOs can choose the level of support that matches their urgency, team capacity, and governance needs.
 
-### 1. First Commercial Workflow Map
+### 1. Discovery & Blueprint
 
-Start here when one commercial workflow is visibly slowing down growth or creating uncertainty.
+Start here when one commercial pain point is visibly slowing down growth or creating uncertainty.
 
 A focused diagnostic maps the current workflow, identifies the highest-leverage AI opportunities, flags governance risks, and gives the CEO a practical recommendation on what to fix first.
 
-### 2. 90-Day Harness Build
+### 2. Custom AI Build
 
 Start here when your team can self-implement but needs proven frameworks, prompts, worksheets, workshops, and light expert guidance.
 
 This path helps an executive team build AI capability without losing control of strategy, claims, data boundaries, or human accountability.
 
-### 3. Embedded AI Twin
+### 3. Strategic AI Growth Retainer
 
-Start here when the business needs a done-for-you Single Brain transformation with an embedded strategic operator.
+Start here when the business needs a ongoing Single Brain and HealthFounderOS leadership with an embedded strategic operator.
 
 This path is for CEOs who want HealthFounderOS installed across priorities, offers, prospect intelligence, follow-up, meetings, decisions, content, governance, and execution cadence.
 

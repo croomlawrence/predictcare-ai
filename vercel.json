@@ -1,6 +1,38 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/pricing",
+      "destination": "/offers",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-workflow-map",
+      "destination": "/discovery-blueprint",
+      "permanent": true
+    },
+    {
+      "source": "/function-diagnostic",
+      "destination": "/discovery-blueprint",
+      "permanent": true
+    },
+    {
+      "source": "/90-day-harness-build",
+      "destination": "/custom-ai-build",
+      "permanent": true
+    },
+    {
+      "source": "/healthfounderos-sprint",
+      "destination": "/strategic-ai-growth-retainer",
+      "permanent": true
+    },
+    {
+      "source": "/embedded-ai-twin",
+      "destination": "/strategic-ai-growth-retainer",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/pro-evolve-demo",

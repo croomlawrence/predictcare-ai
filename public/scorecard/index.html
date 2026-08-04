@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HealthFounderOS Scorecard — PredictCare.AI</title>
-  <meta name="description" content="Free healthcare AI readiness scorecard for HealthFounderOS. Score your AI readiness and send the result to PredictCare.AI for recommended next steps.">
+  <meta name="description" content="Healthcare AI readiness scorecard for HealthFounderOS. Score your AI readiness and send the result to PredictCare.AI for recommended next steps.">
   <meta property="og:title" content="HealthFounderOS Scorecard — PredictCare.AI">
   <meta property="og:description" content="Score where your healthcare organization is ready for AI — and where resistance, workflow fragmentation, or governance gaps will slow you down.">
   <meta property="og:type" content="website">
@@ -25,14 +25,14 @@
 .hero h1{background:linear-gradient(100deg,#080a0f 0%,#345cff 36%,#6a5cff 68%,#0f8f72 100%);-webkit-background-clip:text;background-clip:text;color:transparent;}
 </style></head>
 <body>
-  <nav class="nav"><div class="navin"><a class="brand brand-lockup" href="/"><strong>HealthFounderOS</strong><span>by PredictCare.AI</span></a><div class="links"><a href="/learning">Learning</a><a href="/community">Community</a><a href="/tools">Tools</a><a href="/pricing">Pricing</a><a href="/90-day-harness-build">90-Day Build</a><a class="btn" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Talk with Croom →</a></div></div></nav>
+  <nav class="nav"><div class="navin"><a class="brand brand-lockup" href="/"><strong>HealthFounderOS</strong><span>by PredictCare.AI</span></a><div class="links"><a href="/learning">Learning</a><a href="/community">Community</a><a href="/tools">Tools</a><a href="/offers">Offers</a><a href="/custom-ai-build">Custom AI Build</a><a class="btn" href="https://calendly.com/croomlawrence/30min" target="_blank" rel="noopener">Talk with Croom →</a></div></div></nav>
 
   <header class="hero">
     <div class="wrap">
-      <span class="kicker">Free lead diagnostic</span>
+      <span class="kicker">Lead diagnostic</span>
       <h1>HealthFounderOS Scorecard.</h1>
       <p class="lede">Score where your healthcare organization is ready for AI — and where resistance, workflow fragmentation, or governance gaps will slow you down. No PHI. No patient-specific information.</p>
-      <div class="actions"><a class="btnY" href="#scorecard">Find your first workflow →</a><a class="btn2" href="#send">Send your result</a></div>
+      <div class="actions"><a class="btnY" href="#scorecard">Find your first strategic blueprint →</a><a class="btn2" href="#send">Send your result</a></div>
     </div>
   </header>
 
@@ -74,9 +74,9 @@
       <span class="kicker">What happens next</span>
       <h2>Your score routes you to the lightest useful next step.</h2>
       <div class="grid3">
-        <div class="card"><span class="badge">Early</span><h3>Free tools / workshop</h3><p>If readiness is low, start with a low-risk workflow, the checklist, or the $100 Healthcare AI Shift workshop.</p></div>
-        <div class="card"><span class="badge">Emerging</span><h3>First Commercial Workflow Map</h3><p>If the organization has a clear pain point but needs prioritization and guardrails, start with the $999 commercial workflow map.</p></div>
-        <div class="card"><span class="badge">Ready</span><h3>90-Day Harness Build or Embedded AI Twin</h3><p>If readiness is high, move into a HealthFounderOS 90-Day Harness Build or Embedded AI Twin engagement.</p></div>
+        <div class="card"><span class="badge">Early</span><h3>Tools / workshop</h3><p>If readiness is low, start with a low-risk workflow, the checklist, or the Healthcare AI Shift workshop.</p></div>
+        <div class="card"><span class="badge">Emerging</span><h3>Discovery & Blueprint</h3><p>If the organization has a clear pain point but needs prioritization and guardrails, start with the Discovery & Blueprint.</p></div>
+        <div class="card"><span class="badge">Ready</span><h3>Custom AI Build or Strategic AI Growth Retainer</h3><p>If readiness is high, move into a HealthFounderOS Custom AI Build or Strategic AI Growth Retainer engagement.</p></div>
       </div>
     </div>
   </section>
@@ -89,9 +89,9 @@ const box=document.getElementById('score');
 items.forEach((x,i)=>box.insertAdjacentHTML('beforeend',`<div class="scorebox"><label>${x}: <span id="v${i}">3</span></label><input aria-label="${x}" type="range" min="1" max="5" value="3" oninput="document.getElementById('v${i}').textContent=this.value;calc()"></div>`));
 function scoreValues(){return [...document.querySelectorAll('#score input[type=range]')].map((el,i)=>({name:items[i],value:Number(el.value)}));}
 function recommendation(total){
-  if(total<20) return {tier:'Early', next:'Start with the Healthcare AI Workflow Checklist or $100 Healthcare AI Shift workshop.', path:'/healthcare-ai-checklist/'};
-  if(total<30) return {tier:'Emerging', next:'Book the $999 First Commercial Workflow Map to choose the first governed workflow and practical next-step roadmap.', path:'/commercial-workflow-map/'};
-  return {tier:'Ready', next:'Consider a HealthFounderOS 90-Day Harness Build or Embedded AI Twin engagement.', path:'/embedded-ai-twin/'};
+  if(total<20) return {tier:'Early', next:'Start with the Healthcare AI Workflow Checklist or Healthcare AI Shift workshop.', path:'/healthcare-ai-checklist/'};
+  if(total<30) return {tier:'Emerging', next:'Book the Discovery & Blueprint to choose the first governed workflow and practical next-step roadmap.', path:'/discovery-blueprint/'};
+  return {tier:'Ready', next:'Consider a HealthFounderOS Custom AI Build or Strategic AI Growth Retainer engagement.', path:'/strategic-ai-growth-retainer/'};
 }
 function summary(){
   const values=scoreValues(); const total=values.reduce((a,b)=>a+b.value,0); const rec=recommendation(total);

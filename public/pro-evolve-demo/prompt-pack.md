@@ -1,4 +1,4 @@
-# 90-Day Harness Build BioPharma Commercial Strategy Prompt Pack
+# Custom AI Build BioPharma Commercial Strategy Prompt Pack
 
 **Prototype demo:** HealthFounderOS by PredictCare.AI  
 **Buyer persona:** BioPharma CEO  
@@ -211,7 +211,7 @@ Structure:
 7. DTC / DTP activation map
 8. Claims and evidence review matrix
 9. Governance, approvals, and launch-phase boundaries
-10. 90-day implementation plan
+10. custom implementation plan
 11. Decision log
 12. Risks and open questions
 13. Next step recommendation
