@@ -33,6 +33,28 @@
       "permanent": true
     }
   ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "predictcare.ai"
+        }
+      ],
+      "destination": "/agency"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.predictcare.ai"
+        }
+      ],
+      "destination": "/agency"
+    }
+  ],
   "headers": [
     {
       "source": "/pro-evolve-demo",
