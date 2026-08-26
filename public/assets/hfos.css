@@ -257,3 +257,50 @@ img,svg,iframe,video{max-width:100%}
 
 /* Workflow mapping conversion pages */
 .conversion-hero{padding-bottom:64px}.conversion-hero .qualification-line,.qualification-line{margin-top:18px!important;max-width:900px;color:#303640!important;font-size:15px!important;font-weight:800!important;line-height:1.45!important;background:rgba(255,253,248,.78);border:1px solid rgba(52,92,255,.16);border-radius:18px;padding:13px 15px}.conversion-summary h2{font-size:clamp(30px,3.6vw,48px);line-height:1;letter-spacing:-.055em}.conversion-soft{background:linear-gradient(180deg,#fffdf8,#eef3ff);border-top:1px solid rgba(8,10,15,.06);border-bottom:1px solid rgba(8,10,15,.06)}.conversion-grid{background:transparent!important;border:0!important;gap:18px!important}.conversion-grid .card{min-height:0;border-radius:24px;border:1px solid rgba(8,10,15,.08);box-shadow:0 14px 36px rgba(8,10,15,.045)}.conversion-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px}.conversion-list li{position:relative;padding-left:28px;color:#343831;font-weight:750;line-height:1.45}.conversion-list li:before{content:'✓';position:absolute;left:0;top:1px;width:20px;height:20px;border-radius:50%;background:#e9f8ef;color:#0f8f72;display:grid;place-items:center;font-weight:950;font-size:12px}.guardrail-note{background:#fff;border:1px solid rgba(8,10,15,.08);border-radius:18px;padding:14px 16px;color:#343831!important}.conversion-final-cta{padding:76px 0;background:radial-gradient(circle at 14% 0%,rgba(255,210,46,.22),transparent 28%),radial-gradient(circle at 88% 12%,rgba(52,92,255,.16),transparent 28%),linear-gradient(135deg,#fffdf8,#eef3ff)}.conversion-cta-card{max-width:980px;margin:auto;text-align:center;background:rgba(255,253,248,.88);border:1px solid rgba(52,92,255,.18);border-radius:34px;padding:38px;box-shadow:0 24px 70px rgba(8,10,15,.08)}.conversion-cta-card h2{font-size:clamp(34px,4.8vw,66px);line-height:.96;letter-spacing:-.06em;margin:0 0 14px;background:linear-gradient(100deg,#080a0f,#345cff 52%,#0f8f72);-webkit-background-clip:text;background-clip:text;color:transparent}.conversion-cta-card p{font-size:18px;line-height:1.5;max-width:820px;margin:12px auto;color:#3f443e}.conversion-cta-card .actions{justify-content:center}.service-list a.card{display:block}.service-list a.card strong{margin-top:14px}@media(max-width:900px){.conversion-hero .offer-hero-grid{grid-template-columns:1fr!important;gap:22px!important;overflow:hidden!important}.conversion-hero .offer-hero-grid>*{min-width:0!important}.conversion-hero h1{font-size:38px!important;line-height:1!important;letter-spacing:-.05em!important;max-width:100%!important;overflow-wrap:break-word!important;word-break:normal!important}.conversion-hero .qualification-line,.qualification-line{max-width:100%!important;overflow-wrap:break-word!important}.nav .links .btn{max-width:104px!important;font-size:0!important;overflow:hidden!important}.nav .links .btn::after{content:'Map call →';font-size:12px!important;line-height:1!important;white-space:nowrap!important}}@media(max-width:760px){.conversion-hero .qualification-line,.qualification-line{font-size:14px!important}.conversion-cta-card{text-align:left;padding:24px}.conversion-cta-card .actions{justify-content:stretch}.conversion-final-cta{padding:48px 20px!important}}
+
+/* CX/UX hierarchy update — HealthFounderOS as umbrella solution */
+.simple-architecture-section{padding:76px 24px;background:linear-gradient(180deg,#fffdf8,#f7f9ff);border-top:1px solid rgba(8,10,15,.06);border-bottom:1px solid rgba(8,10,15,.06)}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
+.architecture-simple-grid .card{border:1px solid rgba(52,92,255,.14);border-radius:24px;box-shadow:0 16px 42px rgba(8,10,15,.055);min-height:0}
+.architecture-simple-grid .card h3{font-size:clamp(25px,2.4vw,34px);letter-spacing:-.05em;margin:8px 0 10px}
+.workflow-selector-section{padding:76px 24px;background:radial-gradient(circle at 14% 0%,rgba(255,210,46,.20),transparent 28%),radial-gradient(circle at 86% 16%,rgba(52,92,255,.14),transparent 30%),linear-gradient(135deg,#fffdf8,#eef3ff)}
+.selector-card{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:center;background:rgba(255,253,248,.88);border:1px solid rgba(52,92,255,.16);border-radius:34px;padding:34px;box-shadow:0 24px 78px rgba(8,10,15,.085)}
+.selector-card h2{font-size:clamp(36px,5vw,68px);line-height:.96;letter-spacing:-.065em;margin:8px 0 14px;background:linear-gradient(100deg,#080a0f,#345cff 52%,#0f8f72);-webkit-background-clip:text;background-clip:text;color:transparent}
+.selector-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.selector-options a{display:flex;align-items:center;min-height:58px;border-radius:18px;background:#fff;border:1px solid rgba(8,10,15,.09);padding:14px 16px;color:#172033;font-weight:900;box-shadow:0 12px 30px rgba(8,10,15,.05)}
+.selector-options a:hover{transform:translateY(-1px);border-color:rgba(52,92,255,.28);box-shadow:0 16px 38px rgba(52,92,255,.10)}
+.offer-ladder-section{padding:76px 24px!important}
+.offer-ladder-section .path-copy{max-width:900px!important}
+.offer-ladder-section .path-copy p{max-width:900px!important}
+.offer-ladder-section .path-copy p strong{font-weight:900!important}
+@media(max-width:980px){.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}.selector-card{grid-template-columns:1fr}.selector-options{grid-template-columns:1fr}}
+@media(max-width:760px){.simple-architecture-section,.workflow-selector-section,.offer-ladder-section{padding:56px 20px!important}.grid4{grid-template-columns:1fr!important;gap:14px!important}.selector-card{padding:24px!important;border-radius:24px!important}.selector-card h2{font-size:32px!important}.selector-options{gap:10px}.selector-options a{min-height:50px;font-size:15px}.architecture-simple-grid .card h3{font-size:24px!important}.hero h1{overflow-wrap:normal!important}}
+
+/* Mobile clipping fix after CX hierarchy update */
+@media(max-width:760px){
+  .system-kicker{width:auto!important;max-width:100%!important;display:inline-flex!important;white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important;text-align:left!important;line-height:1.25!important}
+  .hero h1{font-size:40px!important;line-height:1!important;letter-spacing:-.052em!important;overflow-wrap:anywhere!important;word-break:normal!important;max-width:100%!important}
+  .hero-short,.hero-explainer,.hero-microcopy,p,.lede,.section-head p{max-width:100%!important;overflow-wrap:break-word!important;word-break:normal!important}
+  h2,.section-head h2,.selector-card h2,.workflow-map-card h2,.buyer-fit-section h2,.founder-video-copy h2,.ebook-promo-card h2,.case-study-card h2,.cta h2{max-width:100%!important;overflow-wrap:break-word!important;word-break:normal!important;hyphens:none!important}
+  .problem-bubbles{grid-template-columns:1fr!important}
+  .selector-options a,.problem-bubbles span{min-width:0!important;overflow-wrap:break-word!important;white-space:normal!important}
+  .nav .links .btn{max-width:104px!important;font-size:0!important;overflow:hidden!important}
+  .nav .links .btn::after{content:'Map call →';font-size:12px!important;line-height:1!important;white-space:nowrap!important}
+}
+@media(min-width:361px) and (max-width:430px){
+  .hero h1{font-size:38px!important;letter-spacing:-.045em!important}
+  h2,.section-head h2,.selector-card h2,.workflow-map-card h2,.buyer-fit-section h2,.founder-video-copy h2,.ebook-promo-card h2,.case-study-card h2,.cta h2{font-size:30px!important;line-height:1.04!important;letter-spacing:-.038em!important}
+}
+@media(max-width:360px){.hero h1{font-size:32px!important}}
+
+/* Hard mobile viewport containment: avoid wide desktop line boxes inside headless/mobile browsers */
+@media(max-width:760px){
+  body,main,header,section,footer,.nav{width:100%!important;max-width:100%!important;overflow-x:hidden!important}
+  .hero>.wrap,section>.wrap,.footin,.navin{width:100%!important;max-width:100%!important;min-width:0!important;margin-left:0!important;margin-right:0!important;overflow-x:hidden!important}
+  .hero *,.simple-architecture-section *,.workflow-selector-section *,.first-workflow-map *,.offer-ladder-section *{min-width:0!important;max-width:100%!important}
+  .hero h1{font-size:34px!important;line-height:1.02!important;letter-spacing:-.035em!important;white-space:normal!important}
+  .hero-short{font-size:17px!important;line-height:1.32!important;white-space:normal!important}
+  .hero-explainer{font-size:15.5px!important;line-height:1.5!important;white-space:normal!important}
+  .system-kicker{font-size:10px!important;letter-spacing:.075em!important;padding:7px 10px!important}
+  .simple-proof-grid div{overflow:hidden!important}
+}
