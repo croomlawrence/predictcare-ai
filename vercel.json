@@ -25,6 +25,28 @@
       "permanent": false
     },
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "healthfounderos.com"
+        }
+      ],
+      "destination": "/healthfounderos/",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.healthfounderos.com"
+        }
+      ],
+      "destination": "/healthfounderos/",
+      "permanent": false
+    },
+    {
       "source": "/pricing",
       "destination": "/offers",
       "permanent": true
