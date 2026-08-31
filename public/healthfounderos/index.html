@@ -10,16 +10,17 @@
 :root{--ink:#102033;--muted:#5d6878;--line:rgba(16,32,51,.12);--gold:#ffd22e;--teal:#00a98f;--blue:#2d6cdf}
 *{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;background:#fff}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.nav{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
+.nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
 .navin{height:68px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:900;font-size:21px;letter-spacing:-.03em;color:#080a0f;text-decoration:none}
+.brand{font-weight:900;font-size:21px;letter-spacing:-.03em;color:#080a0f;text-decoration:none;white-space:nowrap}
 .brand span{font-size:11px;color:#667384;font-weight:700;letter-spacing:.06em;margin-left:6px}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}
 a{color:inherit;text-decoration:none}
 h1{font-size:42px;line-height:1.05;letter-spacing:-.05em;margin:0 0 18px}
 h2{font-size:28px;line-height:1.1;letter-spacing:-.04em;margin:32px 0 14px}
 .kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#2d6cdf}
 .card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;margin-bottom:24px;box-shadow:0 10px 30px rgba(7,24,39,.06)}
-.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 20px;font-weight:900;background:var(--gold);color:#06151f;border:1px solid rgba(6,21,31,.08)}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 20px;font-weight:900;background:var(--gold);color:#06151f;border:1px solid rgba(6,21,31,.08);white-space:nowrap}
 .cta.secondary{background:#fff;color:var(--ink);box-shadow:none;border:1px solid var(--line)}
 .footer{margin-top:60px;padding:40px 0;border-top:1px solid var(--line);font-size:13px;color:#667384}
 </style>
@@ -27,8 +28,8 @@ h2{font-size:28px;line-height:1.1;letter-spacing:-.04em;margin:32px 0 14px}
 <body>
 <nav class="nav">
 <div class="wrap navin">
-<a class="brand" href="/">HealthFounderOS<span>by PredictCare.AI</span></a>
-<div class="links">
+<a class="brand" href="/">HealthFounderOS <span>by PredictCare.AI</span></a>
+<div class="nav-links">
 <a href="/learning">Learning</a>
 <a href="/community">Community</a>
 <a href="/tools">Tools</a>
@@ -39,7 +40,7 @@ h2{font-size:28px;line-height:1.1;letter-spacing:-.04em;margin:32px 0 14px}
 </div>
 </nav>
 
-<header style="padding:72px 0 48px;background:radial-gradient(circle at 15% 0%,rgba(255,210,46,.22),transparent 34%),radial-gradient(circle at 85% 10%,rgba(0,169,143,.15),transparent 32%),linear-gradient(180deg,#ffffff 0%,#f7fbfd 48%,#fffaf0 100%)">
+<header style="padding:72px 0 56px;background:radial-gradient(circle at 15% 0%,rgba(255,210,46,.22),transparent 34%),radial-gradient(circle at 85% 10%,rgba(0,169,143,.15),transparent 32%),linear-gradient(180deg,#ffffff 0%,#f7fbfd 48%,#fffaf0 100%)">
 <div class="wrap">
 <span class="kicker">Governed AI Growth System</span>
 <h1>The operating layer healthcare companies need to scale without losing control.</h1>
