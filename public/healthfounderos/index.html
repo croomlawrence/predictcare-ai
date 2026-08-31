@@ -6,62 +6,53 @@
 <title>HealthFounderOS — The Governed AI Growth System for Healthcare | PredictCare.AI</title>
 <meta name="description" content="HealthFounderOS is the governed AI operating layer PredictCare.ai installs so healthcare companies can scale pipeline profitably without scaling headcount.">
 <link rel="canonical" href="https://healthfounderos.com/">
+<link rel="stylesheet" href="/assets/hfos.css">
 <style>
-:root{--ink:#102033;--muted:#5d6878;--line:rgba(16,32,51,.12);--gold:#ffd22e;--teal:#00a98f;--blue:#2d6cdf}
-*{box-sizing:border-box}body{margin:0;color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.6;background:#fff}
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
-.nav{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:20}
-.navin{height:68px;display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:900;font-size:21px;letter-spacing:-.03em;color:#080a0f;text-decoration:none;white-space:nowrap}
-.brand span{font-size:11px;color:#667384;font-weight:700;letter-spacing:.06em;margin-left:6px}
-.nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:700}
-a{color:inherit;text-decoration:none}
-h1{font-size:42px;line-height:1.05;letter-spacing:-.05em;margin:0 0 18px}
-h2{font-size:28px;line-height:1.1;letter-spacing:-.04em;margin:32px 0 14px}
-.kicker{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#2d6cdf}
-.card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;margin-bottom:24px;box-shadow:0 10px 30px rgba(7,24,39,.06)}
-.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:999px;padding:13px 20px;font-weight:900;background:var(--gold);color:#06151f;border:1px solid rgba(6,21,31,.08);white-space:nowrap}
-.cta.secondary{background:#fff;color:var(--ink);box-shadow:none;border:1px solid var(--line)}
-.footer{margin-top:60px;padding:40px 0;border-top:1px solid var(--line);font-size:13px;color:#667384}
+/* Homepage-specific polish to match subpage visual system */
+.hero{background:radial-gradient(circle at 12% 0%,rgba(106,92,255,.18),transparent 32%),radial-gradient(circle at 82% 10%,rgba(255,210,46,.26),transparent 26%),linear-gradient(180deg,#fffaf0 0%,#f7f4ec 64%,#eef3ff 100%)}
+.hero h1{background:linear-gradient(100deg,#080a0f 0%,#345cff 46%,#6a5cff 72%,#0f8f72 100%);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:.96}
+.section-soft{background:#fffdf8}
 </style>
 </head>
 <body>
 <nav class="nav">
-<div class="wrap navin">
-<a class="brand" href="/">HealthFounderOS <span>by PredictCare.AI</span></a>
-<div class="nav-links">
+<div class="navin">
+<a class="brand brand-lockup" href="/"><strong>HealthFounderOS</strong><span>by PredictCare.AI</span></a>
+<div class="links">
 <a href="/learning">Learning</a>
 <a href="/community">Community</a>
 <a href="/tools">Tools</a>
 <a href="/offers">Offers</a>
 <a href="https://www.predictcare.ai/agency">PredictCare.ai Agency</a>
-<a class="cta" href="https://calendly.com/croomlawrence/30min">Speak with a Healthcare Growth Expert →</a>
+<a class="btnY" href="https://calendly.com/croomlawrence/30min">Speak with a Healthcare Growth Expert →</a>
 </div>
 </div>
 </nav>
 
-<header style="padding:72px 0 56px;background:radial-gradient(circle at 15% 0%,rgba(255,210,46,.22),transparent 34%),radial-gradient(circle at 85% 10%,rgba(0,169,143,.15),transparent 32%),linear-gradient(180deg,#ffffff 0%,#f7fbfd 48%,#fffaf0 100%)">
+<header class="hero">
 <div class="wrap">
-<span class="kicker">Governed AI Growth System</span>
+<span class="system-kicker">Governed AI Growth System</span>
 <h1>The operating layer healthcare companies need to scale without losing control.</h1>
-<p style="font-size:20px;max-width:720px;color:#4f5d6c">HealthFounderOS is the governed AI operating system PredictCare.ai installs so healthcare teams can scale pipeline profitably without scaling headcount — with human review, privacy guardrails, and one source of truth.</p>
-<div style="margin-top:28px"><a class="cta" href="https://calendly.com/croomlawrence/30min">Speak with a Healthcare Growth Expert →</a></div>
+<p class="lede">HealthFounderOS is the governed AI operating system PredictCare.ai installs so healthcare teams can scale pipeline profitably without scaling headcount — with human review, privacy guardrails, and one source of truth.</p>
+<div class="actions">
+<a class="btnY" href="https://calendly.com/croomlawrence/30min">Speak with a Healthcare Growth Expert →</a>
+</div>
 </div>
 </header>
 
-<section style="padding:64px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fffaf0">
+<section class="section-soft" style="padding:72px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
 <div class="wrap">
 <div class="kicker">The problem</div>
 <h2>AI is everywhere. The harness is missing.</h2>
-<p style="max-width:760px;font-size:18px;color:#4f5d6c">Most healthcare companies are drowning in disconnected agents, scattered knowledge, and no clear review process. HealthFounderOS gives you one operating layer that connects strategy, memory, workflows, and human accountability.</p>
+<p style="max-width:760px;font-size:18px">Most healthcare companies are drowning in disconnected agents, scattered knowledge, and no clear review process. HealthFounderOS gives you one operating layer that connects strategy, memory, workflows, and human accountability.</p>
 </div>
 </section>
 
-<section id="workflows" style="padding:64px 0">
+<section style="padding:72px 0">
 <div class="wrap">
 <div class="kicker">Where governed AI helps first</div>
 <h2>Map your first high-return workflow.</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:28px">
+<div class="path-cards" style="margin-top:28px">
 <div class="card"><strong>Sales follow-up</strong><p>Route, draft, and track every lead with human review before any message leaves the building.</p></div>
 <div class="card"><strong>CRM &amp; account intelligence</strong><p>Keep your source of truth clean and actionable without manual data entry.</p></div>
 <div class="card"><strong>Content reuse</strong><p>Turn every webinar, guide, and campaign into reusable, governed assets.</p></div>
@@ -69,56 +60,57 @@ h2{font-size:28px;line-height:1.1;letter-spacing:-.04em;margin:32px 0 14px}
 <div class="card"><strong>Executive reporting</strong><p>Weekly command reports and value ledgers that leadership can trust.</p></div>
 <div class="card"><strong>Compliance-sensitive review</strong><p>Define approval gates before any workflow touches sensitive data or external communication.</p></div>
 </div>
-<p style="margin-top:24px"><a class="cta" href="/map-first-workflow">Map my first workflow →</a></p>
+<p style="margin-top:28px"><a class="btnY" href="/map-first-workflow">Map my first workflow →</a></p>
 </div>
 </section>
 
-<section style="padding:64px 0;background:#071827;color:#f8fbff">
+<section style="padding:72px 0;background:#071827;color:#f8fbff">
 <div class="wrap">
 <div class="kicker" style="color:#b9c6d2">How we install it</div>
 <h2 style="color:#fff">Three clear ways to get started.</h2>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:28px">
+<div class="path-cards" style="margin-top:28px">
 <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)">
 <h3>Discovery &amp; Blueprint</h3>
 <p>Best when you need to know where governed AI will actually help first. A practical blueprint, first-workflow roadmap, and implementation priorities.</p>
-<a class="cta secondary" href="/offers">Build my blueprint →</a>
+<a class="btn2" href="/offers">Build my blueprint →</a>
 </div>
 <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)">
 <h3>Custom AI Build</h3>
 <p>Best when you know the workflow and need it turned into a working system. We build around your knowledge, rules, and review process.</p>
-<a class="cta secondary" href="/offers">Scope my build →</a>
+<a class="btn2" href="/offers">Scope my build →</a>
 </div>
 <div class="card" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)">
 <h3>Strategic AI Growth Retainer</h3>
 <p>Best when you need ongoing AI-native growth leadership. Croom and team stay embedded to run strategy, execution, and weekly improvement cycles.</p>
-<a class="cta secondary" href="/offers">Discuss the retainer →</a>
+<a class="btn2" href="/offers">Discuss the retainer →</a>
 </div>
 </div>
 </div>
 </section>
 
-<section style="padding:64px 0">
+<section style="padding:72px 0">
 <div class="wrap">
 <div class="kicker">Principal-led</div>
 <h2>Built by the same team that runs PredictCare.ai.</h2>
 <p style="max-width:720px;font-size:18px;color:#4f5d6c">HealthFounderOS is the operating layer PredictCare.ai installs for healthcare companies that need leverage without losing control. Same team. Same compliance guardrails. Same single CTA.</p>
-<p style="margin-top:24px"><a class="cta" href="https://calendly.com/croomlawrence/30min">Speak with a Healthcare Growth Expert →</a></p>
+<p style="margin-top:24px"><a class="btnY" href="https://calendly.com/croomlawrence/30min">Speak with a Healthcare Growth Expert →</a></p>
 </div>
 </section>
 
-<section style="padding:64px 0;background:#fffaf0;border-top:1px solid var(--line)">
+<section class="founder-video-section">
 <div class="wrap">
 <div class="kicker">Video</div>
 <h2>How we build your HealthFounderOS.</h2>
 <p style="max-width:720px">Watch the 12-minute walkthrough of the operating model, workflow examples, and governance approach.</p>
-<div style="margin-top:24px"><a class="cta secondary" href="https://www.youtube.com/@croomlawrence" target="_blank">Watch on YouTube →</a></div>
+<div style="margin-top:24px"><a class="btn2" href="https://www.youtube.com/@croomlawrence" target="_blank">Watch on YouTube →</a></div>
 </div>
 </section>
 
 <footer class="footer">
-<div class="wrap">
-<strong>PredictCare.AI</strong> · HealthFounderOS is the governed AI operating layer for healthcare growth.<br>
-Educational and commercial operations support only; not medical advice, diagnosis, treatment, or clinical decision support.
+<div class="wrap footin">
+<strong>PredictCare.AI</strong>
+<span>The healthcare AI harness for regulated growth.</span>
+<span>Educational and commercial operations support only; not medical advice, diagnosis, treatment, or clinical decision support.</span>
 </div>
 </footer>
 </body>
