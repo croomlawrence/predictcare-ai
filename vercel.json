@@ -55,6 +55,12 @@
       "permanent": true
     }
   ],
+  "rewrites": [
+    {"source": "/robots.txt", "has": [{"type": "host", "value": "www.healthfounderos.com"}], "destination": "/hfos-robots.txt"},
+    {"source": "/robots.txt", "has": [{"type": "host", "value": "healthfounderos.com"}], "destination": "/hfos-robots.txt"},
+    {"source": "/sitemap.xml", "has": [{"type": "host", "value": "www.healthfounderos.com"}], "destination": "/hfos-sitemap.xml"},
+    {"source": "/sitemap.xml", "has": [{"type": "host", "value": "healthfounderos.com"}], "destination": "/hfos-sitemap.xml"}
+  ],
   "headers": [
     {
       "source": "/pro-evolve-demo",
