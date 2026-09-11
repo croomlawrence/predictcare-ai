@@ -3,6 +3,28 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "healthfounderos.com"
+        }
+      ],
+      "destination": "https://www.healthfounderos.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "healthfounderos.com"
+        }
+      ],
+      "destination": "https://www.healthfounderos.com/",
+      "permanent": true
+    },
+    {
       "source": "/",
       "has": [
         {
